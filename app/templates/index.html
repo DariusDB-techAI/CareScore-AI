@@ -69,6 +69,21 @@
 
             <footer class="composer-wrap">
                 <form id="chatForm" class="composer-shell">
+                    <div class="chat-mode-row">
+                        <label for="chatModeSelect">Che do:</label>
+                        <select id="chatModeSelect">
+                            <option value="gemini">Gemini (bot tu dong tra loi)</option>
+                            <option value="local">Local (nhap vai cung 1 hoi thoai)</option>
+                        </select>
+                        <label id="localRoleWrap" for="localRoleSelect" class="hidden">
+                            Vai tro:
+                            <select id="localRoleSelect">
+                                <option value="customer">Khach hang</option>
+                                <option value="support">CSKH</option>
+                            </select>
+                        </label>
+                    </div>
+                    <p id="chatModeHint" class="mode-hint">Gemini: bot tu dong tra loi. Local: ban tu nhap vai Khach hang/CSKH ngay trong cung cuoc hoi thoai, khong mo hop chat rieng.</p>
                     <label class="composer-field">
                         <textarea id="messageInput" rows="1" placeholder="Nhan tin giong nhu trong ChatGPT..."></textarea>
                     </label>

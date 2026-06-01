@@ -17,6 +17,9 @@ const messageCount = document.getElementById("messageCount");
 const activeConversationTitle = document.getElementById("activeConversationTitle");
 const transportStatus = document.getElementById("transportStatus");
 const activeThemeLabel = document.getElementById("activeThemeLabel");
+const chatModeSelect = document.getElementById("chatModeSelect");
+const localRoleWrap = document.getElementById("localRoleWrap");
+const localRoleSelect = document.getElementById("localRoleSelect");
 
 const themeNames = {
     aurora: "Aurora",
@@ -38,13 +41,14 @@ async function fetchChatbotConfig() {
         }
         const config = await response.json();
 
-        if (config.provider === "openai") {
-            transportStatus.textContent = `OpenAI · ${config.openai_model}`;
-            return;
-        }
+        if (config.provider === "gemini") {
+            const suffix = config.gemini_configured
+                ? config.gemini_model
+                : `${config.gemini_model} (missing key)`;
+            transportStatus.textContent = `Gemini · ${suffix}`;
 
-        if (config.provider === "ollama") {
-            transportStatus.textContent = `Ollama · ${config.ollama_model}`;
+            const fallbackText = (config.gemini_fallback_models || []).join(", ");
+            transportStatus.title = fallbackText ? `Fallback: ${fallbackText}` : "";
             return;
         }
 
@@ -52,6 +56,25 @@ async function fetchChatbotConfig() {
     } catch (error) {
         console.warn("Could not load chatbot config", error);
     }
+}
+
+function getChatMode() {
+    return chatModeSelect ? chatModeSelect.value : "gemini";
+}
+
+function getLocalRole() {
+    return localRoleSelect ? localRoleSelect.value : "customer";
+}
+
+function refreshModeUI() {
+    if (!localRoleWrap) {
+        return;
+    }
+    if (getChatMode() === "local") {
+        localRoleWrap.classList.remove("hidden");
+        return;
+    }
+    localRoleWrap.classList.add("hidden");
 }
 
 async function fetchConversations() {
@@ -167,21 +190,22 @@ chatForm.addEventListener("submit", async (event) => {
         return;
     }
 
+    const payload = {
+        conversation_id: state.activeConversationId,
+        message,
+        mode: getChatMode(),
+        local_role: getLocalRole(),
+    };
+
     if (socket) {
-        socket.emit("send_message", {
-            conversation_id: state.activeConversationId,
-            message,
-        });
+        socket.emit("send_message", payload);
     } else {
         const response = await fetch("/api/message", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-                conversation_id: state.activeConversationId,
-                message,
-            }),
+            body: JSON.stringify(payload),
         });
         const conversation = await response.json();
         if (response.ok) {
@@ -206,6 +230,10 @@ messageInput.addEventListener("keydown", (event) => {
 });
 
 newConversationBtn.addEventListener("click", createConversationLocally);
+
+if (chatModeSelect) {
+    chatModeSelect.addEventListener("change", refreshModeUI);
+}
 
 function upsertConversation(conversation) {
     const index = state.conversations.findIndex((item) => item.id === conversation.id);
@@ -319,5 +347,6 @@ themeButtons.forEach((button) => {
 });
 
 setTheme(document.body.dataset.theme || "aurora");
+refreshModeUI();
 fetchChatbotConfig();
 fetchConversations();

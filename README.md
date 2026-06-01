@@ -6,24 +6,11 @@ Giao dien demo cho he thong danh gia chat luong hoi thoai khach hang bang `Flask
 
 - Giao dien chat kieu ChatGPT.
 - Sidebar luu danh sach hoi thoai.
-- 5 nut danh gia theo tung tieu chi:
-  - Cam xuc tong the
-  - Muc do dong cam
-  - Lich su va ton trong
-  - Ngon ngu tieu cuc/cong kich
-  - Kha nang giai quyet van de
-- Moi tieu chi co theme giao dien rieng khi bam.
-- Dashboard cho quan ly:
-  - KPI tong so hoi thoai
-  - KPI tong so luot danh gia
-  - KPI diem trung binh
-  - Bieu do cot
-  - Bieu do radar
-  - Danh sach tom tat tung hoi thoai
-- Chatbot ho tro 3 provider:
+- 5 nut danh gia theo tung tieu chi.
+- Dashboard cho quan ly voi KPI va chart.
+- Chatbot ho tro:
+  - `gemini`
   - `mock`
-  - `openai`
-  - `ollama`
 
 ## Chay du an
 
@@ -34,74 +21,42 @@ python app.py
 
 Mo:
 
-- `http://127.0.0.1:8001/` de chat va danh gia
-- `http://127.0.0.1:8001/dashboard` de xem dashboard
+- `http://127.0.0.1:8001/`
+- `http://127.0.0.1:8001/dashboard`
 
 ## Chatbot provider
 
-### 1. OpenAI API
+### 1. Gemini API
 
 PowerShell:
 
 ```powershell
-$env:CHAT_PROVIDER="openai"
-$env:OPENAI_API_KEY="your_api_key"
-$env:OPENAI_MODEL="chat-latest"
+$env:CHAT_PROVIDER="gemini"
+$env:GEMINI_API_KEY="your_gemini_api_key"
+$env:GEMINI_MODEL="gemini-3.5-flash-lite"
+$env:GEMINI_FALLBACK_MODELS="gemini-2.5-flash-lite"
 python app.py
 ```
 
-### 2. Llama local qua Ollama
-
-Can co Ollama dang chay tren may:
-
-```powershell
-ollama run llama3.1
-```
-
-Sau do:
-
-```powershell
-$env:CHAT_PROVIDER="ollama"
-$env:OLLAMA_MODEL="llama3.1"
-$env:OLLAMA_BASE_URL="http://127.0.0.1:11434"
-python app.py
-```
-
-### 3. Mock tam thoi
+### 2. Mock tam thoi
 
 ```powershell
 $env:CHAT_PROVIDER="mock"
 python app.py
 ```
 
-## Ghi chu OpenAI
+## Ghi chu model Gemini
 
-- `gpt-3.5-turbo` la model legacy/deprecated.
-- `gpt-3.5-turbo-instruct` la model cu cho legacy endpoint.
-- Neu muon trai nghiem gan ChatGPT hon, nen dung `chat-latest` hoac doi `OPENAI_MODEL` sang model OpenAI moi hon.
+App hien uu tien model `gemini-3.5-flash-lite` theo cau hinh ban muon.
+Neu model nay khong available tren tai khoan/region, backend se fallback tu dong sang `gemini-2.5-flash-lite`.
+
+Nguon chinh thuc:
+- https://ai.google.dev/gemini-api/docs/models/gemini-v2
+- https://ai.google.dev/docs/gemini_api_overview/
 
 ## Cam model danh gia sau nay
 
 Hien tai backend danh gia van dung `run_mock_model()` trong `app/__init__.py`.
-
-Ban co the thay the moi tieu chi bang logic nhu:
-
-```python
-import joblib
-
-model = joblib.load("models/sentiment.pkl")
-score = model.predict([transcript])[0]
-```
-
-Hoac voi `.h5`:
-
-```python
-from tensorflow.keras.models import load_model
-
-model = load_model("models/empathy.h5")
-score = model.predict(...)
-```
-
-API hien tai tach theo dang:
+API hien tai:
 
 - `POST /api/evaluate/<conversation_id>/<criterion>`

@@ -220,6 +220,10 @@ textarea {
     font-weight: 700;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .conversation-list {
     display: flex;
     flex-direction: column;
@@ -348,6 +352,35 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.chat-mode-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.chat-mode-row select {
+    background: var(--panel-soft);
+    color: var(--text);
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    padding: 7px 10px;
+}
+
+.mode-hint {
+    margin: -4px 2px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+#localRoleWrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .composer-field {
@@ -590,6 +623,104 @@ textarea {
     font-size: 12px;
 }
 
+.local-chat-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.58);
+    display: grid;
+    place-items: center;
+    z-index: 60;
+    padding: 20px;
+}
+
+.local-chat-panel {
+    width: min(780px, 100%);
+    max-height: min(90vh, 860px);
+    background: #1f2128;
+    border: 1px solid var(--line-strong);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+}
+
+.local-chat-head {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.local-chat-head h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.local-chat-messages {
+    padding: 16px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #18191d;
+}
+
+.local-chat-row {
+    max-width: 86%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    line-height: 1.6;
+}
+
+.local-chat-row.customer {
+    align-self: flex-start;
+    background: #2f3240;
+    border: 1px solid var(--line);
+}
+
+.local-chat-row.support {
+    align-self: flex-end;
+    background: color-mix(in srgb, var(--accent-soft) 60%, #252a2c);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.local-chat-row .meta {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.local-chat-form {
+    border-top: 1px solid var(--line);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #1f2128;
+}
+
+.local-chat-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.local-chat-controls select {
+    background: #2e313d;
+    color: var(--text);
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    padding: 7px 10px;
+}
+
 @media (max-width: 1380px) {
     .chatgpt-shell {
         grid-template-columns: 250px minmax(0, 1fr) 340px;
@@ -623,7 +754,8 @@ textarea {
     .chat-thread > .empty-state,
     .message-row,
     .message-row.assistant-row .message,
-    .composer-shell {
+    .composer-shell,
+    .local-chat-panel {
         width: min(100% - 12px, 100%);
     }
 
