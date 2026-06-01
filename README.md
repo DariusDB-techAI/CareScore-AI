@@ -32,7 +32,7 @@ PowerShell:
 
 ```powershell
 $env:CHAT_PROVIDER="gemini"
-$env:GEMINI_API_KEY="your_gemini_api_key"
+$env:GEMINI_API_KEY="your_gemini_api_key" có thể sử dụng api key có sẵn = AQ.Ab8RN6KuUXVVL8W2iCYlDDapCzC0EioQ6SdVX2r5qRDBXABGag
 $env:GEMINI_MODEL="gemini-3.5-flash-lite"
 $env:GEMINI_FALLBACK_MODELS="gemini-2.5-flash-lite"
 python app.py
