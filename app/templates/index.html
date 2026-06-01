@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation Quality Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-theme="aurora">
+    <div class="chatgpt-shell">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-mark">CQ</div>
+                <div>
+                    <p class="kicker">Conversation QA</p>
+                    <h1>Quality Console</h1>
+                </div>
+            </div>
+
+            <button id="newConversationBtn" class="primary-btn full-width">+ Cuoc hoi thoai moi</button>
+
+            <div class="sidebar-stats">
+                <article class="stat-card">
+                    <span class="metric-label">Hoi thoai</span>
+                    <strong id="conversationCount">0</strong>
+                </article>
+                <article class="stat-card">
+                    <span class="metric-label">Danh gia</span>
+                    <strong id="evaluationCount">0</strong>
+                </article>
+            </div>
+
+            <section class="sidebar-section">
+                <div class="section-head">
+                    <div>
+                        <p class="kicker">History</p>
+                        <h2>Lich su hoi thoai</h2>
+                    </div>
+                    <a class="subtle-link" href="/dashboard">Dashboard</a>
+                </div>
+                <div id="conversationList" class="conversation-list"></div>
+            </section>
+        </aside>
+
+        <main class="chat-stage">
+            <header class="chat-header">
+                <div>
+                    <p class="kicker">Transcript Workspace</p>
+                    <h2 id="activeConversationTitle">Phien danh gia moi</h2>
+                </div>
+                <div class="header-pills">
+                    <div id="transportStatus" class="status-pill">HTTP Fallback</div>
+                    <div class="status-pill">
+                        <span class="live-dot"></span>
+                        <span id="messageCount">0 tin nhan</span>
+                    </div>
+                </div>
+            </header>
+
+            <section id="chatMessages" class="chat-thread">
+                <div class="empty-state">
+                    <h3>Bat dau mot phien chat</h3>
+                    <p>Nhap noi dung khach hang hoac nhan vien de tao transcript. Sau do chay cac model ben phai de danh gia chat luong hoi thoai.</p>
+                </div>
+            </section>
+
+            <footer class="composer-wrap">
+                <form id="chatForm" class="composer-shell">
+                    <label class="composer-field">
+                        <textarea id="messageInput" rows="1" placeholder="Nhan tin giong nhu trong ChatGPT..."></textarea>
+                    </label>
+                    <div class="composer-meta">
+                        <span class="hint-text">Enter de gui, Shift + Enter de xuong dong</span>
+                        <button type="submit" class="primary-btn">Gui tin nhan</button>
+                    </div>
+                </form>
+            </footer>
+        </main>
+
+        <aside class="insight-drawer">
+            <div class="drawer-top">
+                <p class="kicker">Model Review</p>
+                <h2>5 tieu chi danh gia</h2>
+                <p class="panel-copy">Giao dien nay giu transcript o trung tam. Ben phai la bang review theo tung model, giong mot inspector panel.</p>
+            </div>
+
+            <div class="theme-status-card">
+                <span class="metric-label">Theme hien tai</span>
+                <strong id="activeThemeLabel">Aurora</strong>
+            </div>
+
+            <div class="criteria-stack">
+                {% for key, value in criteria.items() %}
+                <article class="criterion-card" data-criterion="{{ key }}">
+                    <div class="criterion-top">
+                        <div class="criterion-number">{{ loop.index }}</div>
+                        <div class="criterion-copy">
+                            <h3>{{ value.label }}</h3>
+                            <p>{{ value.summary }}</p>
+                        </div>
+                    </div>
+
+                    <div class="criterion-meta">
+                        <button class="theme-btn" data-theme="{{ value.theme }}" data-criterion="{{ key }}">Chay model</button>
+                        <span class="theme-capsule">{{ value.theme|upper }}</span>
+                    </div>
+
+                    <div class="result-box" id="result-{{ key }}">
+                        <div class="result-empty">
+                            <span class="result-score">--</span>
+                            <p>Chua co ket qua danh gia cho tieu chi nay.</p>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </aside>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script>
+        window.APP_CRITERIA = {{ criteria|tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation Quality Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-theme="forest">
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+
+    <div class="dashboard-frame">
+        <header class="surface dashboard-topbar">
+            <div>
+                <p class="kicker">Manager Console</p>
+                <h1>Buc tranh tong quan ve chat luong hoi thoai</h1>
+                <p class="panel-copy">Theo doi so phien chat, tong so luot danh gia va profile chat luong theo tung tieu chi trong mot bo cuc bao cao gon hon.</p>
+            </div>
+            <div class="dashboard-actions">
+                <div class="theme-card">
+                    <span>Focus</span>
+                    <strong>Quality Intelligence</strong>
+                </div>
+                <a class="primary-btn" href="/">Quay lai khung chat</a>
+            </div>
+        </header>
+
+        <section class="dashboard-kpis">
+            <article class="surface kpi-card">
+                <span class="metric-label">Tong hoi thoai</span>
+                <strong id="kpiTotal">0</strong>
+                <p>So phien chat da duoc ghi nhan trong bo nho ung dung.</p>
+            </article>
+            <article class="surface kpi-card">
+                <span class="metric-label">Luot danh gia</span>
+                <strong id="kpiEvaluations">0</strong>
+                <p>Tong so lan chay model tren cac tieu chi chat luong.</p>
+            </article>
+            <article class="surface kpi-card">
+                <span class="metric-label">Diem trung binh</span>
+                <strong id="kpiAverage">0.0</strong>
+                <p>Muc chat luong chung tren thang 5 diem.</p>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            <article class="surface chart-panel wide-panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="kicker">Criterion Score</p>
+                        <h2>Diem trung binh theo tieu chi</h2>
+                    </div>
+                </div>
+                <canvas id="barChart"></canvas>
+            </article>
+
+            <article class="surface chart-panel narrow-panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="kicker">Quality Shape</p>
+                        <h2>Dang phan bo chat luong</h2>
+                    </div>
+                </div>
+                <canvas id="radarChart"></canvas>
+            </article>
+
+            <article class="surface chart-panel full-span">
+                <div class="section-heading">
+                    <div>
+                        <p class="kicker">Conversation Ledger</p>
+                        <h2>Tom tat tung cuoc hoi thoai</h2>
+                    </div>
+                </div>
+                <div id="conversationSummary" class="summary-list"></div>
+            </article>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        window.APP_CRITERIA = {{ criteria|tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
