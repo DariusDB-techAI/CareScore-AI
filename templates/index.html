@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversation Quality Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="hero-orb hero-orb--left"></div>
+        <div class="hero-orb hero-orb--right"></div>
+
+        <main class="main-panel">
+            <header class="hero">
+                <div class="hero__eyebrow">Conversation Quality Studio</div>
+                <h1>Mot trang tong de agent dieu phoi danh gia chat luong hoi thoai theo 5 tieu chi.</h1>
+                <p class="hero__copy">
+                    Tren trang nay, user co the dan hoi thoai va hoi agent muon danh gia positivity, toxicity, empathy, politeness hoac resolution.
+                    Agent se route sang dung criterion API, lay ket qua local model, roi tong hop cau tra loi ngay tren cung mot man hinh.
+                </p>
+                <div class="hero__meta">
+                    <span id="modelBadge" class="meta-pill">Checking model...</span>
+                    <span class="meta-pill">Single page agent</span>
+                </div>
+            </header>
+
+            <section class="composer-card">
+                <div id="messages" class="messages">
+                    <div class="message message--system">
+                        <div class="message__label">System</div>
+                        <div class="message__bubble">
+                            Nhap hoi thoai, kich mot tieu chi ben duoi, hoac yeu cau chatbot review cau tra loi theo muc tieu ban chon.
+                        </div>
+                    </div>
+                </div>
+
+                <form id="chatForm" class="composer">
+                    <textarea id="messageInput" rows="1" placeholder="Paste hoi thoai, hoi Gemini phan tich, hoac yeu cau viet lai cau tra loi..."></textarea>
+                    <div class="composer__footer">
+                        <div class="composer__hint">Enter de gui, Shift+Enter de xuong dong.</div>
+                        <button id="sendButton" type="submit">Send</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="criteria-panel">
+                <div class="criteria-panel__head">
+                    <div>
+                        <span class="section-kicker">Quick Criteria</span>
+                        <h2>5 tieu chi danh gia</h2>
+                    </div>
+                    <p>Moi the se chen mot prompt mau vao khung chat de ban nhanh chong yeu cau agent danh gia dung tieu chi can xem.</p>
+                </div>
+
+                <div class="criteria-grid">
+                    {% for criterion in criteria %}
+                    <button
+                        class="criterion-card criterion-card--{{ criterion.theme }}"
+                        type="button"
+                        data-criterion="{{ criterion.id }}"
+                        data-prompt="{{ criterion.prompt }}"
+                    >
+                        <span class="criterion-card__index">0{{ loop.index }}</span>
+                        <strong>{{ criterion.label }}</strong>
+                        <span>{{ criterion.description }}</span>
+                    </button>
+                    {% endfor %}
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        window.APP_BOOTSTRAP = {
+            criteria: {{ criteria|tojson }}
+        };
+    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

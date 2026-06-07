@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positivity Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="positivity-page">
+    <div class="page-shell">
+        <div class="hero-orb hero-orb--left"></div>
+        <div class="hero-orb hero-orb--right"></div>
+
+        <main class="main-panel">
+            <header class="hero hero--criterion">
+                <div class="hero__eyebrow">Single Criterion Agent</div>
+                <h1>Positivity Review</h1>
+                <p class="hero__copy">
+                    Day la chatbot rieng cho positivity. Trang nay chi goi dung model positivity va chi tra loi trong pham vi tieu chi positivity.
+                </p>
+                <div class="hero__meta">
+                    <span class="meta-pill">Criterion: positivity</span>
+                    <span class="meta-pill">Fixed route</span>
+                </div>
+                <p class="criterion-backlink"><a href="/">Quay lai trang tong</a></p>
+            </header>
+
+            <section class="positivity-layout">
+                <aside class="positivity-info">
+                    <div class="positivity-info__card">
+                        <span class="section-kicker">How It Works</span>
+                        <h2>One page, one model</h2>
+                        <p>Frontend cua trang nay chi goi endpoint positivity. Backend cua endpoint do chi goi evaluate_positivity().</p>
+                    </div>
+                    <div class="positivity-info__card">
+                        <span class="section-kicker">Prompt Tip</span>
+                        <p>Ban co the gui theo kieu: Hay danh gia hoi thoai nay ve positivity: Khach hang: ... Nhan vien: ...</p>
+                    </div>
+                </aside>
+
+                <section class="composer-card positivity-chat">
+                    <div id="positivityMessages" class="messages">
+                        <div class="message message--system">
+                            <div class="message__label">System</div>
+                            <div class="message__bubble">
+                                Day la positivity chatbot. Moi ket qua se chi dung model positivity.
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="positivityForm" class="composer">
+                        <textarea id="positivityInput" rows="1" placeholder="Dan hoi thoai va hoi positivity agent..."></textarea>
+                        <div class="composer__footer">
+                            <div class="composer__hint">Chi route vao positivity model.</div>
+                            <button id="positivitySendButton" type="submit">Send</button>
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        window.CRITERION_CHAT_CONFIG = {
+            criterion: "positivity",
+            endpoint: "/api/criterion/positivity/chat",
+            title: "Positivity"
+        };
+    </script>
+    <script src="{{ url_for('static', filename='js/criterion_chat.js') }}"></script>
+</body>
+</html>
