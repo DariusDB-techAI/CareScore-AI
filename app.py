@@ -55,7 +55,7 @@ for key, value in CRITERIA_META.items():
             "description": value["summary"],
             "prompt": f"Hay danh gia hoi thoai nay theo tieu chi {value['label'].lower()}:",
             "theme": "criterion",
-            "has_page": key == "positivity",
+            "has_page": key in ["positivity", "toxicity"],
             "href": f"/criterion/{key}",
         }
     )
@@ -63,6 +63,7 @@ for key, value in CRITERIA_META.items():
 CONVERSATIONS: dict[str, list[dict[str, object]]] = {}
 CRITERION_CONVERSATIONS: dict[str, dict[str, list[dict[str, object]]]] = {
     "positivity": {},
+    "toxicity": {},
 }
 
 
@@ -214,6 +215,10 @@ def positivity_page():
     criterion = next(item for item in CRITERIA if item["id"] == "positivity")
     return render_template("positivity.html", criterion=criterion)
 
+@app.get("/criterion/toxicity")
+def toxicity_page():
+    criterion = next(item for item in CRITERIA if item["id"] == "toxicity")
+    return render_template("toxicity.html", criterion=criterion)
 
 @app.get("/api/config")
 def api_config():
@@ -296,6 +301,75 @@ def api_criterion_positivity_chat():
     append_assistant_message(messages, reply, evaluation)
     return jsonify({"conversation_id": conversation_id, "messages": messages})
 
+@app.post("/api/criterion/toxicity/chat")
+def api_criterion_toxicity_chat():
+
+    criterion = "toxicity"
+
+    payload = request.get_json(silent=True) or {}
+    conversation_id = str(payload.get("conversation_id") or "default")
+    message = str(payload.get("message") or "").strip()
+
+    if not message:
+        return jsonify({"error": "Message is required."}), 400
+
+    criterion_conversations = CRITERION_CONVERSATIONS.setdefault(
+        criterion,
+        {}
+    )
+
+    messages = criterion_conversations.setdefault(
+        conversation_id,
+        []
+    )
+
+    messages.append({
+        "role": "user",
+        "content": message
+    })
+
+    try:
+
+        reply, evaluation = run_single_criterion_chat(
+            criterion,
+            message
+        )
+
+    except RuntimeError:
+
+        from services.evaluation import evaluate_criterion_text
+
+        evaluation = evaluate_criterion_text(
+            extract_transcript(message),
+            criterion
+        )
+
+        reply = build_single_criterion_fallback_reply(
+            criterion,
+            evaluation
+        )
+
+    except Exception as exc:
+
+        messages.pop()
+
+        return jsonify({
+            "error": str(exc)
+        }), 500
+
+    append_assistant_message(
+        messages,
+        reply,
+        evaluation
+    )
+
+    return jsonify({
+
+        "conversation_id": conversation_id,
+
+        "messages": messages
+
+    })
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8001, debug=True)

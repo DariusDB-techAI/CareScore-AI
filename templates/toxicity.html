@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxicity Agent</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="toxicity-page">
+
+    <div class="page-shell">
+
+        <div class="hero-orb hero-orb--left"></div>
+        <div class="hero-orb hero-orb--right"></div>
+
+        <main class="main-panel">
+
+            <header class="hero hero--criterion">
+
+                <div class="hero__eyebrow">
+                    Single Criterion Agent
+                </div>
+
+                <h1>Toxicity Analysis</h1>
+
+                <p class="hero__copy">
+                    Công cụ này được thiết kế để phân tích mức độ Toxicity trong hội thoại. Mọi đánh giá đều được thực
+                    hiện bằng mô hình chuyên biệt cho tiêu chí Toxicity, tập trung nhận diện các biểu hiện công kích,
+                    xúc phạm hoặc ngôn từ tiêu cực.
+                </p>
+
+                <div class="hero__meta">
+                    <span class="meta-pill">
+                        Criterion: toxicity
+                    </span>
+
+                    <span class="meta-pill">
+                        Fixed route
+                    </span>
+                </div>
+
+                <p class="criterion-backlink">
+                    <a href="/">Quay lai trang tong</a>
+                </p>
+
+            </header>
+
+            <section class="toxicity-layout">
+
+                <aside class="toxicity-info">
+
+                    <div class="toxicity-info__card">
+                        <span class="section-kicker">
+                            How It Works
+                        </span>
+
+                        <h2>Specialized Evaluation </h2>
+
+                        <p>
+                            Trang này sử dụng pipeline đánh giá Toxicity riêng biệt. Mọi yêu cầu đều được chuyển
+                            đến mô hình chuyên trách nhằm đảm bảo kết quả phân tích nhất quán và chính xác.
+                        </p>
+                    </div>
+
+                    <div class="toxicity-info__card">
+
+                        <span class="section-kicker">
+                            Prompt Tip
+                        </span>
+
+                        <p>
+                            Bạn có thể nhập toàn bộ đoạn hội thoại và yêu cầu hệ thống đánh giá mức độ Toxicity. Ví dụ:
+                            "Hãy phân tích mức độ Toxicity của cuộc hội thoại sau: Khách hàng: ... Nhân viên: ..."
+                        </p>
+
+                    </div>
+
+                </aside>
+
+                <section class="composer-card toxicity-chat">
+
+                    <div id="toxicityMessages" class="messages">
+
+                        <div class="message message--system">
+
+                            <div class="message__label">
+                                System
+                            </div>
+
+                            <div class="message__bubble">
+                                Chào mừng bạn đến với Toxicity Agent.
+                                Hệ thống chỉ thực hiện phân tích và phản hồi liên
+                                quan đến tiêu chí Toxicity trong hội thoại.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <form id="toxicityForm" class="composer">
+
+                        <textarea id="toxicityInput" rows="1"
+                            placeholder="Nhập hoặc dán hội thoại cần phân tích Toxicity..."></textarea>
+
+                        <div class="composer__footer">
+
+                            <div class="composer__hint">
+
+                            </div>
+
+                            <button id="toxicitySendButton" type="submit">
+                                Send
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+
+        window.CRITERION_CHAT_CONFIG = {
+            criterion: "toxicity",
+            endpoint: "/api/criterion/toxicity/chat",
+            title: "Toxicity"
+        };
+
+    </script>
+
+    <script src="{{ url_for('static', filename='js/toxicity_chat.js') }}"></script>
+
+</body>
+
+</html>

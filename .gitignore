@@ -2,3 +2,10 @@
 .venv/
 __pycache__/
 *.pyc
+models/
+results/
+*.safetensors
+*.bin
+*.pt
+*.pth
+checkpoint*/
