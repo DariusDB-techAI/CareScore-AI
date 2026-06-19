@@ -1,0 +1,43 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "thu-coai/esconv",
+  "purpose": "auxiliary",
+  "criterion": "empathy",
+  "local_name": "esconv",
+  "description": "Emotional Support Conversation, dùng pretrain/baseline cho empathy.",
+  "splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "status": "success",
+  "downloaded_files": [
+    {
+      "split": "train",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\esconv\\train.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\esconv\\train.jsonl",
+      "rows": 910,
+      "columns": [
+        "text"
+      ]
+    },
+    {
+      "split": "validation",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\esconv\\validation.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\esconv\\validation.jsonl",
+      "rows": 195,
+      "columns": [
+        "text"
+      ]
+    },
+    {
+      "split": "test",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\esconv\\test.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\esconv\\test.jsonl",
+      "rows": 195,
+      "columns": [
+        "text"
+      ]
+    }
+  ]
+}

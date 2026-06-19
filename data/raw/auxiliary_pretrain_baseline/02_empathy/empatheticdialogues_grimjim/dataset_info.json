@@ -1,0 +1,11 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "grimjim/empatheticdialogues",
+  "purpose": "auxiliary",
+  "criterion": "empathy",
+  "local_name": "empatheticdialogues_grimjim",
+  "description": "Mirror khác của EmpatheticDialogues, dùng phụ cho empathy.",
+  "status": "failed",
+  "error": "Config name is missing.\nPlease pick one among the available configs: ['test', 'test_fixed_commas', 'train', 'train_fixed_commas', 'valid', 'valid_fixed_commas']\nExample of usage:\n\t`load_dataset('grimjim/empatheticdialogues', 'test')`",
+  "suggestion": "Kiểm tra dataset_id, quyền truy cập, hoặc dataset có cần trust_remote_code/fallback hay không."
+}

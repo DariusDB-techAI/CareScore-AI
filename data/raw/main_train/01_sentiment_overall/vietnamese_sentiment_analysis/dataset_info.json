@@ -1,0 +1,35 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "anotherpolarbear/vietnamese-sentiment-analysis",
+  "purpose": "main_train",
+  "criterion": "sentiment",
+  "local_name": "vietnamese_sentiment_analysis",
+  "description": "Dataset tiếng Việt cho sentiment analysis, dùng train tiêu chí cảm xúc tổng thể.",
+  "splits": [
+    "train",
+    "test"
+  ],
+  "status": "success",
+  "downloaded_files": [
+    {
+      "split": "train",
+      "csv": "data\\raw\\main_train\\01_sentiment_overall\\vietnamese_sentiment_analysis\\train.csv",
+      "jsonl": "data\\raw\\main_train\\01_sentiment_overall\\vietnamese_sentiment_analysis\\train.jsonl",
+      "rows": 7786,
+      "columns": [
+        "comment",
+        "label"
+      ]
+    },
+    {
+      "split": "test",
+      "csv": "data\\raw\\main_train\\01_sentiment_overall\\vietnamese_sentiment_analysis\\test.csv",
+      "jsonl": "data\\raw\\main_train\\01_sentiment_overall\\vietnamese_sentiment_analysis\\test.jsonl",
+      "rows": 2224,
+      "columns": [
+        "comment",
+        "label"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id2label": {
+    "0": "clean",
+    "1": "toxic"
+  },
+  "label2id": {
+    "clean": 0,
+    "toxic": 1
+  }
+}

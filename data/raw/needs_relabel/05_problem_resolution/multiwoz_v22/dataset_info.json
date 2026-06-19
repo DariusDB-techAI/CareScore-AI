@@ -1,0 +1,11 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "pfb30/multi_woz_v22",
+  "purpose": "needs_relabel",
+  "criterion": "resolution",
+  "local_name": "multiwoz_v22",
+  "description": "Task-oriented dialogue, cần gán nhãn lại cho problem resolution.",
+  "status": "failed",
+  "error": "Dataset scripts are no longer supported, but found multi_woz_v22.py",
+  "suggestion": "Kiểm tra dataset_id, quyền truy cập, hoặc dataset có cần trust_remote_code/fallback hay không."
+}

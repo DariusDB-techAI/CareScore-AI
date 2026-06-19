@@ -1,0 +1,11 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "sonlam1102/vithsd",
+  "purpose": "auxiliary",
+  "criterion": "toxicity",
+  "local_name": "vithsd",
+  "description": "Vietnamese target-oriented hate speech detection, dùng bổ sung toxicity.",
+  "status": "failed",
+  "error": "Dataset 'sonlam1102/vithsd' is a gated dataset on the Hub. You must be authenticated to access it.",
+  "suggestion": "Kiểm tra dataset_id, quyền truy cập, hoặc dataset có cần trust_remote_code/fallback hay không."
+}

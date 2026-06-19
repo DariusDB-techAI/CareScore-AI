@@ -1,0 +1,55 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "tridm/UIT-VSFC",
+  "purpose": "main_train",
+  "criterion": "sentiment",
+  "local_name": "uit_vsfc_tridm",
+  "description": "UIT-VSFC tiếng Việt, có nhãn sentiment, dùng train/bổ sung sentiment.",
+  "splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "status": "success",
+  "downloaded_files": [
+    {
+      "split": "train",
+      "csv": "data\\raw\\main_train\\01_sentiment_overall\\uit_vsfc_tridm\\train.csv",
+      "jsonl": "data\\raw\\main_train\\01_sentiment_overall\\uit_vsfc_tridm\\train.jsonl",
+      "rows": 11426,
+      "columns": [
+        "Sentence",
+        "Topic",
+        "Sentiment",
+        "Encoded_topic",
+        "Encoded_sentiment"
+      ]
+    },
+    {
+      "split": "validation",
+      "csv": "data\\raw\\main_train\\01_sentiment_overall\\uit_vsfc_tridm\\validation.csv",
+      "jsonl": "data\\raw\\main_train\\01_sentiment_overall\\uit_vsfc_tridm\\validation.jsonl",
+      "rows": 1583,
+      "columns": [
+        "Sentence",
+        "Topic",
+        "Sentiment",
+        "Encoded_topic",
+        "Encoded_sentiment"
+      ]
+    },
+    {
+      "split": "test",
+      "csv": "data\\raw\\main_train\\01_sentiment_overall\\uit_vsfc_tridm\\test.csv",
+      "jsonl": "data\\raw\\main_train\\01_sentiment_overall\\uit_vsfc_tridm\\test.jsonl",
+      "rows": 3166,
+      "columns": [
+        "Sentence",
+        "Topic",
+        "Sentiment",
+        "Encoded_topic",
+        "Encoded_sentiment"
+      ]
+    }
+  ]
+}

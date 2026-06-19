@@ -1,0 +1,11 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "uitnlp/vihsd",
+  "purpose": "main_train",
+  "criterion": "toxicity",
+  "local_name": "vihsd",
+  "description": "ViHSD tiếng Việt, nhãn CLEAN/OFFENSIVE/HATE, dùng train toxicity.",
+  "status": "failed",
+  "error": "Dataset 'uitnlp/vihsd' is a gated dataset on the Hub. You must be authenticated to access it.",
+  "suggestion": "Kiểm tra dataset_id, quyền truy cập, hoặc dataset có cần trust_remote_code/fallback hay không."
+}

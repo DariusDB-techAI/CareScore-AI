@@ -1,0 +1,11 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "ura-hcmut/Vietnamese-Customer-Support-QA",
+  "purpose": "needs_relabel",
+  "criterion": "resolution",
+  "local_name": "vietnamese_customer_support_qa",
+  "description": "QA hỗ trợ khách hàng tiếng Việt, cần gán nhãn lại theo 5 tiêu chí.",
+  "status": "failed",
+  "error": "Dataset 'ura-hcmut/Vietnamese-Customer-Support-QA' is a gated dataset on the Hub. You must be authenticated to access it.",
+  "suggestion": "Kiểm tra dataset_id, quyền truy cập, hoặc dataset có cần trust_remote_code/fallback hay không."
+}

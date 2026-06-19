@@ -1,0 +1,12 @@
+{
+  "id2label": {
+    "0": "low_empathy",
+    "1": "medium_empathy",
+    "2": "high_empathy"
+  },
+  "label2id": {
+    "low_empathy": 0,
+    "medium_empathy": 1,
+    "high_empathy": 2
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT Shop Advisor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hub.css') }}">
+</head>
+<body class="hub-page">
+    <div class="hub-shell">
+        <aside class="hub-sidebar">
+            <div class="hub-brand">
+                <div class="hub-brand__logo" aria-hidden="true">
+                    <span class="hub-brand__logo-mark hub-brand__logo-mark--f">F</span>
+                    <span class="hub-brand__logo-mark hub-brand__logo-mark--p">P</span>
+                    <span class="hub-brand__logo-mark hub-brand__logo-mark--t">T</span>
+                </div>
+                <div>
+                    <h1>V2HAB chatbot</h1>
+                </div>
+            </div>
+
+            <button id="newChatButton" class="sidebar-button sidebar-button--primary" type="button">Chat moi</button>
+
+            <section class="sidebar-section">
+                <div class="sidebar-section__head">
+                    <span class="hub-label">Recent</span>
+                </div>
+                <div id="recentList" class="recent-list">
+                    <div class="recent-empty">Chua co hoi thoai nao.</div>
+                </div>
+            </section>
+        </aside>
+
+        <main class="hub-main">
+            <header class="hub-topbar">
+                <div>
+                    <span class="hub-label">FPT Shop Assistant</span>
+                    <h2>Tu van mua hang va CSKH theo ngu canh FPT Shop.</h2>
+                </div>
+                <div class="hub-topbar__meta">
+                    <span id="connectionBadge" class="status-badge">Dang ket noi websocket...</span>
+                    <span id="modelBadge" class="status-badge">Dang kiem tra model...</span>
+                </div>
+            </header>
+
+            <section id="messages" class="hub-messages"></section>
+
+            <form id="chatForm" class="hub-composer">
+                <textarea id="messageInput" rows="1" placeholder="Hoi ve dien thoai, laptop, phu kien, tra gop, bao hanh... hoac yeu cau tom tat hoi thoai."></textarea>
+                <div class="hub-composer__footer">
+                    <span class="composer-hint">Enter de gui. Shift+Enter de xuong dong.</span>
+                    <button id="sendButton" class="send-button" type="submit">Send</button>
+                </div>
+            </form>
+
+            <section class="criteria-dock">
+                <div class="criteria-dock__head">
+                    <div>
+                        <span class="hub-label">Danh gia</span>
+                        <h3>Tieu chi noi bo</h3>
+                    </div>
+                    <p>Neu can, cham de chen prompt danh gia.</p>
+                </div>
+                <div id="criteriaDock" class="criteria-dock__grid"></div>
+            </section>
+        </main>
+
+        <aside class="hub-insights">
+            <section class="insight-panel">
+                <div class="insight-panel__head">
+                    <div>
+                        <span class="hub-label">Evaluator</span>
+                        <h3>Danh gia hoi thoai</h3>
+                    </div>
+                </div>
+                <form id="evaluatorForm" class="evaluator-box">
+                    <textarea id="evaluatorInput" rows="2" placeholder="Neu can, danh gia transcript theo cac tieu chi noi bo."></textarea>
+                    <div id="evaluatorCriteria" class="evaluator-criteria"></div>
+                    <p id="evaluatorPlanMeta" class="evaluator-meta">The orchestrator will route the current thread to the right local models.</p>
+                    <div class="evaluator-box__footer">
+                        <span class="composer-hint">Uses the current thread as transcript.</span>
+                        <button id="evaluatorButton" class="send-button send-button--secondary" type="submit">Evaluate</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="insight-panel">
+                <div class="insight-panel__head">
+                    <div>
+                        <span class="hub-label">Nguon tham chieu</span>
+                        <h3>Context FPT Shop</h3>
+                    </div>
+                </div>
+                <div id="insightCriteria" class="insight-criteria"></div>
+            </section>
+        </aside>
+    </div>
+
+    <script>
+        window.APP_BOOTSTRAP = {
+            criteria: {{ criteria|tojson }},
+            wsPath: {{ ws_path|tojson }}
+        };
+    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

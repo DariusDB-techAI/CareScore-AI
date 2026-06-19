@@ -1,0 +1,9 @@
+{
+  "source_type": "manual",
+  "purpose": "needs_relabel",
+  "criterion": "resolution",
+  "name": "customer_support_on_twitter_kaggle",
+  "source": "Kaggle: thoughtvector/customer-support-on-twitter",
+  "note": "Dataset lớn về customer support trên Twitter. Cần tài khoản Kaggle và file kaggle.json. Lệnh tải: kaggle datasets download -d thoughtvector/customer-support-on-twitter",
+  "status": "manual_download_required"
+}

@@ -1,0 +1,10 @@
+{
+  "source_type": "github",
+  "repo_url": "https://github.com/guyfe/Tweetsumm.git",
+  "purpose": "needs_relabel",
+  "criterion": "resolution",
+  "local_name": "tweetsumm",
+  "description": "TweetSumm customer support dialogues, cần gán nhãn lại theo 5 tiêu chí.",
+  "status": "success",
+  "error": null
+}

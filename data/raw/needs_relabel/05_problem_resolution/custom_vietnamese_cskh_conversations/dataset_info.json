@@ -1,0 +1,9 @@
+{
+  "source_type": "manual",
+  "purpose": "needs_relabel",
+  "criterion": "resolution",
+  "name": "custom_vietnamese_cskh_conversations",
+  "source": "Your own collected CSKH conversations",
+  "note": "Đây là nơi bạn đặt dữ liệu hội thoại CSKH tiếng Việt tự thu thập. Dữ liệu này nên được gán nhãn lại theo 5 tiêu chí của dự án.",
+  "status": "manual_download_required"
+}

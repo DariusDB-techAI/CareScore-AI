@@ -1,0 +1,25 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "frfede/politeness-corpus",
+  "purpose": "auxiliary",
+  "criterion": "politeness",
+  "local_name": "politeness_corpus_frfede",
+  "description": "Politeness corpus, dùng baseline cho lịch sự/tôn trọng.",
+  "splits": [
+    "train"
+  ],
+  "status": "success",
+  "downloaded_files": [
+    {
+      "split": "train",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\03_politeness_respect\\politeness_corpus_frfede\\train.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\03_politeness_respect\\politeness_corpus_frfede\\train.jsonl",
+      "rows": 16428,
+      "columns": [
+        "text",
+        "label",
+        "sentiment"
+      ]
+    }
+  ]
+}

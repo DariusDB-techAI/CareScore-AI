@@ -1,0 +1,26 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "TNE-AI/customer-support-on-twitter-conversation",
+  "purpose": "needs_relabel",
+  "criterion": "resolution",
+  "local_name": "customer_support_on_twitter_conversation_hf",
+  "description": "Customer support conversation, cần gán nhãn lại cho resolution/empathy/politeness.",
+  "splits": [
+    "train"
+  ],
+  "status": "success",
+  "downloaded_files": [
+    {
+      "split": "train",
+      "csv": "data\\raw\\needs_relabel\\05_problem_resolution\\customer_support_on_twitter_conversation_hf\\train.csv",
+      "jsonl": "data\\raw\\needs_relabel\\05_problem_resolution\\customer_support_on_twitter_conversation_hf\\train.jsonl",
+      "rows": 794335,
+      "columns": [
+        "conversation_id",
+        "company",
+        "conversation",
+        "summary"
+      ]
+    }
+  ]
+}

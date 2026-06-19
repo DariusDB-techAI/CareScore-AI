@@ -1,0 +1,69 @@
+{
+  "source_type": "direct_csv",
+  "dataset_name": "EmpatheticDialogues",
+  "purpose": "auxiliary",
+  "criterion": "empathy",
+  "local_name": "empathetic_dialogues_direct",
+  "description": "EmpatheticDialogues tải trực tiếp từ CSV mirror, dùng auxiliary cho empathy.",
+  "status": "success",
+  "downloaded_files": [
+    {
+      "split": "train",
+      "source_url": "https://raw.githubusercontent.com/bdotloh/affect-classification/main/data/empathetic-dialogues/train.csv",
+      "raw_file": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_direct\\train_raw.csv",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_direct\\train.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_direct\\train.jsonl",
+      "rows": 76492,
+      "columns": [
+        "conv_id",
+        "utterance_idx",
+        "context",
+        "prompt",
+        "speaker_idx",
+        "utterance",
+        "selfeval",
+        "tags"
+      ],
+      "note": "Đọc bằng engine='python' và on_bad_lines='skip'."
+    },
+    {
+      "split": "validation",
+      "source_url": "https://raw.githubusercontent.com/bdotloh/affect-classification/main/data/empathetic-dialogues/valid.csv",
+      "raw_file": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_direct\\validation_raw.csv",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_direct\\validation.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_direct\\validation.jsonl",
+      "rows": 6313,
+      "columns": [
+        "conv_id",
+        "utterance_idx",
+        "context",
+        "prompt",
+        "speaker_idx",
+        "utterance",
+        "selfeval",
+        "tags"
+      ],
+      "note": "Đọc bằng engine='python' và on_bad_lines='skip'."
+    },
+    {
+      "split": "test",
+      "source_url": "https://raw.githubusercontent.com/bdotloh/affect-classification/main/data/empathetic-dialogues/test.csv",
+      "raw_file": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_direct\\test_raw.csv",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_direct\\test.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_direct\\test.jsonl",
+      "rows": 5695,
+      "columns": [
+        "conv_id",
+        "utterance_idx",
+        "context",
+        "prompt",
+        "speaker_idx",
+        "utterance",
+        "selfeval",
+        "tags"
+      ],
+      "note": "Đọc bằng engine='python' và on_bad_lines='skip'."
+    }
+  ],
+  "failed_files": []
+}

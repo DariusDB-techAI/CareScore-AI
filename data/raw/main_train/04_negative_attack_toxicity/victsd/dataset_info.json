@@ -1,0 +1,58 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "tarudesu/ViCTSD",
+  "purpose": "main_train",
+  "criterion": "toxicity",
+  "local_name": "victsd",
+  "description": "ViCTSD tiếng Việt, dùng cho toxic/constructive speech detection.",
+  "splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "status": "success",
+  "downloaded_files": [
+    {
+      "split": "train",
+      "csv": "data\\raw\\main_train\\04_negative_attack_toxicity\\victsd\\train.csv",
+      "jsonl": "data\\raw\\main_train\\04_negative_attack_toxicity\\victsd\\train.jsonl",
+      "rows": 7000,
+      "columns": [
+        "Unnamed: 0",
+        "Comment",
+        "Constructiveness",
+        "Toxicity",
+        "Title",
+        "Topic"
+      ]
+    },
+    {
+      "split": "validation",
+      "csv": "data\\raw\\main_train\\04_negative_attack_toxicity\\victsd\\validation.csv",
+      "jsonl": "data\\raw\\main_train\\04_negative_attack_toxicity\\victsd\\validation.jsonl",
+      "rows": 2000,
+      "columns": [
+        "Unnamed: 0",
+        "Comment",
+        "Constructiveness",
+        "Toxicity",
+        "Title",
+        "Topic"
+      ]
+    },
+    {
+      "split": "test",
+      "csv": "data\\raw\\main_train\\04_negative_attack_toxicity\\victsd\\test.csv",
+      "jsonl": "data\\raw\\main_train\\04_negative_attack_toxicity\\victsd\\test.jsonl",
+      "rows": 1000,
+      "columns": [
+        "Unnamed: 0",
+        "Comment",
+        "Constructiveness",
+        "Toxicity",
+        "Title",
+        "Topic"
+      ]
+    }
+  ]
+}

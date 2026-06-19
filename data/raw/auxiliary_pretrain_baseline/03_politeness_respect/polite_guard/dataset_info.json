@@ -1,0 +1,52 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "Intel/polite-guard",
+  "purpose": "auxiliary",
+  "criterion": "politeness",
+  "local_name": "polite_guard",
+  "description": "Dataset polite/neutral/impolite, dùng baseline cho lịch sự.",
+  "splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "status": "success",
+  "downloaded_files": [
+    {
+      "split": "train",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\03_politeness_respect\\polite_guard\\train.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\03_politeness_respect\\polite_guard\\train.jsonl",
+      "rows": 80000,
+      "columns": [
+        "text",
+        "label",
+        "source",
+        "reasoning"
+      ]
+    },
+    {
+      "split": "validation",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\03_politeness_respect\\polite_guard\\validation.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\03_politeness_respect\\polite_guard\\validation.jsonl",
+      "rows": 10000,
+      "columns": [
+        "text",
+        "label",
+        "source",
+        "reasoning"
+      ]
+    },
+    {
+      "split": "test",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\03_politeness_respect\\polite_guard\\test.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\03_politeness_respect\\polite_guard\\test.jsonl",
+      "rows": 10200,
+      "columns": [
+        "text",
+        "label",
+        "source",
+        "reasoning"
+      ]
+    }
+  ]
+}

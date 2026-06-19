@@ -1,0 +1,12 @@
+{
+  "id2label": {
+    "0": "impolite",
+    "1": "neutral",
+    "2": "polite"
+  },
+  "label2id": {
+    "impolite": 0,
+    "neutral": 1,
+    "polite": 2
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "source_type": "huggingface",
+  "dataset_id": "bdotloh/empathetic-dialogues-contexts",
+  "purpose": "auxiliary",
+  "criterion": "empathy",
+  "local_name": "empathetic_dialogues_contexts",
+  "description": "Mirror EmpatheticDialogues, dùng baseline/pretrain cho empathy.",
+  "splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "status": "success",
+  "downloaded_files": [
+    {
+      "split": "train",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_contexts\\train.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_contexts\\train.jsonl",
+      "rows": 19209,
+      "columns": [
+        "Unnamed: 0",
+        "situation",
+        "emotion"
+      ]
+    },
+    {
+      "split": "validation",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_contexts\\validation.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_contexts\\validation.jsonl",
+      "rows": 2756,
+      "columns": [
+        "Unnamed: 0",
+        "situation",
+        "emotion"
+      ]
+    },
+    {
+      "split": "test",
+      "csv": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_contexts\\test.csv",
+      "jsonl": "data\\raw\\auxiliary_pretrain_baseline\\02_empathy\\empathetic_dialogues_contexts\\test.jsonl",
+      "rows": 2542,
+      "columns": [
+        "Unnamed: 0",
+        "situation",
+        "emotion"
+      ]
+    }
+  ]
+}
