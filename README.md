@@ -204,10 +204,38 @@ These notebooks are intended for:
 
 ## How to Run
 
-### 1. Install dependencies
+### Windows PowerShell
+
+```powershell
+git clone <YOUR_GITHUB_REPO_URL>
+cd <YOUR_REPO_FOLDER>
+
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
+Copy-Item .env.example .env
+python app.py
+streamlit run streamlit_app.py
+```
+
+### macOS / Linux
 
 ```bash
+git clone <YOUR_GITHUB_REPO_URL>
+cd <YOUR_REPO_FOLDER>
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install --upgrade pip
 pip install -r requirements.txt
+
+cp .env.example .env
+python app.py
+streamlit run streamlit_app.py
 ```
 
 ### 2. Configure environment variables
@@ -231,23 +259,6 @@ Notes:
 - Local criterion evaluation can still work without Gemini if the local models are available.
 - `REDIS_URL` is optional.
 
-### 3. Start Streamlit
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\run_streamlit.ps1
-```
-
-Or:
-
-```bash
-python -m streamlit run streamlit_app.py --server.port 8501
-```
-
-### 4. Start Flask app
-
-```bash
-python app.py
-```
 
 Default local services:
 
