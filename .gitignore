@@ -2,3 +2,9 @@
 .venv/
 __pycache__/
 *.pyc
+
+# Model weights — tải bằng download_model.py / train notebook
+models/
+
+# macOS duplicate copies
+* 2.csv
