@@ -4,8 +4,10 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
+from .paths import PROJECT_ROOT, resolve_project_path
 
-DEFAULT_MODELS_DIR = Path(os.getenv("MODELS_DIR", "models"))
+
+DEFAULT_MODELS_DIR = resolve_project_path(os.getenv("MODELS_DIR", "models"), base_dir=PROJECT_ROOT)
 
 
 @dataclass(frozen=True)

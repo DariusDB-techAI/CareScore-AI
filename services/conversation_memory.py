@@ -7,6 +7,8 @@ from pathlib import Path
 from threading import Lock
 from typing import Any
 
+from .paths import PROJECT_ROOT, resolve_project_path
+
 try:
     import redis  # type: ignore
 except Exception:  # pragma: no cover
@@ -225,7 +227,7 @@ class ConversationMemoryService:
 
 
 def build_default_memory_service(base_dir: Path) -> ConversationMemoryService:
-    memory_dir = base_dir / os.getenv("MEMORY_DIR", "data/memory")
+    memory_dir = resolve_project_path(os.getenv("MEMORY_DIR", "data/memory"), base_dir=base_dir or PROJECT_ROOT)
     redis_url = os.getenv("REDIS_URL", "").strip()
     redis_ttl = int(os.getenv("REDIS_TTL_SECONDS", "86400"))
     return ConversationMemoryService(

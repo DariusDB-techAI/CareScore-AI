@@ -22,9 +22,10 @@ from services.google_ai import (
     validate_gemini_api_key,
 )
 from services.ngrok_helper import start_ngrok_tunnel
+from services.paths import PROJECT_ROOT
 
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = PROJECT_ROOT
 
 
 def load_local_env() -> None:

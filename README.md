@@ -39,6 +39,18 @@ Các phần chính:
 
 Không còn Streamlit, không còn port `8501`, không còn cần 2 tunnel ngrok.
 
+## Quy ước path
+
+Project đã được chỉnh để dùng path theo repo root thay vì path tuyệt đối theo máy local.
+
+Điều này có nghĩa:
+
+- `MODELS_DIR=models` sẽ được hiểu là `<repo>/models`
+- `MEMORY_DIR=data/memory` sẽ được hiểu là `<repo>/data/memory`
+- file `.env` được đọc từ ngay repo root
+
+Vì vậy người khác chỉ cần `git clone`, cài dependency và chạy app trong repo là có thể dùng mà không phải sửa path theo máy riêng.
+
 ## Tính năng chính
 
 - Chat với assistant theo ngữ cảnh FPT Shop

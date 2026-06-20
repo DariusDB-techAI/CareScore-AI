@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 import os
-from pathlib import Path
+
+from .paths import PROJECT_ROOT
 
 
 PLACEHOLDER_API_KEYS = {
@@ -11,7 +12,7 @@ PLACEHOLDER_API_KEYS = {
     "changeme",
 }
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = PROJECT_ROOT
 
 
 def _load_local_env() -> None:
