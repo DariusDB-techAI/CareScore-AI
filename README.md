@@ -99,7 +99,7 @@ pip install -r requirements.txt
 
 ## Cấu hình
 
-Tạo file `.env` từ `.env.example`.
+Copy-Item .env.example .env
 
 Ví dụ:
 
