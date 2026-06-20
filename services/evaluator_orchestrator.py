@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import os
 from dataclasses import dataclass
 from statistics import mean
 from typing import Any
@@ -18,6 +17,7 @@ from .evaluation import (
     is_actionable_result,
 )
 from .evaluator_orchestration_prompt import build_evaluator_orchestration_prompt
+from .google_ai import get_gemini_model, is_gemini_configured, validate_gemini_api_key
 
 
 VALID_CRITERIA = list(CRITERIA_META.keys())
@@ -41,8 +41,7 @@ class EvaluatorPlan:
 
 
 def _gemini_is_configured() -> bool:
-    api_key = os.getenv("GEMINI_API_KEY", "").strip()
-    return api_key not in {"", "your_api_key_here", "paste_your_key_here", "changeme"}
+    return is_gemini_configured()
 
 
 def _normalize_criteria(values: list[Any]) -> list[str]:
@@ -107,8 +106,8 @@ def create_evaluator_plan(
     if not _gemini_is_configured():
         return _heuristic_plan(user_prompt, selected)
 
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
-    client = genai.Client(api_key=os.getenv("GEMINI_API_KEY", "").strip())
+    model = get_gemini_model()
+    client = genai.Client(api_key=validate_gemini_api_key())
     prompt = build_evaluator_orchestration_prompt(user_prompt, selected, transcript[:1200])
     response = client.models.generate_content(model=model, contents=prompt)
     text = (response.text or "").strip()

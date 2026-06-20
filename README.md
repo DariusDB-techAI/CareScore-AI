@@ -1,147 +1,66 @@
 # V2HAB Chatbot
 
-Multi-Criteria Vietnamese Conversation Evaluation Workspace for Customer Service and Sales Support
+Workspace đánh giá hội thoại tiếng Việt theo nhiều tiêu chí cho CSKH và bán hàng, chạy trên một Flask app duy nhất.
 
-`Python` `Flask` `Streamlit` `Transformers` `PhoBERT` `XLM-RoBERTa`
+`Python` `Flask` `Transformers` `PhoBERT` `XLM-RoBERTa`
 
-## Overview
+## Mục tiêu
 
-This repository provides a complete workspace for analyzing Vietnamese customer-service conversations across multiple quality dimensions, while also supporting an FPT Shop advisor chatbot experience.
+Project này giải quyết 2 nhu cầu trong cùng một app:
 
-The project combines:
+- Chatbot tư vấn theo ngữ cảnh FPT Shop
+- Đánh giá chất lượng hội thoại theo nhiều tiêu chí nội bộ
 
-- Local NLP models for conversation quality scoring
-- A Flask hub application for chat, orchestration, and conversation memory
-- Streamlit criterion pages for focused single-metric review
-- Training notebooks for each evaluation criterion
-- Structured dataset folders for pretraining, baseline experimentation, and relabeling
+Thay vì tách nhiều service hoặc nhiều public URL, toàn bộ UI và API hiện chạy dưới một domain Flask duy nhất. Điều này giúp việc share qua ngrok đơn giản hơn: chỉ cần một link.
 
-It is designed for use cases such as:
+## Các tiêu chí đánh giá
 
-- Customer-service quality assurance
-- Agent coaching and post-call review
-- Internal conversation benchmarking
-- Vietnamese NLP model experimentation
-- Retail support assistant prototyping
+- `positivity`: sắc thái tích cực, trung tính hay tiêu cực
+- `empathy`: mức độ ghi nhận cảm xúc và bối cảnh khách hàng
+- `politeness`: độ lịch sự, mềm mại, tôn trọng
+- `toxicity`: dấu hiệu công kích, đổ lỗi, gay gắt
+- `resolution`: mức độ rõ ràng của hướng xử lý, next step, owner
 
-## Core Idea
+Mỗi tiêu chí có pipeline riêng, mapping điểm riêng và output schema thống nhất để dễ mở rộng.
 
-Instead of treating a conversation as a single generic classification task, this project evaluates it through separate quality lenses:
+## Kiến trúc hiện tại
 
-- `Sentiment / Positivity`
-- `Empathy`
-- `Politeness`
-- `Toxicity`
-- `Problem Resolution`
+App hiện có một entrypoint chính:
 
-Each criterion has its own inference path, score mapping, and summary logic. This makes the system more interpretable for QA teams and easier to extend model-by-model.
+- `app.py`: Flask app, WebSocket chat hub, REST API, criterion pages, memory lifecycle
 
-## Key Features
+Các phần chính:
 
-- Multi-criteria evaluation for Vietnamese conversations
-- Local Transformer inference using checked-in model artifacts
-- Dedicated criterion APIs with a shared output schema
-- Transcript normalization aligned with notebook training format
-- Streamlit pages for criterion-specific review
-- Flask chat hub with WebSocket-based interaction
-- Persistent conversation memory on filesystem, with optional Redis caching
-- FPT Shop context enrichment for advisor-style responses
-- Training notebooks for sentiment, empathy, politeness, toxicity, and resolution
+- `services/`: inference, registry model, preprocessing, orchestrator, memory, FPT Shop context
+- `templates/`: HTML cho hub và criterion workspace
+- `static/`: CSS và JS cho giao diện
+- `models/`: model artifacts cục bộ
+- `data/`: dataset thô, dữ liệu processed và memory runtime
 
-## Evaluation Criteria
+Không còn Streamlit, không còn port `8501`, không còn cần 2 tunnel ngrok.
 
-### 1. Sentiment / Positivity
-Measures whether the conversation tone is positive, neutral, or negative overall.
+## Tính năng chính
 
-### 2. Empathy
-Measures whether the agent acknowledges the customer's frustration, context, or emotional state.
+- Chat với assistant theo ngữ cảnh FPT Shop
+- Lưu recent conversations và snapshot hội thoại
+- Evaluate hội thoại hiện tại theo nhiều tiêu chí
+- Mở từng criterion page để review riêng một tiêu chí
+- Chạy local model cho sentiment, empathy, politeness, toxicity
+- Fallback heuristic cho resolution nếu thiếu model local
+- Có thể share ra ngoài bằng một ngrok URL duy nhất
 
-### 3. Politeness
-Measures respectfulness, tone softness, and communication style.
-
-### 4. Toxicity
-Detects aggressive, blaming, hostile, or toxic language.
-
-### 5. Problem Resolution
-Measures whether the conversation closes with a clear direction, next step, or owner.
-
-## System Architecture
-
-### Runtime Layer
-
-- `app.py`
-  Main Flask application, REST endpoints, WebSocket chat hub, and conversation lifecycle management
-- `streamlit_app.py`
-  Streamlit container used to render criterion-specific pages
-- `pages/`
-  Individual Streamlit pages for each criterion
-- `services/`
-  Model registry, inference, preprocessing, evaluation orchestration, context lookup, and memory
-
-### Model Layer
-
-The runtime loads local models from `models/` through `transformers` and `torch`.
-
-Current model registry:
-
-- `sentiment_phobert`
-- `empathy_xlm_roberta`
-- `politeness_xlm_roberta`
-- `toxicity_binary_phobert`
-- `problem_resolution_xlm_roberta` expected by code
-
-Note:
-
-- The repository currently contains local model artifacts for sentiment, empathy, politeness, and toxicity.
-- The `resolution` criterion is implemented in code, but if the local resolution model is missing, the app falls back to a heuristic scorer.
-
-### Memory Layer
-
-Conversation state is persisted under `data/memory/`:
-
-- `recent_conversations.json`
-- per-conversation `snapshot.json`
-- append-only `messages.jsonl`
-- workflow memory payloads
-
-Redis is optional and can be enabled through `REDIS_URL`.
-
-## Project Structure
+## Cấu trúc thư mục
 
 ```text
 .
 |-- app.py
-|-- streamlit_app.py
-|-- streamlit_shared.py
-|-- run_streamlit.ps1
 |-- requirements.txt
+|-- README.md
 |-- services/
-|   |-- agent.py
-|   |-- conversation_memory.py
-|   |-- criterion_apis.py
-|   |-- evaluation.py
-|   |-- fptshop_context.py
-|   |-- local_model_runner.py
-|   |-- model_registry.py
-|   |-- text_preprocess.py
-|   `-- apis/
-|-- pages/
-|   |-- 01_sentiment_page.py
-|   |-- 02_empathy_page.py
-|   |-- 03_politeness_page.py
-|   |-- 04_toxicity_page.py
-|   `-- 05_resolution_page.py
 |-- templates/
 |-- static/
 |-- models/
-|   |-- sentiment_phobert/
-|   |-- empathy_xlm_roberta/
-|   |-- politeness_xlm_roberta/
-|   `-- toxicity_binary_phobert/
 |-- data/
-|   |-- raw/
-|   |-- processed/
-|   `-- memory/
 |-- train_sentiment_phobert_notebook.ipynb
 |-- train_empathy_pseudolabel_xlm_roberta_notebook.ipynb
 |-- train_politeness_xlm_roberta_notebook.ipynb
@@ -149,125 +68,87 @@ Redis is optional and can be enabled through `REDIS_URL`.
 `-- train_problem_resolution_xlm_roberta_notebook.ipynb
 ```
 
-## Data Organization
+## Cài đặt
 
-The dataset layout separates data by purpose:
+### 1. Tạo môi trường
 
-- `data/raw/main_train/`
-  Main training datasets used directly for criterion-specific training
-- `data/raw/auxiliary_pretrain_baseline/`
-  Auxiliary or baseline datasets for pretraining and transfer learning
-- `data/raw/needs_relabel/`
-  Candidate datasets that require relabeling for this project's custom criteria
-- `data/processed/`
-  Annotation templates and labeling guides
+```powershell
+python -m venv .venv
+.venv\Scripts\activate
+```
 
-Included dataset summaries indicate the source, status, and intended criterion. Based on the current repository metadata:
+### 2. Cài dependency
 
-- Sentiment uses Vietnamese sentiment datasets such as `UIT-VSFC` and `anotherpolarbear/vietnamese-sentiment-analysis`
-- Empathy uses `EmpatheticDialogues` mirrors and `ESConv`
-- Politeness uses `Stanford Politeness`, `polite-guard`, and related corpora
-- Toxicity uses Vietnamese datasets such as `ViCTSD`
-- Resolution draws from customer-support and task-oriented dialogue datasets, many of which still require relabeling
-
-## Preprocessing Logic
-
-Before inference, transcripts are normalized to match the notebook training style:
-
-- normalize line breaks
-- canonicalize speaker prefixes
-- merge into a notebook-style conversation string
-- lowercase text
-- replace URLs, emails, and phone numbers with special tokens
-- collapse extra spaces
-
-This logic lives in `services/text_preprocess.py`.
-
-## Training Assets
-
-The repository includes separate notebooks for each criterion:
-
-- `train_sentiment_phobert_notebook.ipynb`
-- `train_empathy_pseudolabel_xlm_roberta_notebook.ipynb`
-- `train_politeness_xlm_roberta_notebook.ipynb`
-- `train_binary_toxicity_victsd_phobert_notebook.ipynb`
-- `train_problem_resolution_xlm_roberta_notebook.ipynb`
-
-These notebooks are intended for:
-
-- dataset loading and cleanup
-- preprocessing
-- label mapping
-- fine-tuning Transformer classifiers
-- evaluating checkpoints
-- exporting final model artifacts into `models/.../final_model`
-
-## How to Run
-
-### 1. Install dependencies
-
-```bash
+```powershell
 pip install -r requirements.txt
 ```
 
-### 2. Configure environment variables
+## Cấu hình
 
-Create `.env` from `.env.example` and update the values you need:
+Tạo file `.env` từ `.env.example`.
+
+Ví dụ:
 
 ```env
+APP_HOST=127.0.0.1
+APP_PORT=8001
+APP_DEBUG=1
 GEMINI_API_KEY=your_api_key_here
 GEMINI_MODEL=gemini-3.1-flash-lite
+NGROK_ENABLED=0
+NGROK_AUTHTOKEN=
 MODELS_DIR=models
-STREAMLIT_BASE_URL=
-STREAMLIT_PORT=8501
 MEMORY_DIR=data/memory
 REDIS_URL=
 REDIS_TTL_SECONDS=86400
 ```
 
-Notes:
+Ý nghĩa các biến quan trọng:
 
-- `GEMINI_API_KEY` is required for the advisor/chat generation flow.
-- Local criterion evaluation can still work without Gemini if the local models are available.
-- `REDIS_URL` is optional.
+- `APP_HOST`, `APP_PORT`: host và port chạy Flask
+- `GEMINI_API_KEY`: cần cho luồng chatbot tư vấn / tổng hợp bằng Gemini
+- `NGROK_ENABLED=1`: bật public URL qua ngrok
+- `NGROK_AUTHTOKEN`: authtoken ngrok
+- `MODELS_DIR`: thư mục chứa model local
+- `MEMORY_DIR`: thư mục lưu snapshot hội thoại
+- `REDIS_URL`: optional, nếu muốn thêm cache / memory layer ngoài filesystem
 
-### 3. Start Streamlit
+Lưu ý:
+
+- Nếu không có `GEMINI_API_KEY`, phần đánh giá local vẫn có thể chạy nếu model local sẵn sàng.
+- Nếu `NGROK_ENABLED=1`, app sẽ in ra đúng một public URL để share.
+
+## Chạy app
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\run_streamlit.ps1
-```
-
-Or:
-
-```bash
-python -m streamlit run streamlit_app.py --server.port 8501
-```
-
-### 4. Start Flask app
-
-```bash
 python app.py
 ```
 
-Default local services:
+Local URL mặc định:
 
-- Flask hub: `http://127.0.0.1:8001`
-- Streamlit criterion workspace: `http://127.0.0.1:8501`
+```text
+http://127.0.0.1:8001
+```
 
-## Main Interfaces
+Nếu bật ngrok:
 
-### Flask Hub
+- terminal sẽ in ra một app URL duy nhất
+- gửi đúng URL đó cho người khác test
 
-The hub UI provides:
+## Giao diện chính
 
-- chat with the advisor assistant
-- recent conversation history
-- conversation evaluation across selected criteria
-- FPT Shop context-aware support prompts
+### 1. Hub `/`
 
-### Criterion Pages
+Hub là màn hình chính để:
 
-Each criterion has a dedicated page rendered via Streamlit and embedded through Flask:
+- chat với assistant
+- xem recent conversations
+- evaluate cả thread hiện tại
+- xem insight theo từng criterion
+
+### 2. Criterion pages `/criterion/<criterion>`
+
+Các trang:
 
 - `/criterion/positivity`
 - `/criterion/empathy`
@@ -275,30 +156,35 @@ Each criterion has a dedicated page rendered via Streamlit and embedded through 
 - `/criterion/toxicity`
 - `/criterion/resolution`
 
-These pages are useful for focused manual review and debugging one criterion at a time.
+Mỗi trang chỉ evaluate đúng một tiêu chí và gọi trực tiếp Flask API tương ứng.
 
-## API Surface
+## API chính
 
-Main routes currently exposed by `app.py`:
+### Web / config
 
 - `GET /`
 - `GET /criterion/<criterion>`
 - `GET /api/config`
 - `GET /api/conversations`
+
+### Chat / evaluate
+
 - `POST /api/chat`
+- `POST /api/criterion/<criterion>/evaluate`
 - `POST /api/criterion/positivity/chat`
 - `WS /ws/chat`
 
-## Output Schema
+## Output schema
 
-Each criterion evaluator returns a shared schema:
+Mỗi criterion evaluator trả về schema gần như sau:
 
 ```json
 {
   "criterion": "positivity",
+  "label": "Sentiment",
   "score": 1,
   "confidence": 0.91,
-  "summary": "....",
+  "summary": "Hoi thoai dang mang sac thai tieu cuc.",
   "raw_label": "negative",
   "probabilities": {
     "negative": 0.91,
@@ -310,51 +196,92 @@ Each criterion evaluator returns a shared schema:
 }
 ```
 
-This makes it easier to plug the evaluators into:
+Schema này giúp dễ cắm vào:
 
-- QA dashboards
-- reviewer tools
-- batch scoring pipelines
-- future orchestration layers
+- QA dashboard
+- reviewer tool
+- batch scoring script
+- orchestration layer khác về sau
 
-## Current Repository State
+## Model hiện có
 
-Important implementation notes for anyone reusing this repository:
+Repo hiện có local artifacts cho:
 
-- Sentiment, empathy, politeness, and toxicity have local model artifacts present in `models/`
-- Resolution is implemented at the application level, but the local model artifact is not currently present in this repo snapshot
-- The resolution API therefore uses a fallback heuristic when the model is missing
-- Conversation memory data already exists in `data/memory/`, so this repository is not a completely clean training-only snapshot
-- `git status` could not be inspected in this environment because the repository is marked with a Windows safe-directory ownership warning
+- sentiment
+- empathy
+- politeness
+- toxicity
 
-## Recommended Workflow
+Riêng `resolution`:
 
-### For inference and demo
+- logic đã có trong code
+- nếu chưa có local model artifact, app sẽ fallback sang heuristic scorer
 
-1. Install dependencies
-2. Configure `.env`
-3. Start Streamlit
-4. Start Flask
-5. Open the Flask hub and test conversations
+## Memory và dữ liệu runtime
 
-### For model development
+Conversation memory được lưu dưới `data/memory/`.
 
-1. Review dataset summaries under `data/raw/`
-2. Use the criterion notebook that matches the target task
-3. Export the trained model into `models/<model_name>/final_model`
-4. Verify that the corresponding entry in `services/model_registry.py` points to the correct directory
-5. Re-run the app and validate predictions through the hub or criterion pages
+Thông thường sẽ có:
 
-## Future Improvements
+- recent conversations
+- snapshot theo conversation
+- append-only messages
+- workflow memory payloads
 
-- Add a trained local model for `problem_resolution_xlm_roberta`
-- Standardize evaluation reports across all notebooks
-- Add batch inference scripts for offline dataset scoring
-- Add test coverage for preprocessing and evaluator APIs
-- Add Docker setup for reproducible deployment
-- Introduce clearer experiment tracking and model versioning
+Điều này có nghĩa repo có thể chứa dữ liệu runtime từ các lần chạy trước, không phải snapshot training-only hoàn toàn sạch.
+
+## Dữ liệu huấn luyện
+
+Thư mục `data/` được chia theo mục đích:
+
+- `data/raw/main_train/`: dataset train chính
+- `data/raw/auxiliary_pretrain_baseline/`: dữ liệu baseline hoặc pretrain phụ trợ
+- `data/raw/needs_relabel/`: dữ liệu cần relabel cho tiêu chí nội bộ
+- `data/processed/`: guideline và template annotation
+
+Notebook huấn luyện hiện có:
+
+- `train_sentiment_phobert_notebook.ipynb`
+- `train_empathy_pseudolabel_xlm_roberta_notebook.ipynb`
+- `train_politeness_xlm_roberta_notebook.ipynb`
+- `train_binary_toxicity_victsd_phobert_notebook.ipynb`
+- `train_problem_resolution_xlm_roberta_notebook.ipynb`
+
+## Workflow đề xuất
+
+### Demo / inference
+
+1. Cài dependency
+2. Cấu hình `.env`
+3. Chạy `python app.py`
+4. Mở `http://127.0.0.1:8001`
+5. Nếu cần share, bật ngrok và dùng đúng một public URL
+
+### Phát triển model
+
+1. Xem dataset trong `data/raw/`
+2. Fine-tune notebook phù hợp với criterion
+3. Export model vào `models/<model_name>/final_model`
+4. Kiểm tra mapping trong `services/model_registry.py`
+5. Chạy lại app để validate prediction trên hub hoặc criterion page
+
+## Hạn chế hiện tại
+
+- `resolution` chưa chắc có đủ local artifact trong repo hiện tại
+- Chưa có test coverage đầy đủ cho preprocessing và evaluator API
+- Chưa có Docker setup chuẩn cho deployment
+- Repo có thể còn dữ liệu memory từ các lần chạy trước
+
+## Hướng mở rộng
+
+- Bổ sung local model hoàn chỉnh cho `resolution`
+- Thêm batch inference script
+- Thêm test tự động cho API và preprocessing
+- Chuẩn hóa experiment tracking
+- Đóng gói deployment bằng Docker
 
 ## License
 
-No license file is currently included in this repository snapshot.
-If you plan to distribute or open-source the project, add an explicit license such as `MIT`.
+Repo hiện chưa có file license.
+
+Nếu bạn định phát hành public hoặc dùng nội bộ bài bản, nên thêm license rõ ràng như `MIT`.

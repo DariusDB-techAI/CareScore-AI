@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import json
 import os
+import socket
 from datetime import UTC, datetime
 from pathlib import Path
-
 from flask import Flask, jsonify, render_template, request
 from flask_sock import Sock
 from google import genai
@@ -14,6 +14,14 @@ from services.agent import build_agent_context, build_fallback_reply, extract_tr
 from services.conversation_memory import build_default_memory_service
 from services.evaluation import CRITERIA_META
 from services.fptshop_context import FPTShopContextService
+from services.google_ai import (
+    describe_gemini_api_key_issue,
+    get_gemini_api_key,
+    get_gemini_model,
+    is_gemini_configured,
+    validate_gemini_api_key,
+)
+from services.ngrok_helper import start_ngrok_tunnel
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -40,18 +48,50 @@ sock = Sock(app)
 FPTSHOP_CONTEXT_SERVICE = FPTShopContextService()
 
 
-def get_streamlit_base_url() -> str:
-    configured_base_url = os.getenv("STREAMLIT_BASE_URL", "").strip().rstrip("/")
-    if configured_base_url:
-        return configured_base_url
-
-    current_host = request.host.split(":", 1)[0] if request.host else "127.0.0.1"
-    streamlit_port = os.getenv("STREAMLIT_PORT", "8501").strip() or "8501"
-    return f"{request.scheme}://{current_host}:{streamlit_port}"
+def get_app_host() -> str:
+    return os.getenv("APP_HOST", "127.0.0.1").strip() or "127.0.0.1"
 
 
-def build_streamlit_criterion_url(criterion: str) -> str:
-    return f"{get_streamlit_base_url()}/?criterion={criterion}"
+def get_app_port() -> int:
+    return int(os.getenv("APP_PORT", "8001").strip() or "8001")
+
+
+def get_app_debug() -> bool:
+    return (os.getenv("APP_DEBUG", "1").strip().lower() in {"1", "true", "yes", "on"})
+
+
+def is_ngrok_enabled() -> bool:
+    return (os.getenv("NGROK_ENABLED", "0").strip().lower() in {"1", "true", "yes", "on"})
+
+
+def get_ngrok_authtoken() -> str:
+    return os.getenv("NGROK_AUTHTOKEN", "").strip()
+
+
+def port_is_available(host: str, port: int) -> bool:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        return sock.connect_ex((host, port)) != 0
+
+
+def resolve_server_port(host: str, preferred_port: int, max_attempts: int = 20) -> int:
+    if port_is_available(host, preferred_port):
+        return preferred_port
+
+    for port in range(preferred_port + 1, preferred_port + max_attempts + 1):
+        if port_is_available(host, port):
+            print(f"Cong {preferred_port} dang duoc su dung. App se chuyen sang cong {port}.")
+            return port
+
+    raise RuntimeError(f"Khong tim duoc cong trong khoang {preferred_port}-{preferred_port + max_attempts}.")
+
+
+def start_public_tunnel(app_port: int) -> str | None:
+    if not is_ngrok_enabled():
+        return None
+
+    authtoken = get_ngrok_authtoken()
+    return start_ngrok_tunnel(authtoken=authtoken, port=app_port)
 
 
 CRITERIA = []
@@ -67,6 +107,89 @@ for key, value in CRITERIA_META.items():
             "href": f"/criterion/{key}",
         }
     )
+
+CRITERION_THEMES = {
+    "positivity": {
+        "title": "Sentiment Studio",
+        "eyebrow": "Warm Signal",
+        "accent": "#ff7a00",
+        "accent_soft": "rgba(255, 122, 0, 0.14)",
+        "bg_start": "#fff3e8",
+        "bg_end": "#ffe1bf",
+        "surface": "#fffaf4",
+        "ink": "#311300",
+        "muted": "#7a4b27",
+        "chip": "#ffd5ad",
+        "placeholder": "Vi du:\nKhach hang: Toi that vong ve don hang nay.\nNhan vien: Em xin loi vi trai nghiem nay...",
+        "button_label": "Evaluate sentiment",
+        "focus_points": ["positive", "neutral", "negative"],
+        "support_copy": "Ho tro nhap tu don, cau ngan, hoac transcript hoi thoai day du.",
+    },
+    "empathy": {
+        "title": "Empathy Garden",
+        "eyebrow": "Listening Lens",
+        "accent": "#0f9d7a",
+        "accent_soft": "rgba(15, 157, 122, 0.15)",
+        "bg_start": "#e8fff8",
+        "bg_end": "#cbf7e6",
+        "surface": "#f7fffb",
+        "ink": "#07271f",
+        "muted": "#42695f",
+        "chip": "#c9f1e4",
+        "placeholder": "Vi du:\nKhach hang: Toi rat met vi phai doi qua lau.\nNhan vien: Em hieu su bat tien nay va se kiem tra ngay...",
+        "button_label": "Evaluate empathy",
+        "focus_points": ["dong cam", "boi canh", "ho tro tiep"],
+        "support_copy": "Kiem tra viec ghi nhan cam xuc, nhac lai boi canh va chuyen sang huong ho tro.",
+    },
+    "politeness": {
+        "title": "Politeness Atelier",
+        "eyebrow": "Tone Craft",
+        "accent": "#0d5bd7",
+        "accent_soft": "rgba(13, 91, 215, 0.14)",
+        "bg_start": "#eef4ff",
+        "bg_end": "#dce7ff",
+        "surface": "#fbfdff",
+        "ink": "#0c1933",
+        "muted": "#4f638c",
+        "chip": "#d6e4ff",
+        "placeholder": "Vi du:\nKhach hang: Toi can duoc giai thich phi nay.\nNhan vien: Em xin phep kiem tra lai cho anh chi...",
+        "button_label": "Evaluate politeness",
+        "focus_points": ["xung ho", "ton trong", "phan hoi mem"],
+        "support_copy": "Do do ton trong, do mem va cach giu tone giao tiep chuyen nghiep.",
+    },
+    "toxicity": {
+        "title": "Toxicity Watchtower",
+        "eyebrow": "Risk Scan",
+        "accent": "#c62828",
+        "accent_soft": "rgba(198, 40, 40, 0.14)",
+        "bg_start": "#fff0ef",
+        "bg_end": "#ffd7d3",
+        "surface": "#fff8f7",
+        "ink": "#341111",
+        "muted": "#885151",
+        "chip": "#ffd6d2",
+        "placeholder": "Vi du:\nKhach hang: Toi rat buc xuc.\nNhan vien: Anh dang noi chuyen kieu gi day?",
+        "button_label": "Evaluate toxicity",
+        "focus_points": ["cong kich", "do loi", "gay gat"],
+        "support_copy": "Criterion nay can doc ky summary vi model dang tim dau hieu doc hai hoac tan cong.",
+    },
+    "resolution": {
+        "title": "Resolution Control Room",
+        "eyebrow": "Next Step Check",
+        "accent": "#7057ff",
+        "accent_soft": "rgba(112, 87, 255, 0.14)",
+        "bg_start": "#f4f0ff",
+        "bg_end": "#e1d9ff",
+        "surface": "#fbfaff",
+        "ink": "#1d173b",
+        "muted": "#5f5890",
+        "chip": "#ddd7ff",
+        "placeholder": "Vi du:\nKhach hang: Don cua toi bi tre.\nNhan vien: Em da tao yeu cau kiem tra va se goi lai truoc 17h hom nay.",
+        "button_label": "Evaluate resolution",
+        "focus_points": ["next step", "deadline", "owner"],
+        "support_copy": "Tap trung vao huong xu ly, nguoi phu trach va moc thoi gian cu the.",
+    },
+}
 
 CONVERSATIONS: dict[str, list[dict[str, object]]] = {}
 CONVERSATION_META: dict[str, dict[str, str]] = {}
@@ -232,18 +355,12 @@ website_snippets:
 
 
 def get_chat_config() -> dict[str, str | bool]:
-    api_key = os.getenv("GEMINI_API_KEY", "").strip()
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
-    placeholder_values = {
-        "",
-        "your_api_key_here",
-        "paste_your_key_here",
-        "changeme",
-    }
+    api_key = get_gemini_api_key()
     return {
         "api_key": api_key,
-        "model": model,
-        "configured": api_key not in placeholder_values,
+        "model": get_gemini_model(),
+        "configured": is_gemini_configured(),
+        "config_error": describe_gemini_api_key_issue(api_key),
     }
 
 
@@ -254,11 +371,9 @@ def generate_reply(
 ) -> str:
     config = get_chat_config()
     if not config["configured"]:
-        raise RuntimeError(
-            "GEMINI_API_KEY chua hop le. Mo file .env va thay 'your_api_key_here' bang API key Gemini that."
-        )
+        raise RuntimeError(str(config["config_error"] or "GEMINI_API_KEY chua hop le."))
 
-    client = genai.Client(api_key=str(config["api_key"]))
+    client = genai.Client(api_key=validate_gemini_api_key())
     contents: list[types.Content] = []
     for message in messages:
         role = message["role"]
@@ -597,10 +712,37 @@ def criterion_page(criterion: str):
     selected = next((item for item in CRITERIA if item["id"] == criterion), None)
     if selected is None:
         return jsonify({"error": "Criterion page not found."}), 404
+    theme = CRITERION_THEMES[criterion]
     return render_template(
-        "criterion_embed.html",
+        "criterion.html",
         criterion=selected,
-        streamlit_url=build_streamlit_criterion_url(criterion),
+        criterion_theme=theme,
+    )
+
+
+@app.post("/api/criterion/<criterion>/evaluate")
+def api_criterion_evaluate(criterion: str):
+    if criterion not in CRITERIA_META:
+        return jsonify({"error": "Criterion not found."}), 404
+
+    payload = request.get_json(silent=True) or {}
+    text = str(payload.get("text") or "").strip()
+
+    from services.evaluation import evaluate_criterion_text
+
+    try:
+        evaluation = evaluate_criterion_text(text, criterion)
+    except Exception as exc:
+        return jsonify({"error": str(exc)}), 500
+
+    return jsonify(
+        {
+            "criterion": criterion,
+            "meta": CRITERIA_META[criterion],
+            "theme": CRITERION_THEMES[criterion],
+            "text": text,
+            "evaluation": evaluation,
+        }
     )
 
 
@@ -761,4 +903,23 @@ def api_criterion_positivity_chat():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8001, debug=True)
+    app_host = get_app_host()
+    app_port = resolve_server_port(app_host, get_app_port())
+    app_debug = get_app_debug()
+
+    if is_ngrok_enabled():
+        try:
+            app_public_url = start_public_tunnel(app_port)
+            if app_public_url:
+                print(f"Ngrok App URL: {app_public_url}")
+                print(f"Cho may khac dung URL nay de vao app: {app_public_url}")
+        except RuntimeError as exc:
+            print(f"Canh bao: {exc}")
+            print(f"App se tiep tuc chay local tai http://{app_host}:{app_port}")
+
+    app.run(
+        host=app_host,
+        port=app_port,
+        debug=app_debug,
+        use_reloader=False if is_ngrok_enabled() else app_debug,
+    )

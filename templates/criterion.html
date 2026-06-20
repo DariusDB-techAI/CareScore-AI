@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ criterion_theme.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/criterion.css') }}">
+</head>
+<body
+    class="criterion-page"
+    style="
+        --criterion-accent: {{ criterion_theme.accent }};
+        --criterion-accent-soft: {{ criterion_theme.accent_soft }};
+        --criterion-bg-start: {{ criterion_theme.bg_start }};
+        --criterion-bg-end: {{ criterion_theme.bg_end }};
+        --criterion-surface: {{ criterion_theme.surface }};
+        --criterion-ink: {{ criterion_theme.ink }};
+        --criterion-muted: {{ criterion_theme.muted }};
+        --criterion-chip: {{ criterion_theme.chip }};
+    "
+>
+    <div class="criterion-shell">
+        <header class="criterion-topbar">
+            <div>
+                <span class="criterion-kicker">{{ criterion_theme.eyebrow }}</span>
+                <h1>{{ criterion_theme.title }}</h1>
+                <p>{{ criterion.description }}</p>
+            </div>
+            <a class="criterion-back" href="/">Quay ve hub</a>
+        </header>
+
+        <main class="criterion-layout">
+            <section class="criterion-editor">
+                <div class="hero-card">
+                    <span class="hero-label">{{ criterion.label }}</span>
+                    <h2>Danh gia nhanh tren mot URL duy nhat</h2>
+                    <p>Trang nay goi truc tiep Flask API cho tieu chi da chon, khong can Streamlit va khong can public endpoint thu hai.</p>
+                </div>
+
+                <div class="editor-card">
+                    <div class="editor-head">
+                        <div>
+                            <span class="criterion-kicker">Transcript</span>
+                            <h3>Noi dung can danh gia</h3>
+                        </div>
+                        <button id="useDraftButton" class="ghost-button" type="button">Nap thread hien tai</button>
+                    </div>
+
+                    <textarea id="criterionInput" rows="12" placeholder="{{ criterion_theme.placeholder }}"></textarea>
+
+                    <div class="editor-actions">
+                        <div class="chip-row">
+                            {% for point in criterion_theme.focus_points %}
+                            <span class="focus-chip">{{ point }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="action-row">
+                            <button id="clearButton" class="ghost-button" type="button">Xoa text</button>
+                            <button id="evaluateButton" class="primary-button" type="button">{{ criterion_theme.button_label }}</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="criterion-results">
+                <section class="result-card">
+                    <span class="criterion-kicker">Focus</span>
+                    <p class="support-copy">{{ criterion_theme.support_copy }}</p>
+                    <p id="statusMessage" class="status-copy">Nhap transcript hoac nap thread tu hub de bat dau.</p>
+                </section>
+
+                <section id="resultPanel" class="result-stack">
+                    <article class="result-card result-card--empty">
+                        <h3>Chua co ket qua</h3>
+                        <p>Ket qua score, summary, confidence va probability se hien o day sau khi goi model.</p>
+                    </article>
+                </section>
+            </aside>
+        </main>
+    </div>
+
+    <script>
+        window.CRITERION_BOOTSTRAP = {
+            criterion: {{ criterion|tojson }},
+            theme: {{ criterion_theme|tojson }}
+        };
+    </script>
+    <script src="{{ url_for('static', filename='js/criterion.js') }}"></script>
+</body>
+</html>

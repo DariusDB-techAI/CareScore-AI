@@ -306,11 +306,32 @@ function upsertConversationSummary(conversation) {
     state.conversations = next;
 }
 
+function buildTranscriptFromMessages(messages) {
+    return (Array.isArray(messages) ? messages : [])
+        .filter((message) => (message.message_kind || "chat") === "chat")
+        .map((message) => {
+            const role = message.role === "user" ? "Khach hang" : "Nhan vien";
+            const content = String(message.content || "").trim();
+            return content ? `${role}: ${content}` : "";
+        })
+        .filter(Boolean)
+        .join("\n");
+}
+
 function openCriterionPage(criterion) {
     const config = criteriaById[criterion];
     if (!config || !config.href) {
         window.alert(`Criterion page for "${criterion}" is not configured yet.`);
         return;
+    }
+
+    const transcript = buildTranscriptFromMessages(state.messages);
+    if (transcript) {
+        try {
+            window.localStorage.setItem(`criterionDraft:${criterion}`, transcript);
+        } catch {
+            // Ignore storage errors and continue navigation.
+        }
     }
 
     window.location.href = config.href;
