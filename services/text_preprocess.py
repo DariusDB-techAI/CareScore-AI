@@ -5,11 +5,11 @@ import re
 
 
 NOTEBOOK_BY_CRITERION = {
-    "positivity": "train_sentiment_phobert_notebook.ipynb",
-    "toxicity": "train_binary_toxicity_victsd_phobert_notebook.ipynb",
-    "empathy": "train_empathy_pseudolabel_xlm_roberta_notebook.ipynb",
-    "politeness": "train_politeness_xlm_roberta_notebook.ipynb",
-    "resolution": "train_problem_resolution_xlm_roberta_notebook.ipynb",
+    "positivity": "train_sentiment_phobert_notebook_complete_visible_outputs.ipynb",
+    "toxicity": "train_binary_toxicity_victsd_phobert_notebook_complete_visible_outputs.ipynb",
+    "empathy": "train_empathy_pair_cskh_anhnhc_notebook.ipynb",
+    "politeness": "train_politeness_xlm_roberta_notebook_complete_visible_outputs.ipynb",
+    "resolution": "train_problem_resolution_xlm_roberta_notebook_complete_visible_outputs.ipynb",
 }
 
 CUSTOMER_PREFIX = "Khach hang: "

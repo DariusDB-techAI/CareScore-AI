@@ -4,7 +4,7 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
-from .paths import PROJECT_ROOT, resolve_project_path
+from .paths import PROJECT_ROOT, resolve_project_path, to_project_relative_path
 
 
 DEFAULT_MODELS_DIR = resolve_project_path(os.getenv("MODELS_DIR", "models"), base_dir=PROJECT_ROOT)
@@ -27,6 +27,10 @@ class CriterionModelSpec:
             or (self.model_dir / "pytorch_model.bin").exists()
         )
 
+    @property
+    def model_hint(self) -> str:
+        return to_project_relative_path(self.model_dir)
+
 
 MODEL_SPECS: dict[str, CriterionModelSpec] = {
     "positivity": CriterionModelSpec(
@@ -40,7 +44,7 @@ MODEL_SPECS: dict[str, CriterionModelSpec] = {
     ),
     "empathy": CriterionModelSpec(
         criterion="empathy",
-        model_dir=DEFAULT_MODELS_DIR / "empathy_xlm_roberta" / "final_model",
+        model_dir=DEFAULT_MODELS_DIR / "empathy_xlm_roberta_anhnhc" / "final_model",
         max_length=256,
         score_map={"low_empathy": 1, "medium_empathy": 3, "high_empathy": 5},
         high_signal="Ben ho tro co dau hieu ghi nhan va dong cam voi van de cua khach hang.",

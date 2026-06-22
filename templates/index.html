@@ -28,7 +28,9 @@
             <section class="sidebar-section">
                 <div class="sidebar-section__head">
                     <span class="hub-label">Recent</span>
+                    <span id="recentCountLabel" class="sidebar-section__meta">0 threads</span>
                 </div>
+                <p id="activeConversationLabel" class="sidebar-kicker">Dang mo thread moi</p>
                 <div id="recentList" class="recent-list">
                     <div class="recent-empty">Chua co hoi thoai nao.</div>
                 </div>
@@ -106,6 +108,6 @@
             wsPath: {{ ws_path|tojson }}
         };
     </script>
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/hub/main.js') }}"></script>
 </body>
 </html>

@@ -25,12 +25,14 @@ Mỗi tiêu chí có pipeline riêng, mapping điểm riêng và output schema t
 
 ## Kiến trúc hiện tại
 
-App hiện có một entrypoint chính:
+App hiện có một entrypoint bootstrap:
 
-- `app.py`: Flask app, WebSocket chat hub, REST API, criterion pages, memory lifecycle
+- `app.py`: tạo Flask app, nạp `.env`, đăng ký HTTP routes và WebSocket
 
 Các phần chính:
 
+- `services/hub_*.py`: cấu hình runtime, route registration, websocket flow, conversation state, chat workflow
+- `services/apis/`: adapter cho từng criterion
 - `services/`: inference, model registry, preprocessing, orchestrator, memory, FPT Shop context
 - `templates/`: HTML cho hub và criterion workspace
 - `static/`: CSS và JS cho giao diện
@@ -73,11 +75,11 @@ Vì vậy người khác chỉ cần `git clone`, cài dependency và chạy app
 |-- static/
 |-- models/
 |-- data/
-|-- train_sentiment_phobert_notebook.ipynb
-|-- train_empathy_pseudolabel_xlm_roberta_notebook.ipynb
-|-- train_politeness_xlm_roberta_notebook.ipynb
-|-- train_binary_toxicity_victsd_phobert_notebook.ipynb
-`-- train_problem_resolution_xlm_roberta_notebook.ipynb
+|-- train_sentiment_phobert_notebook_complete_visible_outputs.ipynb
+|-- train_empathy_pair_cskh_anhnhc_notebook.ipynb
+|-- train_politeness_xlm_roberta_notebook_complete_visible_outputs.ipynb
+|-- train_binary_toxicity_victsd_phobert_notebook_complete_visible_outputs.ipynb
+`-- train_problem_resolution_xlm_roberta_notebook_complete_visible_outputs.ipynb
 ```
 
 ## Cài đặt
@@ -107,7 +109,7 @@ Ví dụ:
 APP_HOST=127.0.0.1
 APP_PORT=8001
 APP_DEBUG=1
-GEMINI_API_KEY=your_api_key_here
+GEMINI_API_KEY=
 GEMINI_MODEL=gemini-3.1-flash-lite
 NGROK_ENABLED=0
 NGROK_AUTHTOKEN=
@@ -255,11 +257,11 @@ Thư mục `data/` được chia theo mục đích:
 
 Notebook huấn luyện hiện có:
 
-- `train_sentiment_phobert_notebook.ipynb`
-- `train_empathy_pseudolabel_xlm_roberta_notebook.ipynb`
-- `train_politeness_xlm_roberta_notebook.ipynb`
-- `train_binary_toxicity_victsd_phobert_notebook.ipynb`
-- `train_problem_resolution_xlm_roberta_notebook.ipynb`
+- `train_sentiment_phobert_notebook_complete_visible_outputs.ipynb`
+- `train_empathy_pair_cskh_anhnhc_notebook.ipynb`
+- `train_politeness_xlm_roberta_notebook_complete_visible_outputs.ipynb`
+- `train_binary_toxicity_victsd_phobert_notebook_complete_visible_outputs.ipynb`
+- `train_problem_resolution_xlm_roberta_notebook_complete_visible_outputs.ipynb`
 
 ## Workflow đề xuất
 
@@ -278,6 +280,10 @@ Notebook huấn luyện hiện có:
 3. Export model vào `models/<model_name>/final_model`
 4. Kiểm tra mapping trong `services/model_registry.py`
 5. Chạy lại app để validate prediction trên hub hoặc criterion page
+
+Hiện tại tiêu chí `empathy` đang mặc định dùng model:
+
+- `models/empathy_xlm_roberta_anhnhc/final_model`
 
 ## Hạn chế hiện tại
 

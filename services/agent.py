@@ -3,18 +3,6 @@ from __future__ import annotations
 import re
 from typing import Any
 
-from .criterion_apis import CRITERION_APIS
-from .evaluation import CRITERIA_META, evaluate_text
-
-
-CRITERION_KEYWORDS = {
-    "positivity": ["positive", "positivity", "cam xuc", "negative", "tich cuc", "tieu cuc", "sentiment"],
-    "empathy": ["empathy", "dong cam", "thau hieu", "ghi nhan cam xuc"],
-    "politeness": ["polite", "politeness", "lich su", "ton trong", "xung ho"],
-    "toxicity": ["toxic", "toxicity", "doc hai", "gay gat", "cong kich", "do loi"],
-    "resolution": ["resolution", "giai quyet", "xu ly", "next step", "huong xu ly"],
-}
-
 AGENT_INTENT_KEYWORDS = [
     "danh gia",
     "review",
@@ -33,16 +21,6 @@ AGENT_INTENT_KEYWORDS = [
 def is_agent_request(message: str) -> bool:
     lowered = message.lower()
     return any(token in lowered for token in AGENT_INTENT_KEYWORDS)
-
-
-def detect_criteria(message: str) -> list[str]:
-    lowered = message.lower()
-    selected = [
-        criterion
-        for criterion, keywords in CRITERION_KEYWORDS.items()
-        if any(keyword in lowered for keyword in keywords)
-    ]
-    return selected or list(CRITERIA_META.keys())
 
 
 def extract_transcript(message: str) -> str:
@@ -106,24 +84,3 @@ def build_fallback_reply(result: dict[str, Any]) -> str:
         )
 
     return " ".join(part.strip() for part in parts if str(part).strip())
-
-
-def run_quality_agent(message: str) -> dict[str, Any]:
-    selected_criteria = detect_criteria(message)
-    transcript = extract_transcript(message)
-    evaluation = evaluate_text(transcript, selected_criteria)
-    return {
-        "selected_criteria": selected_criteria,
-        "transcript": transcript,
-        "evaluation": evaluation,
-        "agent_context": build_agent_context(evaluation),
-        "fallback_reply": build_fallback_reply(evaluation),
-        "routing": [
-            {
-                "criterion": criterion,
-                "api_name": CRITERION_APIS[criterion].display_name,
-                "owner_hint": CRITERION_APIS[criterion].owner_hint,
-            }
-            for criterion in selected_criteria
-        ],
-    }

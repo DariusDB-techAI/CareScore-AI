@@ -1,0 +1,17 @@
+export const messagesEl = document.getElementById("messages");
+export const recentListEl = document.getElementById("recentList");
+export const recentCountLabelEl = document.getElementById("recentCountLabel");
+export const activeConversationLabelEl = document.getElementById("activeConversationLabel");
+export const insightCriteriaEl = document.getElementById("insightCriteria");
+export const criteriaDockEl = document.getElementById("criteriaDock");
+export const evaluatorCriteriaEl = document.getElementById("evaluatorCriteria");
+export const evaluatorPlanMetaEl = document.getElementById("evaluatorPlanMeta");
+export const connectionBadge = document.getElementById("connectionBadge");
+export const modelBadge = document.getElementById("modelBadge");
+export const chatForm = document.getElementById("chatForm");
+export const messageInput = document.getElementById("messageInput");
+export const sendButton = document.getElementById("sendButton");
+export const newChatButton = document.getElementById("newChatButton");
+export const evaluatorForm = document.getElementById("evaluatorForm");
+export const evaluatorInput = document.getElementById("evaluatorInput");
+export const evaluatorButton = document.getElementById("evaluatorButton");

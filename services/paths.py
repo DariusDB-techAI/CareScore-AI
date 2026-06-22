@@ -16,3 +16,11 @@ def resolve_project_path(raw_path: str, *, base_dir: Path | None = None) -> Path
         return path
 
     return (base_dir or PROJECT_ROOT) / path
+
+
+def to_project_relative_path(path: Path | str) -> str:
+    candidate = Path(path)
+    try:
+        return candidate.resolve().relative_to(PROJECT_ROOT.resolve()).as_posix()
+    except Exception:
+        return candidate.as_posix()

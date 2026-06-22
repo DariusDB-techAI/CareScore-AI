@@ -56,7 +56,7 @@ def infer_with_local_model(transcript: str, spec: CriterionModelSpec) -> dict[st
         raw_label=str(raw_label),
         probabilities=dict(prediction["probabilities"]),
         status="model",
-        model_hint=str(spec.model_dir),
+        model_hint=spec.model_hint,
     )
 
 
@@ -86,7 +86,7 @@ def evaluate_with_spec(transcript: str, criterion: str) -> dict[str, Any]:
             raw_label="error",
             probabilities={},
             status="error",
-            model_hint=str(spec.model_dir),
+            model_hint=spec.model_hint,
         )
 
     return build_result(
@@ -97,5 +97,5 @@ def evaluate_with_spec(transcript: str, criterion: str) -> dict[str, Any]:
         raw_label="missing_model",
         probabilities={},
         status="missing_model",
-        model_hint=str(spec.model_dir),
+        model_hint=spec.model_hint,
     )

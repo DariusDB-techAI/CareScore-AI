@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+from dotenv import load_dotenv
 
 from .paths import PROJECT_ROOT
 
@@ -13,35 +14,11 @@ PLACEHOLDER_API_KEYS = {
 }
 
 BASE_DIR = PROJECT_ROOT
-
-
-def _load_local_env() -> None:
-    env_path = BASE_DIR / ".env"
-    if not env_path.exists():
-        return
-
-    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
-        line = raw_line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-
-        key, value = line.split("=", 1)
-        normalized_key = key.strip()
-        normalized_value = value.strip().strip("'").strip('"')
-
-        # Prefer explicit local `.env` values for Gemini settings so a stale
-        # shell-level variable does not mask the key the project is configured with.
-        if normalized_key in {"GEMINI_API_KEY", "GOOGLE_API_KEY", "GEMINI_MODEL"}:
-            os.environ[normalized_key] = normalized_value
-        else:
-            os.environ.setdefault(normalized_key, normalized_value)
-
-
-_load_local_env()
+load_dotenv(BASE_DIR / ".env")
 
 
 def get_gemini_api_key() -> str:
-    return (os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY") or "").strip()
+    return os.getenv("GEMINI_API_KEY", "").strip()
 
 
 def get_gemini_model() -> str:
@@ -65,3 +42,7 @@ def validate_gemini_api_key() -> str:
         raise RuntimeError(issue)
 
     return api_key
+
+
+def describe_gemini_request_error(exc: Exception) -> str:
+    return str(exc)

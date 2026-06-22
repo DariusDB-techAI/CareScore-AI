@@ -70,6 +70,32 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    min-height: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(111, 104, 92, 0.45) transparent;
+}
+
+.hub-insights::-webkit-scrollbar {
+    width: 10px;
+}
+
+.hub-insights::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.hub-insights::-webkit-scrollbar-thumb {
+    background: rgba(111, 104, 92, 0.35);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.hub-insights::-webkit-scrollbar-thumb:hover {
+    background: rgba(111, 104, 92, 0.5);
+    background-clip: padding-box;
 }
 
 .hub-main {
@@ -90,6 +116,23 @@ textarea {
     display: flex;
     justify-content: space-between;
     gap: 12px;
+}
+
+.sidebar-section__meta,
+.sidebar-kicker {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.sidebar-section__meta {
+    font-family: "IBM Plex Mono", monospace;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.sidebar-kicker {
+    margin: 0 0 10px;
+    line-height: 1.5;
 }
 
 .hub-brand {
@@ -230,6 +273,11 @@ textarea {
     border-color: var(--line-strong);
     background: #ffffff;
     box-shadow: var(--shadow);
+}
+
+.recent-item.is-loading {
+    opacity: 0.7;
+    pointer-events: none;
 }
 
 .recent-item strong {

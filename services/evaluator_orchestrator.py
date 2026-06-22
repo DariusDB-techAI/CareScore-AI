@@ -17,7 +17,12 @@ from .evaluation import (
     is_actionable_result,
 )
 from .evaluator_orchestration_prompt import build_evaluator_orchestration_prompt
-from .google_ai import get_gemini_model, is_gemini_configured, validate_gemini_api_key
+from .google_ai import (
+    describe_gemini_request_error,
+    get_gemini_model,
+    is_gemini_configured,
+    validate_gemini_api_key,
+)
 
 
 VALID_CRITERIA = list(CRITERIA_META.keys())
@@ -109,7 +114,10 @@ def create_evaluator_plan(
     model = get_gemini_model()
     client = genai.Client(api_key=validate_gemini_api_key())
     prompt = build_evaluator_orchestration_prompt(user_prompt, selected, transcript[:1200])
-    response = client.models.generate_content(model=model, contents=prompt)
+    try:
+        response = client.models.generate_content(model=model, contents=prompt)
+    except Exception as exc:
+        raise RuntimeError(describe_gemini_request_error(exc)) from exc
     text = (response.text or "").strip()
     if not text:
         return _heuristic_plan(user_prompt, selected)

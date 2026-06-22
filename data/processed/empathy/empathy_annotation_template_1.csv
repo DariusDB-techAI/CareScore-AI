@@ -1,0 +1,689 @@
+conversation_id,conversation_text,customer_text,agent_text,empathy_label,empathy_score,annotator,notes
+EMP-001,"Khach hang: Máy mua 2 ngày màn hình đã sọc rồi, bán hàng kiểu gì vậy?
+Nhan vien: Dạ em hiểu anh đang rất bực bội, mua máy mới mà gặp lỗi ai cũng khó chịu. Anh mô tả sọc xuất hiện thế nào không ạ?
+Khach hang: Sọc trắng chạy ngang, không va đập gì hết.
+Nhan vien: Dạ lỗi phần cứng, không do va đập. Trong 30 ngày anh được đổi mới hoàn toàn ạ.
+Khach hang: Ủa đổi mới luôn không? Tôi tưởng phải bảo hành cả tháng.
+Nhan vien: Dạ không ạ. Anh mang máy và hóa đơn đến, em xử lý ngay. Xin lỗi vì anh phải trải qua chuyện này.
+Khach hang: Vậy được rồi, lỗi do nhà sản xuất chứ cửa hàng không cố tình đâu.
+Nhan vien: Dạ đúng ạ. Cảm ơn anh đã thông cảm ạ.","Máy mua 2 ngày màn hình đã sọc rồi, bán hàng kiểu gì vậy? | Sọc trắng chạy ngang, không va đập gì hết. | Ủa đổi mới luôn không? Tôi tưởng phải bảo hành cả tháng. | Vậy được rồi, lỗi do nhà sản xuất chứ cửa hàng không cố tình đâu.","Dạ em hiểu anh đang rất bực bội, mua máy mới mà gặp lỗi ai cũng khó chịu. Anh mô tả sọc xuất hiện thế nào không ạ? | Dạ lỗi phần cứng, không do va đập. Trong 30 ngày anh được đổi mới hoàn toàn ạ. | Dạ không ạ. Anh mang máy và hóa đơn đến, em xử lý ngay. Xin lỗi vì anh phải trải qua chuyện này. | Dạ đúng ạ. Cảm ơn anh đã thông cảm ạ.",high_empathy,5,claude-sonnet-4-6,"arc đầy đủ, khách tự nhận ra vấn đề"
+EMP-002,"Khach hang: Laptop mua về cắm sạc không nhận, tức lắm.
+Nhan vien: Dạ em rất tiếc khi nghe điều này. Anh thử các cổng USB-C khác chưa ạ?
+Khach hang: Thử hết rồi, vẫn không vào. Hàng lỗi từ hộp rồi.
+Nhan vien: Dạ em hiểu anh bực bội, mua laptop mới mà không dùng được. Anh mang máy đến hôm nay em kiểm tra và đổi ngay ạ.
+Khach hang: Đổi được không hay phải chờ lâu?
+Nhan vien: Dạ còn hàng, anh đến trong hôm nay là nhận máy mới luôn ạ. Em xin lỗi vì sự cố này.
+Khach hang: Vậy thì được, tôi đến chiều nay. Cảm ơn em xử lý nhanh.
+Nhan vien: Dạ em sẽ báo trước cho cửa hàng chuẩn bị sẵn cho anh ạ.","Laptop mua về cắm sạc không nhận, tức lắm. | Thử hết rồi, vẫn không vào. Hàng lỗi từ hộp rồi. | Đổi được không hay phải chờ lâu? | Vậy thì được, tôi đến chiều nay. Cảm ơn em xử lý nhanh.","Dạ em rất tiếc khi nghe điều này. Anh thử các cổng USB-C khác chưa ạ? | Dạ em hiểu anh bực bội, mua laptop mới mà không dùng được. Anh mang máy đến hôm nay em kiểm tra và đổi ngay ạ. | Dạ còn hàng, anh đến trong hôm nay là nhận máy mới luôn ạ. Em xin lỗi vì sự cố này. | Dạ em sẽ báo trước cho cửa hàng chuẩn bị sẵn cho anh ạ.",high_empathy,5,claude-sonnet-4-6,khách chuyển từ tức sang cảm ơn
+EMP-003,"Khach hang: Tôi đặt hàng thứ Hai, nói thứ Tư giao, giờ thứ Bảy vẫn chưa thấy gì.
+Nhan vien: Dạ em thật sự xin lỗi anh, trễ 3 ngày so với cam kết là không chấp nhận được. Anh cho em mã đơn ạ.
+Khach hang: ORD-1234. Tôi đặt để đi công tác, giờ đi tay không rồi.
+Nhan vien: Dạ đơn bị kẹt kho trung chuyển do lỗi hệ thống. Anh bị ảnh hưởng công việc, em hoàn toàn hiểu. Em đẩy đơn ưu tiên giao sáng mai và hoàn phí ship ạ.
+Khach hang: Sáng mai trước 10 giờ được không?
+Nhan vien: Dạ được ạ. Em liên hệ kho ngay. Anh để lại số để shipper gọi trước khi đến.
+Khach hang: Số đây. Thôi hiểu hệ thống đông hàng đôi lúc lỗi, nhưng lần sau báo sớm hơn nhé.
+Nhan vien: Dạ anh nói đúng, em ghi nhận và cảm ơn anh đã thông cảm ạ.","Tôi đặt hàng thứ Hai, nói thứ Tư giao, giờ thứ Bảy vẫn chưa thấy gì. | ORD-1234. Tôi đặt để đi công tác, giờ đi tay không rồi. | Sáng mai trước 10 giờ được không? | Số đây. Thôi hiểu hệ thống đông hàng đôi lúc lỗi, nhưng lần sau báo sớm hơn nhé.","Dạ em thật sự xin lỗi anh, trễ 3 ngày so với cam kết là không chấp nhận được. Anh cho em mã đơn ạ. | Dạ đơn bị kẹt kho trung chuyển do lỗi hệ thống. Anh bị ảnh hưởng công việc, em hoàn toàn hiểu. Em đẩy đơn ưu tiên giao sáng mai và hoàn phí ship ạ. | Dạ được ạ. Em liên hệ kho ngay. Anh để lại số để shipper gọi trước khi đến. | Dạ anh nói đúng, em ghi nhận và cảm ơn anh đã thông cảm ạ.",high_empathy,5,claude-sonnet-4-6,khách chấp nhận sau khi được giải thích và có action cụ thể
+EMP-004,"Khach hang: Giao nhầm màu đen thay vì trắng, tôi mua làm quà tặng mà giờ lỡ hẹn rồi.
+Nhan vien: Dạ em xin lỗi anh, nhận hàng không đúng yêu cầu thì rất bực mình. Anh cho em mã đơn ạ.
+Khach hang: ORD-5678. Quà sinh nhật người yêu hôm nay mà.
+Nhan vien: Dạ em hiểu đây là dịp quan trọng. Lỗi của bên em khi đóng gói. Em giao lại đúng màu trong hôm nay, anh có ở nhà không ạ?
+Khach hang: Giao trong ngày được không? Vậy thì kịp.
+Nhan vien: Dạ được ạ. Shipper giao hàng đúng sẽ thu hồi hàng sai luôn, anh không cần mang đến đâu. Em theo dõi đơn và liên hệ lại khi shipper xuất phát.
+Khach hang: Vậy tốt quá. Cảm ơn em đã xử lý nhanh.
+Nhan vien: Dạ một lần nữa xin lỗi anh. Chúc sinh nhật người yêu anh vui vẻ ạ.","Giao nhầm màu đen thay vì trắng, tôi mua làm quà tặng mà giờ lỡ hẹn rồi. | ORD-5678. Quà sinh nhật người yêu hôm nay mà. | Giao trong ngày được không? Vậy thì kịp. | Vậy tốt quá. Cảm ơn em đã xử lý nhanh.","Dạ em xin lỗi anh, nhận hàng không đúng yêu cầu thì rất bực mình. Anh cho em mã đơn ạ. | Dạ em hiểu đây là dịp quan trọng. Lỗi của bên em khi đóng gói. Em giao lại đúng màu trong hôm nay, anh có ở nhà không ạ? | Dạ được ạ. Shipper giao hàng đúng sẽ thu hồi hàng sai luôn, anh không cần mang đến đâu. Em theo dõi đơn và liên hệ lại khi shipper xuất phát. | Dạ một lần nữa xin lỗi anh. Chúc sinh nhật người yêu anh vui vẻ ạ.",high_empathy,5,claude-sonnet-4-6,"deadline cảm xúc cao, agent xử lý kịp thời"
+EMP-005,"Khach hang: Trên web ghi giảm 15% thẻ Visa mà thanh toán xong không thấy giảm, tôi bị lừa à?
+Nhan vien: Dạ em hiểu anh cảm thấy bị thiệt, nhìn hóa đơn không khớp kỳ vọng thì ai cũng bức xúc. Anh cho em mã đơn và loại thẻ ạ.
+Khach hang: ORD-9012, Visa Techcombank. Tôi chụp màn hình chương trình rõ ràng mà.
+Nhan vien: Dạ chương trình này ngân hàng hoàn tiền sau 7 ngày, không trừ trực tiếp. Thông tin trên trang hơi nhỏ, em xin lỗi vì gây hiểu nhầm ạ.
+Khach hang: Ủa hoàn sau à? Vậy chắc chắn về chứ?
+Nhan vien: Dạ chắc chắn ạ. Em gửi link điều kiện chương trình để anh theo dõi.
+Khach hang: Nhận được rồi. Thôi tôi hơi nóng vội, lần sau web ghi rõ hơn đi.
+Nhan vien: Dạ anh nói đúng, em phản ánh lên team nội dung. Cảm ơn anh đã kiên nhẫn ạ.","Trên web ghi giảm 15% thẻ Visa mà thanh toán xong không thấy giảm, tôi bị lừa à? | ORD-9012, Visa Techcombank. Tôi chụp màn hình chương trình rõ ràng mà. | Ủa hoàn sau à? Vậy chắc chắn về chứ? | Nhận được rồi. Thôi tôi hơi nóng vội, lần sau web ghi rõ hơn đi.","Dạ em hiểu anh cảm thấy bị thiệt, nhìn hóa đơn không khớp kỳ vọng thì ai cũng bức xúc. Anh cho em mã đơn và loại thẻ ạ. | Dạ chương trình này ngân hàng hoàn tiền sau 7 ngày, không trừ trực tiếp. Thông tin trên trang hơi nhỏ, em xin lỗi vì gây hiểu nhầm ạ. | Dạ chắc chắn ạ. Em gửi link điều kiện chương trình để anh theo dõi. | Dạ anh nói đúng, em phản ánh lên team nội dung. Cảm ơn anh đã kiên nhẫn ạ.",high_empathy,5,claude-sonnet-4-6,"hiểu nhầm được giải toả, khách tự nhận lỗi"
+EMP-006,"Khach hang: Tai nghe 1 tuần bên trái mất tiếng, chất lượng tệ quá.
+Nhan vien: Dạ em rất tiếc, tai nghe mới mà hỏng thì đáng thất vọng thật. Anh dùng có va đập hay ẩm ướt không ạ?
+Khach hang: Không có gì hết, chỉ nghe nhạc thôi.
+Nhan vien: Dạ triệu chứng đột ngột như vậy là lỗi linh kiện. Trong bảo hành 12 tháng, anh mang đến em xử lý ngay. Nếu anh cần gấp em bố trí tai nghe mượn trong lúc chờ ạ.
+Khach hang: Có cho mượn không? Tôi cần dùng cho công việc.
+Nhan vien: Dạ có ạ. Anh cứ ghé, em sắp xếp. Xin lỗi vì anh gặp sự cố này.
+Khach hang: Oke, chiều nay tôi ghé. Cảm ơn em hỗ trợ nhiệt tình.
+Nhan vien: Dạ em thông báo cửa hàng chuẩn bị sẵn cho anh ạ.","Tai nghe 1 tuần bên trái mất tiếng, chất lượng tệ quá. | Không có gì hết, chỉ nghe nhạc thôi. | Có cho mượn không? Tôi cần dùng cho công việc. | Oke, chiều nay tôi ghé. Cảm ơn em hỗ trợ nhiệt tình.","Dạ em rất tiếc, tai nghe mới mà hỏng thì đáng thất vọng thật. Anh dùng có va đập hay ẩm ướt không ạ? | Dạ triệu chứng đột ngột như vậy là lỗi linh kiện. Trong bảo hành 12 tháng, anh mang đến em xử lý ngay. Nếu anh cần gấp em bố trí tai nghe mượn trong lúc chờ ạ. | Dạ có ạ. Anh cứ ghé, em sắp xếp. Xin lỗi vì anh gặp sự cố này. | Dạ em thông báo cửa hàng chuẩn bị sẵn cho anh ạ.",high_empathy,5,claude-sonnet-4-6,"giải pháp vượt kỳ vọng, khách cảm ơn chân thành"
+EMP-007,"Khach hang: Tôi thanh toán bị trừ 2 lần rồi, tiền mất hết mà hàng chưa thấy.
+Nhan vien: Dạ em hiểu anh đang lo lắng, bị trừ tiền 2 lần mà hàng chưa về thì ai cũng hoảng. Anh cho em mã giao dịch để em kiểm tra ngay ạ.
+Khach hang: Đây là 2 mã giao dịch của tôi.
+Nhan vien: Dạ em thấy rồi, 1 giao dịch thành công và 1 đang pending sẽ tự hoàn trong 3-5 ngày. Đơn hàng vẫn đang xử lý ạ.
+Khach hang: Vậy tiền sẽ về đúng không? Tôi lo quá.
+Nhan vien: Dạ chắc chắn về ạ, em gửi anh biên lai xác nhận. Xin lỗi vì gây lo lắng cho anh.
+Khach hang: Nhận được rồi. Thôi may có biên lai, tôi yên tâm hơn rồi.
+Nhan vien: Dạ anh cứ theo dõi, có gì liên hệ lại em ạ.","Tôi thanh toán bị trừ 2 lần rồi, tiền mất hết mà hàng chưa thấy. | Đây là 2 mã giao dịch của tôi. | Vậy tiền sẽ về đúng không? Tôi lo quá. | Nhận được rồi. Thôi may có biên lai, tôi yên tâm hơn rồi.","Dạ em hiểu anh đang lo lắng, bị trừ tiền 2 lần mà hàng chưa về thì ai cũng hoảng. Anh cho em mã giao dịch để em kiểm tra ngay ạ. | Dạ em thấy rồi, 1 giao dịch thành công và 1 đang pending sẽ tự hoàn trong 3-5 ngày. Đơn hàng vẫn đang xử lý ạ. | Dạ chắc chắn về ạ, em gửi anh biên lai xác nhận. Xin lỗi vì gây lo lắng cho anh. | Dạ anh cứ theo dõi, có gì liên hệ lại em ạ.",high_empathy,5,claude-sonnet-4-6,lo lắng được giải toả bằng bằng chứng cụ thể
+EMP-008,"Khach hang: Đơn tôi bị hủy mà không ai báo, tôi đã thanh toán rồi đấy.
+Nhan vien: Dạ em xin lỗi anh vì không được thông báo, thật sự rất đáng tiếc. Anh cho em mã đơn ạ.
+Khach hang: ORD-3456. Tôi đã hủy kế hoạch khác để chờ hàng này.
+Nhan vien: Dạ em thấy rồi, đơn bị hủy do hết hàng sau khi anh đặt, tiền sẽ hoàn trong 3-5 ngày. Em hiểu anh đã sắp xếp kế hoạch riêng, thật sự rất tiếc ạ.
+Khach hang: Vậy bao giờ có hàng lại? Tôi vẫn cần mua.
+Nhan vien: Dạ em đăng ký thông báo cho anh ngay khi có hàng. Anh để lại email nhé. Xin lỗi vì sự cố này ạ.
+Khach hang: Được rồi. Tôi hiểu hàng đông đôi lúc lỗi hệ thống, nhưng cần thông báo sớm hơn.
+Nhan vien: Dạ anh nói hoàn toàn đúng. Em ghi nhận ạ.","Đơn tôi bị hủy mà không ai báo, tôi đã thanh toán rồi đấy. | ORD-3456. Tôi đã hủy kế hoạch khác để chờ hàng này. | Vậy bao giờ có hàng lại? Tôi vẫn cần mua. | Được rồi. Tôi hiểu hàng đông đôi lúc lỗi hệ thống, nhưng cần thông báo sớm hơn.","Dạ em xin lỗi anh vì không được thông báo, thật sự rất đáng tiếc. Anh cho em mã đơn ạ. | Dạ em thấy rồi, đơn bị hủy do hết hàng sau khi anh đặt, tiền sẽ hoàn trong 3-5 ngày. Em hiểu anh đã sắp xếp kế hoạch riêng, thật sự rất tiếc ạ. | Dạ em đăng ký thông báo cho anh ngay khi có hàng. Anh để lại email nhé. Xin lỗi vì sự cố này ạ. | Dạ anh nói hoàn toàn đúng. Em ghi nhận ạ.",high_empathy,5,claude-sonnet-4-6,khách chấp nhận và đưa ra góp ý xây dựng
+EMP-009,"Khach hang: Bảo hành máy tôi 2 tháng rồi chưa xong, tôi cần máy để làm việc.
+Nhan vien: Dạ 2 tháng là quá lâu, em hoàn toàn hiểu anh bức xúc. Anh cho em mã bảo hành để em leo thang lên kỹ thuật ngay ạ.
+Khach hang: BH-7890. Họ cứ nói chờ thêm mà không có thông tin gì.
+Nhan vien: Dạ em kiểm tra ngay. Máy đang chờ linh kiện nhập. Em sẽ đề xuất cho anh máy thay thế dùng tạm trong lúc chờ ạ.
+Khach hang: Có máy thay thế không? Vậy hay quá.
+Nhan vien: Dạ có ạ. Anh ghé cửa hàng hôm nay để nhận. Em xin lỗi vì anh phải chờ quá lâu mà không được cập nhật.
+Khach hang: Thôi được rồi, cảm ơn em đã xử lý. Lần sau update tình trạng cho khách đều đặn nhé.
+Nhan vien: Dạ em ghi nhận ạ. Cảm ơn anh đã kiên nhẫn.","Bảo hành máy tôi 2 tháng rồi chưa xong, tôi cần máy để làm việc. | BH-7890. Họ cứ nói chờ thêm mà không có thông tin gì. | Có máy thay thế không? Vậy hay quá. | Thôi được rồi, cảm ơn em đã xử lý. Lần sau update tình trạng cho khách đều đặn nhé.","Dạ 2 tháng là quá lâu, em hoàn toàn hiểu anh bức xúc. Anh cho em mã bảo hành để em leo thang lên kỹ thuật ngay ạ. | Dạ em kiểm tra ngay. Máy đang chờ linh kiện nhập. Em sẽ đề xuất cho anh máy thay thế dùng tạm trong lúc chờ ạ. | Dạ có ạ. Anh ghé cửa hàng hôm nay để nhận. Em xin lỗi vì anh phải chờ quá lâu mà không được cập nhật. | Dạ em ghi nhận ạ. Cảm ơn anh đã kiên nhẫn.",high_empathy,5,claude-sonnet-4-6,"vấn đề lâu ngày được giải quyết, khách đưa ra góp ý"
+EMP-010,"Khach hang: Sản phẩm giao về hộp bị móp, tôi sợ bên trong hỏng.
+Nhan vien: Dạ em hiểu anh lo lắng, nhận hàng hộp móp thì ai cũng không yên tâm. Anh mở ra kiểm tra giúp em, bên trong có dấu hiệu hỏng không ạ?
+Khach hang: Bên trong nhìn ổn nhưng tôi không dám dùng vì sợ linh kiện bị ảnh hưởng.
+Nhan vien: Dạ lo như vậy là có lý. Em đổi hộp mới cho anh để anh yên tâm. Anh không cần chứng minh gì hết ạ.
+Khach hang: Ủa đổi dễ vậy hả? Tôi tưởng phải quay video mới được.
+Nhan vien: Dạ trường hợp hộp hỏng khi giao thì bên em chịu trách nhiệm, không cần video ạ. Xin lỗi vì để anh nhận hàng trong tình trạng này.
+Khach hang: Vậy tốt quá, cảm ơn em. Tôi cứ nghĩ sẽ rất phức tạp.
+Nhan vien: Dạ không phức tạp đâu anh. Chúc anh dùng sản phẩm tốt ạ.","Sản phẩm giao về hộp bị móp, tôi sợ bên trong hỏng. | Bên trong nhìn ổn nhưng tôi không dám dùng vì sợ linh kiện bị ảnh hưởng. | Ủa đổi dễ vậy hả? Tôi tưởng phải quay video mới được. | Vậy tốt quá, cảm ơn em. Tôi cứ nghĩ sẽ rất phức tạp.","Dạ em hiểu anh lo lắng, nhận hàng hộp móp thì ai cũng không yên tâm. Anh mở ra kiểm tra giúp em, bên trong có dấu hiệu hỏng không ạ? | Dạ lo như vậy là có lý. Em đổi hộp mới cho anh để anh yên tâm. Anh không cần chứng minh gì hết ạ. | Dạ trường hợp hộp hỏng khi giao thì bên em chịu trách nhiệm, không cần video ạ. Xin lỗi vì để anh nhận hàng trong tình trạng này. | Dạ không phức tạp đâu anh. Chúc anh dùng sản phẩm tốt ạ.",high_empathy,5,claude-sonnet-4-6,"kỳ vọng thấp được vượt qua, khách ngạc nhiên tích cực"
+EMP-011,"Khach hang: Màn hình điện thoại tôi tự nhiên chết, không bật được, tôi có hẹn quan trọng chiều nay.
+Nhan vien: Dạ em hiểu anh đang rất căng thẳng, máy chết mà có hẹn quan trọng thì thật sự khó. Máy còn trong bảo hành không anh?
+Khach hang: Còn 3 tháng. Nhưng chiều nay tôi cần điện thoại.
+Nhan vien: Dạ em sắp xếp cho anh máy mượn ngay hôm nay trong lúc máy anh được kiểm tra. Anh có thể đến cửa hàng gần nhất ngay bây giờ không ạ?
+Khach hang: Được, tôi đến ngay. Máy mượn có dùng được số của tôi không?
+Nhan vien: Dạ dùng được sim anh, anh cứ đến em hỗ trợ luôn. Xin lỗi vì anh gặp sự cố vào lúc không đúng lúc.
+Khach hang: Cảm ơn em nhiều, may mà gọi được kịp.
+Nhan vien: Dạ anh yên tâm đi hẹn, em sẽ xử lý máy cho anh ạ.","Màn hình điện thoại tôi tự nhiên chết, không bật được, tôi có hẹn quan trọng chiều nay. | Còn 3 tháng. Nhưng chiều nay tôi cần điện thoại. | Được, tôi đến ngay. Máy mượn có dùng được số của tôi không? | Cảm ơn em nhiều, may mà gọi được kịp.","Dạ em hiểu anh đang rất căng thẳng, máy chết mà có hẹn quan trọng thì thật sự khó. Máy còn trong bảo hành không anh? | Dạ em sắp xếp cho anh máy mượn ngay hôm nay trong lúc máy anh được kiểm tra. Anh có thể đến cửa hàng gần nhất ngay bây giờ không ạ? | Dạ dùng được sim anh, anh cứ đến em hỗ trợ luôn. Xin lỗi vì anh gặp sự cố vào lúc không đúng lúc. | Dạ anh yên tâm đi hẹn, em sẽ xử lý máy cho anh ạ.",high_empathy,5,claude-sonnet-4-6,"urgency cao, agent giải quyết kịp thời"
+EMP-012,"Khach hang: Con tôi mua máy về 1 ngày là hỏng, nó khóc cả buổi tối, tôi tức lắm.
+Nhan vien: Dạ em xin lỗi anh và cháu rất nhiều. Quà mới mà hỏng ngay ngày đầu thì thật sự rất đáng tiếc. Cháu bao nhiêu tuổi ạ?
+Khach hang: 15 tuổi, sinh nhật mà. Tôi không chấp nhận được.
+Nhan vien: Dạ anh tức là đúng, không ai chấp nhận được. Em đổi máy mới ngay hôm nay để cháu có quà ạ. Anh cho em xem hóa đơn.
+Khach hang: Đây. Cửa hàng còn hàng không?
+Nhan vien: Dạ còn ạ, em giữ cho anh luôn. Xin lỗi vì cháu phải trải qua đêm sinh nhật như vậy.
+Khach hang: Thôi được, lỗi nhà sản xuất chứ cửa hàng không cố tình. Cảm ơn em xử lý nhanh.
+Nhan vien: Dạ chúc cháu sinh nhật vui vẻ ạ.","Con tôi mua máy về 1 ngày là hỏng, nó khóc cả buổi tối, tôi tức lắm. | 15 tuổi, sinh nhật mà. Tôi không chấp nhận được. | Đây. Cửa hàng còn hàng không? | Thôi được, lỗi nhà sản xuất chứ cửa hàng không cố tình. Cảm ơn em xử lý nhanh.","Dạ em xin lỗi anh và cháu rất nhiều. Quà mới mà hỏng ngay ngày đầu thì thật sự rất đáng tiếc. Cháu bao nhiêu tuổi ạ? | Dạ anh tức là đúng, không ai chấp nhận được. Em đổi máy mới ngay hôm nay để cháu có quà ạ. Anh cho em xem hóa đơn. | Dạ còn ạ, em giữ cho anh luôn. Xin lỗi vì cháu phải trải qua đêm sinh nhật như vậy. | Dạ chúc cháu sinh nhật vui vẻ ạ.",high_empathy,5,claude-sonnet-4-6,"cảm xúc gia đình, khách tự phân biệt lỗi"
+EMP-013,"Khach hang: Tôi order máy tính bảng cho con học online, giao về hỏng màn hình, gọi 3 lần không ai nghe. Con tôi không có máy học bài.
+Nhan vien: Dạ em nghe rõ. Chị vừa nhận hàng hỏng, gọi không được, con không có máy học, dồn vào một lúc như vậy thì ai cũng căng. Em xin lỗi vì bên em để chị chờ lâu.
+Khach hang: Xin lỗi thì được gì, tôi cần máy cho con học ngay hôm nay.
+Nhan vien: Dạ hôm nay là yêu cầu tối thiểu. Chị cho em mã đơn, em xử lý giao máy mới trong 2 giờ ạ.
+Khach hang: ORD-2468. Thầy nhắn 3 giờ chiều phải có mặt.
+Nhan vien: Dạ kho gần chị còn hàng, shipper đến trước 2 giờ 30 được ạ. Em gửi số shipper để chị chủ động.
+Khach hang: Cảm ơn em. Hồi nãy tôi nóng quá nói nặng lời, thông cảm nhé.
+Nhan vien: Dạ không sao, chị lo cho con là điều tự nhiên. Chúc con học tốt ạ.","Tôi order máy tính bảng cho con học online, giao về hỏng màn hình, gọi 3 lần không ai nghe. Con tôi không có máy học bài. | Xin lỗi thì được gì, tôi cần máy cho con học ngay hôm nay. | ORD-2468. Thầy nhắn 3 giờ chiều phải có mặt. | Cảm ơn em. Hồi nãy tôi nóng quá nói nặng lời, thông cảm nhé.","Dạ em nghe rõ. Chị vừa nhận hàng hỏng, gọi không được, con không có máy học, dồn vào một lúc như vậy thì ai cũng căng. Em xin lỗi vì bên em để chị chờ lâu. | Dạ hôm nay là yêu cầu tối thiểu. Chị cho em mã đơn, em xử lý giao máy mới trong 2 giờ ạ. | Dạ kho gần chị còn hàng, shipper đến trước 2 giờ 30 được ạ. Em gửi số shipper để chị chủ động. | Dạ không sao, chị lo cho con là điều tự nhiên. Chúc con học tốt ạ.",high_empathy,5,claude-sonnet-4-6,khách tự xin lỗi sau khi được de-escalate
+EMP-014,"Khach hang: Voucher 200k của tôi hết hạn rồi mà tôi không biết, mất 200k oan.
+Nhan vien: Dạ em hiểu chị tiếc, 200k không phải nhỏ. Chị cho em xem mã voucher và ngày hết hạn, em kiểm tra xem có thể gia hạn không ạ.
+Khach hang: Đây, hết hạn hôm qua. Hệ thống không nhắc tôi gì hết.
+Nhan vien: Dạ hệ thống lẽ ra phải gửi nhắc trước 3 ngày, em kiểm tra xem có lỗi không. Nếu do hệ thống không nhắc, em đề xuất gia hạn thêm 7 ngày cho chị ạ.
+Khach hang: Thật không? Nếu được gia hạn thì tốt quá.
+Nhan vien: Dạ em gửi yêu cầu lên bộ phận chăm sóc khách hàng ngay ạ. Chị chờ em xác nhận trong 30 phút.
+Khach hang: Được rồi, cảm ơn em. Tôi không ngờ còn được hỗ trợ.
+Nhan vien: Dạ đây là lỗi của bên em không nhắc đúng hạn. Em xin lỗi chị ạ.","Voucher 200k của tôi hết hạn rồi mà tôi không biết, mất 200k oan. | Đây, hết hạn hôm qua. Hệ thống không nhắc tôi gì hết. | Thật không? Nếu được gia hạn thì tốt quá. | Được rồi, cảm ơn em. Tôi không ngờ còn được hỗ trợ.","Dạ em hiểu chị tiếc, 200k không phải nhỏ. Chị cho em xem mã voucher và ngày hết hạn, em kiểm tra xem có thể gia hạn không ạ. | Dạ hệ thống lẽ ra phải gửi nhắc trước 3 ngày, em kiểm tra xem có lỗi không. Nếu do hệ thống không nhắc, em đề xuất gia hạn thêm 7 ngày cho chị ạ. | Dạ em gửi yêu cầu lên bộ phận chăm sóc khách hàng ngay ạ. Chị chờ em xác nhận trong 30 phút. | Dạ đây là lỗi của bên em không nhắc đúng hạn. Em xin lỗi chị ạ.",high_empathy,5,claude-sonnet-4-6,"vượt kỳ vọng, khách ngạc nhiên"
+EMP-015,"Khach hang: Tôi mua điện thoại để quay vlog mà camera bị mờ, quảng cáo 50MP mà ra ảnh như điện thoại cũ.
+Nhan vien: Dạ em hiểu anh thất vọng, đầu tư điện thoại cao cấp mà camera không đáp ứng kỳ vọng thì rất bực. Anh chụp trong điều kiện nào ạ?
+Khach hang: Trong nhà, ánh sáng bình thường. Ảnh ra hạt và mờ.
+Nhan vien: Dạ có thể do mode đang bật HDR hoặc AI Scene chưa tối ưu cho điều kiện đó. Anh vào Camera Settings thử tắt AI Enhancement xem ảnh có khác không ạ?
+Khach hang: Tắt rồi, ảnh khác hẳn luôn, nét hơn nhiều.
+Nhan vien: Dạ tốt quá. Mặc định AI đôi khi làm mềm ảnh quá mức. Em ghi chú vào case để team sản phẩm biết ạ.
+Khach hang: Ừ oke, tôi hơi nóng vội. Cảm ơn em giải thích rõ.
+Nhan vien: Dạ không sao, phản hồi của anh giúp bên em cải thiện ạ.","Tôi mua điện thoại để quay vlog mà camera bị mờ, quảng cáo 50MP mà ra ảnh như điện thoại cũ. | Trong nhà, ánh sáng bình thường. Ảnh ra hạt và mờ. | Tắt rồi, ảnh khác hẳn luôn, nét hơn nhiều. | Ừ oke, tôi hơi nóng vội. Cảm ơn em giải thích rõ.","Dạ em hiểu anh thất vọng, đầu tư điện thoại cao cấp mà camera không đáp ứng kỳ vọng thì rất bực. Anh chụp trong điều kiện nào ạ? | Dạ có thể do mode đang bật HDR hoặc AI Scene chưa tối ưu cho điều kiện đó. Anh vào Camera Settings thử tắt AI Enhancement xem ảnh có khác không ạ? | Dạ tốt quá. Mặc định AI đôi khi làm mềm ảnh quá mức. Em ghi chú vào case để team sản phẩm biết ạ. | Dạ không sao, phản hồi của anh giúp bên em cải thiện ạ.",high_empathy,5,claude-sonnet-4-6,"vấn đề kỹ thuật được giải thích rõ, khách tự nhận nóng vội"
+EMP-016,"Khach hang: Tôi đặt hàng cho sự kiện công ty tuần tới, giờ hệ thống báo out of stock sau 3 ngày chờ, điên quá.
+Nhan vien: Dạ em hiểu anh đang rất áp lực, đặt hàng cho sự kiện mà bị hủy thì rất căng. Bên em xin lỗi vì để anh chờ 3 ngày mới báo.
+Khach hang: Giờ còn 4 ngày, tôi tìm nguồn khác không kịp rồi.
+Nhan vien: Dạ em kiểm tra tồn kho các cửa hàng khác ngay. Nếu có em có thể ship đến anh trước thứ Sáu được không ạ?
+Khach hang: Thứ Sáu kịp. Tìm được không?
+Nhan vien: Dạ cửa hàng quận 7 còn đủ số lượng, em đặt giữ và ship express đến văn phòng anh, chắc chắn trước thứ Sáu ạ.
+Khach hang: May quá. Cảm ơn em đã tìm giải pháp, tôi tưởng hỏng sự kiện rồi.
+Nhan vien: Dạ anh yên tâm. Em theo dõi đơn và cập nhật anh liên tục ạ.","Tôi đặt hàng cho sự kiện công ty tuần tới, giờ hệ thống báo out of stock sau 3 ngày chờ, điên quá. | Giờ còn 4 ngày, tôi tìm nguồn khác không kịp rồi. | Thứ Sáu kịp. Tìm được không? | May quá. Cảm ơn em đã tìm giải pháp, tôi tưởng hỏng sự kiện rồi.","Dạ em hiểu anh đang rất áp lực, đặt hàng cho sự kiện mà bị hủy thì rất căng. Bên em xin lỗi vì để anh chờ 3 ngày mới báo. | Dạ em kiểm tra tồn kho các cửa hàng khác ngay. Nếu có em có thể ship đến anh trước thứ Sáu được không ạ? | Dạ cửa hàng quận 7 còn đủ số lượng, em đặt giữ và ship express đến văn phòng anh, chắc chắn trước thứ Sáu ạ. | Dạ anh yên tâm. Em theo dõi đơn và cập nhật anh liên tục ạ.",high_empathy,5,claude-sonnet-4-6,"deadline sự kiện, agent tìm giải pháp chủ động"
+EMP-017,"Khach hang: Smartwatch tôi mua không sync được với iPhone, tôi không rành kỹ thuật mà hướng dẫn trong hộp toàn tiếng Anh.
+Nhan vien: Dạ em hiểu, hướng dẫn tiếng Anh mà không rành kỹ thuật thì rất bối rối. Anh đang dùng iOS mấy ạ?
+Khach hang: iOS 17. Tôi làm theo sách mà vẫn không kết nối được.
+Nhan vien: Dạ iOS 17 cần bật thêm Bluetooth Location Permission, bước này sách chưa cập nhật. Anh vào Cài đặt, Bluetooth, tìm tên đồng hồ, nhấn vào và bật Location ạ.
+Khach hang: Ồ bật rồi, sync được rồi. Sao trong sách không có bước này?
+Nhan vien: Dạ iOS 17 ra sau khi in sách, bên em chưa kịp cập nhật. Em xin lỗi vì gây bất tiện cho anh.
+Khach hang: Thôi không sao, cảm ơn em kiên nhẫn hướng dẫn từng bước.
+Nhan vien: Dạ anh dùng tốt nhé. Em ghi nhận để update hướng dẫn ạ.","Smartwatch tôi mua không sync được với iPhone, tôi không rành kỹ thuật mà hướng dẫn trong hộp toàn tiếng Anh. | iOS 17. Tôi làm theo sách mà vẫn không kết nối được. | Ồ bật rồi, sync được rồi. Sao trong sách không có bước này? | Thôi không sao, cảm ơn em kiên nhẫn hướng dẫn từng bước.","Dạ em hiểu, hướng dẫn tiếng Anh mà không rành kỹ thuật thì rất bối rối. Anh đang dùng iOS mấy ạ? | Dạ iOS 17 cần bật thêm Bluetooth Location Permission, bước này sách chưa cập nhật. Anh vào Cài đặt, Bluetooth, tìm tên đồng hồ, nhấn vào và bật Location ạ. | Dạ iOS 17 ra sau khi in sách, bên em chưa kịp cập nhật. Em xin lỗi vì gây bất tiện cho anh. | Dạ anh dùng tốt nhé. Em ghi nhận để update hướng dẫn ạ.",high_empathy,5,claude-sonnet-4-6,hướng dẫn tỉ mỉ cho người không rành kỹ thuật
+EMP-018,"Khach hang: Tôi bị charge phí bảo hành cao cấp nhưng tôi không đăng ký, đây là lừa đảo.
+Nhan vien: Dạ em hiểu anh tức khi thấy khoản phí không đăng ký, em sẽ kiểm tra ngay. Anh cho em mã đơn hàng ạ.
+Khach hang: ĐH-111. Tôi không ký bất kỳ giấy tờ nào về bảo hành cao cấp.
+Nhan vien: Dạ em tra rồi, bảo hành cao cấp được thêm vào do lỗi hệ thống, anh không đăng ký. Em hoàn tiền đầy đủ trong 24 giờ và gửi xác nhận qua email ạ.
+Khach hang: Tức là tôi nói đúng, lỗi của bên em?
+Nhan vien: Dạ đúng hoàn toàn, lỗi của hệ thống bên em. Em xin lỗi anh và cam kết hoàn tiền. Em cũng báo cáo lên team kỹ thuật để fix ạ.
+Khach hang: Được rồi, miễn là hoàn tiền đầy đủ. Cảm ơn em đã xác nhận rõ ràng.
+Nhan vien: Dạ anh theo dõi email nhé. Xin lỗi anh một lần nữa ạ.","Tôi bị charge phí bảo hành cao cấp nhưng tôi không đăng ký, đây là lừa đảo. | ĐH-111. Tôi không ký bất kỳ giấy tờ nào về bảo hành cao cấp. | Tức là tôi nói đúng, lỗi của bên em? | Được rồi, miễn là hoàn tiền đầy đủ. Cảm ơn em đã xác nhận rõ ràng.","Dạ em hiểu anh tức khi thấy khoản phí không đăng ký, em sẽ kiểm tra ngay. Anh cho em mã đơn hàng ạ. | Dạ em tra rồi, bảo hành cao cấp được thêm vào do lỗi hệ thống, anh không đăng ký. Em hoàn tiền đầy đủ trong 24 giờ và gửi xác nhận qua email ạ. | Dạ đúng hoàn toàn, lỗi của hệ thống bên em. Em xin lỗi anh và cam kết hoàn tiền. Em cũng báo cáo lên team kỹ thuật để fix ạ. | Dạ anh theo dõi email nhé. Xin lỗi anh một lần nữa ạ.",high_empathy,5,claude-sonnet-4-6,lỗi của công ty được thừa nhận rõ ràng
+EMP-019,"Khach hang: Tôi mua laptop gaming về fan kêu to như máy bay, dùng trong thư viện bị nhắc nhở rồi.
+Nhan vien: Dạ em hiểu tình huống đó rất ngại. Fan laptop gaming chạy tải cao thì to hơn laptop thường, nhưng nếu to bất thường thì là lỗi. Anh đang chạy ứng dụng gì lúc fan kêu to ạ?
+Khach hang: Chỉ mở Word với Chrome, không chơi game gì.
+Nhan vien: Dạ Word và Chrome mà fan chạy tối đa là bất thường. Có thể nhiễm malware hoặc driver lỗi. Anh để em hỗ trợ remote kiểm tra không ạ?
+Khach hang: Remote được không? Vậy tiện quá, tôi không cần mang máy đi.
+Nhan vien: Dạ được ạ. Em gửi link kết nối vào email anh, 15 phút là xử lý xong.
+Khach hang: Xong rồi em ơi, fan chạy bình thường rồi. Hóa ra driver cũ.
+Nhan vien: Dạ tốt quá. Cảm ơn anh đã kiên nhẫn để em hỗ trợ ạ.","Tôi mua laptop gaming về fan kêu to như máy bay, dùng trong thư viện bị nhắc nhở rồi. | Chỉ mở Word với Chrome, không chơi game gì. | Remote được không? Vậy tiện quá, tôi không cần mang máy đi. | Xong rồi em ơi, fan chạy bình thường rồi. Hóa ra driver cũ.","Dạ em hiểu tình huống đó rất ngại. Fan laptop gaming chạy tải cao thì to hơn laptop thường, nhưng nếu to bất thường thì là lỗi. Anh đang chạy ứng dụng gì lúc fan kêu to ạ? | Dạ Word và Chrome mà fan chạy tối đa là bất thường. Có thể nhiễm malware hoặc driver lỗi. Anh để em hỗ trợ remote kiểm tra không ạ? | Dạ được ạ. Em gửi link kết nối vào email anh, 15 phút là xử lý xong. | Dạ tốt quá. Cảm ơn anh đã kiên nhẫn để em hỗ trợ ạ.",high_empathy,5,claude-sonnet-4-6,giải pháp sáng tạo remote support
+EMP-020,"Khach hang: Tôi mua máy ảnh về pin chỉ dùng được 1 tiếng, quảng cáo 300 shot mà.
+Nhan vien: Dạ em hiểu anh thất vọng, pin 1 tiếng thì không đủ dùng. 300 shot là trong điều kiện chuẩn của nhà sản xuất. Anh thường chụp chế độ gì ạ?
+Khach hang: Chụp video 4K liên tục, pin hao quá.
+Nhan vien: Dạ video 4K tiêu thụ pin gấp 3-4 lần so với chụp ảnh. 300 shot là đo bằng ảnh JPEG, không phải video ạ. Anh có thể giảm xuống 1080p để pin lâu hơn, hoặc mua thêm pin dự phòng.
+Khach hang: Ủa tôi không biết điều đó. Vậy máy không lỗi hả?
+Nhan vien: Dạ máy hoạt động bình thường ạ. Em xin lỗi vì thông tin này không được ghi rõ khi mua.
+Khach hang: Thôi không sao, tôi hiểu rồi. Cảm ơn em giải thích rõ.
+Nhan vien: Dạ nếu anh cần pin phụ em tư vấn thêm nhé ạ.","Tôi mua máy ảnh về pin chỉ dùng được 1 tiếng, quảng cáo 300 shot mà. | Chụp video 4K liên tục, pin hao quá. | Ủa tôi không biết điều đó. Vậy máy không lỗi hả? | Thôi không sao, tôi hiểu rồi. Cảm ơn em giải thích rõ.","Dạ em hiểu anh thất vọng, pin 1 tiếng thì không đủ dùng. 300 shot là trong điều kiện chuẩn của nhà sản xuất. Anh thường chụp chế độ gì ạ? | Dạ video 4K tiêu thụ pin gấp 3-4 lần so với chụp ảnh. 300 shot là đo bằng ảnh JPEG, không phải video ạ. Anh có thể giảm xuống 1080p để pin lâu hơn, hoặc mua thêm pin dự phòng. | Dạ máy hoạt động bình thường ạ. Em xin lỗi vì thông tin này không được ghi rõ khi mua. | Dạ nếu anh cần pin phụ em tư vấn thêm nhé ạ.",high_empathy,5,claude-sonnet-4-6,kỳ vọng sai được đính chính nhẹ nhàng
+EMP-021,"Khach hang: Màn hình tablet tôi bị ố vàng viền, mới mua 1 tháng.
+Nhan vien: Dạ em rất tiếc, màn hình 1 tháng đã ố vàng thì đáng lo. Anh có để máy dưới nắng trực tiếp hoặc nhiệt độ cao không ạ?
+Khach hang: Không, tôi để trong túi và dùng trong nhà thôi.
+Nhan vien: Dạ trong điều kiện đó mà ố vàng là lỗi màn hình. Còn trong bảo hành 12 tháng, anh mang đến em đổi màn hình mới ạ.
+Khach hang: Đổi màn hình hay đổi máy?
+Nhan vien: Dạ nếu lỗi chỉ ở màn hình thì đổi màn hình. Nhưng nếu kỹ thuật xác định lỗi từ nhà sản xuất, anh có thể được đổi máy mới ạ.
+Khach hang: Vậy tôi cứ mang đến để kiểm tra. Cảm ơn em tư vấn rõ.
+Nhan vien: Dạ anh ghé em hỗ trợ ngay ạ.","Màn hình tablet tôi bị ố vàng viền, mới mua 1 tháng. | Không, tôi để trong túi và dùng trong nhà thôi. | Đổi màn hình hay đổi máy? | Vậy tôi cứ mang đến để kiểm tra. Cảm ơn em tư vấn rõ.","Dạ em rất tiếc, màn hình 1 tháng đã ố vàng thì đáng lo. Anh có để máy dưới nắng trực tiếp hoặc nhiệt độ cao không ạ? | Dạ trong điều kiện đó mà ố vàng là lỗi màn hình. Còn trong bảo hành 12 tháng, anh mang đến em đổi màn hình mới ạ. | Dạ nếu lỗi chỉ ở màn hình thì đổi màn hình. Nhưng nếu kỹ thuật xác định lỗi từ nhà sản xuất, anh có thể được đổi máy mới ạ. | Dạ anh ghé em hỗ trợ ngay ạ.",high_empathy,5,claude-sonnet-4-6,giải thích quy trình rõ ràng
+EMP-022,"Khach hang: Loa bluetooth tôi mua về 2 ngày thì mất kết nối liên tục, rất bực.
+Nhan vien: Dạ em hiểu, loa mới mà kết nối không ổn định thì khó chịu lắm. Anh đang kết nối với thiết bị gì ạ?
+Khach hang: iPhone 14. Cứ 10 phút là mất kết nối 1 lần.
+Nhan vien: Dạ thử forget device rồi pair lại xem có khác không anh? Đôi khi lần pair đầu có lỗi cache.
+Khach hang: Làm rồi vẫn vậy.
+Nhan vien: Dạ vậy là lỗi firmware loa. Em đổi cho anh máy mới hoặc update firmware ngay tại cửa hàng ạ.
+Khach hang: Update firmware là mất bao lâu?
+Nhan vien: Dạ 5 phút thôi. Nếu update xong vẫn lỗi em đổi máy mới luôn, anh không cần lo.
+Khach hang: Vậy thì được. Cảm ơn em có phương án dự phòng rõ ràng.","Loa bluetooth tôi mua về 2 ngày thì mất kết nối liên tục, rất bực. | iPhone 14. Cứ 10 phút là mất kết nối 1 lần. | Làm rồi vẫn vậy. | Update firmware là mất bao lâu? | Vậy thì được. Cảm ơn em có phương án dự phòng rõ ràng.","Dạ em hiểu, loa mới mà kết nối không ổn định thì khó chịu lắm. Anh đang kết nối với thiết bị gì ạ? | Dạ thử forget device rồi pair lại xem có khác không anh? Đôi khi lần pair đầu có lỗi cache. | Dạ vậy là lỗi firmware loa. Em đổi cho anh máy mới hoặc update firmware ngay tại cửa hàng ạ. | Dạ 5 phút thôi. Nếu update xong vẫn lỗi em đổi máy mới luôn, anh không cần lo.",high_empathy,5,claude-sonnet-4-6,phương án rõ ràng giảm lo lắng
+EMP-023,"Khach hang: Tôi trả hàng 2 tuần mà tiền chưa về, tôi gọi liên tục không ai giải quyết.
+Nhan vien: Dạ 2 tuần chưa hoàn tiền và không liên lạc được là sai hoàn toàn, em xin lỗi anh vì đã để anh chờ lâu như vậy. Anh cho em mã trả hàng ạ.
+Khach hang: TH-5678. Tôi đã chụp ảnh giao lại cho shipper đầy đủ.
+Nhan vien: Dạ em thấy rồi, tiền đang kẹt ở bước xác nhận kho nhận hàng. Em escalate ngay lên cấp trên để xử lý trong 24 giờ ạ.
+Khach hang: 24 giờ chắc chắn không?
+Nhan vien: Dạ em cam kết và gửi email xác nhận ngay bây giờ. Nếu sau 24 giờ chưa về anh cứ reply email đó em xử lý tiếp ạ.
+Khach hang: Được rồi. Cảm ơn em lần này xử lý được, những lần trước gọi không ai như anh vậy.
+Nhan vien: Dạ em xin lỗi vì trải nghiệm không tốt trước đó. Em đảm bảo lần này sẽ xong ạ.","Tôi trả hàng 2 tuần mà tiền chưa về, tôi gọi liên tục không ai giải quyết. | TH-5678. Tôi đã chụp ảnh giao lại cho shipper đầy đủ. | 24 giờ chắc chắn không? | Được rồi. Cảm ơn em lần này xử lý được, những lần trước gọi không ai như anh vậy.","Dạ 2 tuần chưa hoàn tiền và không liên lạc được là sai hoàn toàn, em xin lỗi anh vì đã để anh chờ lâu như vậy. Anh cho em mã trả hàng ạ. | Dạ em thấy rồi, tiền đang kẹt ở bước xác nhận kho nhận hàng. Em escalate ngay lên cấp trên để xử lý trong 24 giờ ạ. | Dạ em cam kết và gửi email xác nhận ngay bây giờ. Nếu sau 24 giờ chưa về anh cứ reply email đó em xử lý tiếp ạ. | Dạ em xin lỗi vì trải nghiệm không tốt trước đó. Em đảm bảo lần này sẽ xong ạ.",high_empathy,5,claude-sonnet-4-6,vấn đề lâu ngày được giải quyết dứt điểm
+EMP-024,"Khach hang: Tôi mua airpod nhái bị nhân viên bán mà không biết, về nhà thấy logo sai.
+Nhan vien: Dạ em thật sự xin lỗi anh, điều này không thể chấp nhận được. Bán nhái là vi phạm nghiêm trọng. Anh cho em xem ảnh và hóa đơn ạ.
+Khach hang: Đây, logo Apple bị lệch. Tôi mua gần 4 triệu.
+Nhan vien: Dạ em xác nhận đây là hàng không chính hãng. Bên em hoàn tiền 100% và tặng thêm voucher 500k cho anh vì sự cố nghiêm trọng này ạ.
+Khach hang: Thật không? Cả voucher nữa hả?
+Nhan vien: Dạ đây là lỗi nghiêm trọng của bên em, anh xứng đáng được bồi thường thêm. Em sẽ báo cáo nhân viên để xử lý.
+Khach hang: Tôi không ngờ được xử lý tốt như vậy. Cảm ơn em.
+Nhan vien: Dạ anh tin tưởng bên em, bên em phải có trách nhiệm ạ.","Tôi mua airpod nhái bị nhân viên bán mà không biết, về nhà thấy logo sai. | Đây, logo Apple bị lệch. Tôi mua gần 4 triệu. | Thật không? Cả voucher nữa hả? | Tôi không ngờ được xử lý tốt như vậy. Cảm ơn em.","Dạ em thật sự xin lỗi anh, điều này không thể chấp nhận được. Bán nhái là vi phạm nghiêm trọng. Anh cho em xem ảnh và hóa đơn ạ. | Dạ em xác nhận đây là hàng không chính hãng. Bên em hoàn tiền 100% và tặng thêm voucher 500k cho anh vì sự cố nghiêm trọng này ạ. | Dạ đây là lỗi nghiêm trọng của bên em, anh xứng đáng được bồi thường thêm. Em sẽ báo cáo nhân viên để xử lý. | Dạ anh tin tưởng bên em, bên em phải có trách nhiệm ạ.",high_empathy,5,claude-sonnet-4-6,lỗi nghiêm trọng được xử lý vượt kỳ vọng
+EMP-025,"Khach hang: Con tôi vô tình xóa hết ảnh trong máy, cả năm ảnh gia đình đó.
+Nhan vien: Dạ em hiểu đây là mất mát lớn, ảnh gia đình cả năm mà mất thì rất đau lòng. Máy anh có bật Google Photos hay iCloud không ạ?
+Khach hang: Có bật Google Photos nhưng tôi không biết còn không.
+Nhan vien: Dạ có hy vọng đó anh. Google Photos sync tự động, nhiều khả năng ảnh vẫn còn trên cloud. Anh mở app Google Photos kiểm tra thư mục Library giúp em ạ.
+Khach hang: Ồ còn hết rồi em ơi, 1847 ảnh còn nguyên.
+Nhan vien: Dạ tuyệt vời quá. Anh có thể tải về máy hoặc để trên cloud đều được ạ.
+Khach hang: Cảm ơn em nhiều lắm, tôi lo sắp chết. May có em hướng dẫn.
+Nhan vien: Dạ em mừng cho anh. Anh bật backup tự động để tránh tình huống này lần sau nhé ạ.","Con tôi vô tình xóa hết ảnh trong máy, cả năm ảnh gia đình đó. | Có bật Google Photos nhưng tôi không biết còn không. | Ồ còn hết rồi em ơi, 1847 ảnh còn nguyên. | Cảm ơn em nhiều lắm, tôi lo sắp chết. May có em hướng dẫn.","Dạ em hiểu đây là mất mát lớn, ảnh gia đình cả năm mà mất thì rất đau lòng. Máy anh có bật Google Photos hay iCloud không ạ? | Dạ có hy vọng đó anh. Google Photos sync tự động, nhiều khả năng ảnh vẫn còn trên cloud. Anh mở app Google Photos kiểm tra thư mục Library giúp em ạ. | Dạ tuyệt vời quá. Anh có thể tải về máy hoặc để trên cloud đều được ạ. | Dạ em mừng cho anh. Anh bật backup tự động để tránh tình huống này lần sau nhé ạ.",high_empathy,5,claude-sonnet-4-6,"cứu dữ liệu quan trọng, cảm xúc cao"
+EMP-026,"Khach hang: Tôi bị giao thiếu 1 phụ kiện trong hộp, sách hướng dẫn ghi là có 5 món mà chỉ có 4.
+Nhan vien: Dạ em xin lỗi anh, thiếu phụ kiện khi nhận hàng là sự cố bên em không kiểm soát tốt. Anh cho em biết thiếu món gì ạ?
+Khach hang: Thiếu cáp sạc. Không có cáp sạc thì dùng sao được.
+Nhan vien: Dạ em gửi cáp sạc đến địa chỉ anh trong ngày mai, freeship. Anh không cần mang máy đến đâu ạ.
+Khach hang: Ngày mai nhận được không? Tôi đang cần dùng máy.
+Nhan vien: Dạ cam kết trước 5 giờ chiều mai. Hôm nay anh tạm dùng cáp tương thích USB-C nào cũng được trong lúc chờ ạ.
+Khach hang: À đúng rồi, tôi có cáp cũ dùng tạm được. Cảm ơn em.
+Nhan vien: Dạ anh dùng tốt nhé. Xin lỗi vì thiếu sót ạ.","Tôi bị giao thiếu 1 phụ kiện trong hộp, sách hướng dẫn ghi là có 5 món mà chỉ có 4. | Thiếu cáp sạc. Không có cáp sạc thì dùng sao được. | Ngày mai nhận được không? Tôi đang cần dùng máy. | À đúng rồi, tôi có cáp cũ dùng tạm được. Cảm ơn em.","Dạ em xin lỗi anh, thiếu phụ kiện khi nhận hàng là sự cố bên em không kiểm soát tốt. Anh cho em biết thiếu món gì ạ? | Dạ em gửi cáp sạc đến địa chỉ anh trong ngày mai, freeship. Anh không cần mang máy đến đâu ạ. | Dạ cam kết trước 5 giờ chiều mai. Hôm nay anh tạm dùng cáp tương thích USB-C nào cũng được trong lúc chờ ạ. | Dạ anh dùng tốt nhé. Xin lỗi vì thiếu sót ạ.",high_empathy,5,claude-sonnet-4-6,"giải pháp nhanh, tạm thời và lâu dài"
+EMP-027,"Khach hang: Điện thoại tôi sập nguồn sau khi cập nhật phần mềm, không bật lại được.
+Nhan vien: Dạ em hiểu anh đang lo lắng, update xong mà máy chết thì rất hoang mang. Anh thử giữ nút nguồn và giảm âm lượng 10 giây không ạ?
+Khach hang: Thử rồi vẫn đen màn hình.
+Nhan vien: Dạ vậy thì cần flash lại firmware. Anh mang máy đến cửa hàng em làm miễn phí, khoảng 30 phút xong. Dữ liệu anh có backup không ạ?
+Khach hang: Có backup hôm qua. Nhưng 30 phút tôi kịp về đón con không?
+Nhan vien: Dạ kịp ạ, em ưu tiên làm ngay khi anh đến. Anh đến lúc mấy giờ?
+Khach hang: 3 giờ chiều. Cảm ơn em, tôi lo cả buổi sáng nay.
+Nhan vien: Dạ anh yên tâm, 3 giờ em chờ anh ạ.","Điện thoại tôi sập nguồn sau khi cập nhật phần mềm, không bật lại được. | Thử rồi vẫn đen màn hình. | Có backup hôm qua. Nhưng 30 phút tôi kịp về đón con không? | 3 giờ chiều. Cảm ơn em, tôi lo cả buổi sáng nay.","Dạ em hiểu anh đang lo lắng, update xong mà máy chết thì rất hoang mang. Anh thử giữ nút nguồn và giảm âm lượng 10 giây không ạ? | Dạ vậy thì cần flash lại firmware. Anh mang máy đến cửa hàng em làm miễn phí, khoảng 30 phút xong. Dữ liệu anh có backup không ạ? | Dạ kịp ạ, em ưu tiên làm ngay khi anh đến. Anh đến lúc mấy giờ? | Dạ anh yên tâm, 3 giờ em chờ anh ạ.",high_empathy,5,claude-sonnet-4-6,quan tâm đến lịch trình cá nhân của khách
+EMP-028,"Khach hang: Tôi mua máy tính bị virus ngay sau khi mua, cài phần mềm diệt virus không được.
+Nhan vien: Dạ em rất tiếc, máy mới mà đã có virus thì rất bực. Anh mua ở đâu và cài thêm phần mềm gì từ khi mua không ạ?
+Khach hang: Mua ở đây hôm qua. Tôi chỉ cài Chrome và Zalo thôi.
+Nhan vien: Dạ Chrome và Zalo không có virus. Có thể máy đã nhiễm trước khi đến tay anh, đây là lỗi của bên em. Anh mang máy đến em clean toàn bộ và restore factory miễn phí ạ.
+Khach hang: Restore thì dữ liệu mất hết không?
+Nhan vien: Dạ mất dữ liệu trên máy, nhưng anh mới mua hôm qua nên chưa có gì quan trọng. Em backup trước khi restore ạ.
+Khach hang: Ừ đúng rồi, mới mua hôm qua chưa có gì. Cảm ơn em xử lý.
+Nhan vien: Dạ anh ghé em làm ngay, không mất phí ạ.","Tôi mua máy tính bị virus ngay sau khi mua, cài phần mềm diệt virus không được. | Mua ở đây hôm qua. Tôi chỉ cài Chrome và Zalo thôi. | Restore thì dữ liệu mất hết không? | Ừ đúng rồi, mới mua hôm qua chưa có gì. Cảm ơn em xử lý.","Dạ em rất tiếc, máy mới mà đã có virus thì rất bực. Anh mua ở đâu và cài thêm phần mềm gì từ khi mua không ạ? | Dạ Chrome và Zalo không có virus. Có thể máy đã nhiễm trước khi đến tay anh, đây là lỗi của bên em. Anh mang máy đến em clean toàn bộ và restore factory miễn phí ạ. | Dạ mất dữ liệu trên máy, nhưng anh mới mua hôm qua nên chưa có gì quan trọng. Em backup trước khi restore ạ. | Dạ anh ghé em làm ngay, không mất phí ạ.",high_empathy,5,claude-sonnet-4-6,"nhận lỗi rõ ràng, hành động cụ thể"
+EMP-029,"Khach hang: Tôi mua máy về thấy IMEI không khớp với hộp, tôi sợ mua phải hàng đổi máy.
+Nhan vien: Dạ em hiểu anh lo lắng, IMEI không khớp là vấn đề nghiêm trọng. Anh cho em số IMEI trên máy và trên hộp ạ.
+Khach hang: Đây, 2 số khác nhau hoàn toàn.
+Nhan vien: Dạ em tra hệ thống ngay. Đây là lỗi đóng gói, máy và hộp của 2 sản phẩm khác nhau bị lẫn. Anh được đổi hộp đúng IMEI hoặc đổi máy mới ạ.
+Khach hang: Đổi máy mới thì chắc hơn. Máy này tôi không dám dùng.
+Nhan vien: Dạ hoàn toàn có lý. Em xác nhận đổi máy mới ngay hôm nay. Xin lỗi anh vì sự cố này.
+Khach hang: Cảm ơn em xử lý nhanh. Tôi lo không biết máy này có vấn đề gì không.
+Nhan vien: Dạ anh yên tâm, máy mới hoàn toàn ạ.","Tôi mua máy về thấy IMEI không khớp với hộp, tôi sợ mua phải hàng đổi máy. | Đây, 2 số khác nhau hoàn toàn. | Đổi máy mới thì chắc hơn. Máy này tôi không dám dùng. | Cảm ơn em xử lý nhanh. Tôi lo không biết máy này có vấn đề gì không.","Dạ em hiểu anh lo lắng, IMEI không khớp là vấn đề nghiêm trọng. Anh cho em số IMEI trên máy và trên hộp ạ. | Dạ em tra hệ thống ngay. Đây là lỗi đóng gói, máy và hộp của 2 sản phẩm khác nhau bị lẫn. Anh được đổi hộp đúng IMEI hoặc đổi máy mới ạ. | Dạ hoàn toàn có lý. Em xác nhận đổi máy mới ngay hôm nay. Xin lỗi anh vì sự cố này. | Dạ anh yên tâm, máy mới hoàn toàn ạ.",high_empathy,5,claude-sonnet-4-6,lo ngại về tính hợp lệ được giải quyết dứt điểm
+EMP-030,"Khach hang: Headphone tôi mua không có tiếng bass, nghe nhạc như nghe qua loa máy tính.
+Nhan vien: Dạ em hiểu anh thất vọng, headphone mà không có bass thì mất đi một nửa trải nghiệm. Anh đang kết nối qua cáp hay Bluetooth ạ?
+Khach hang: Bluetooth. Tôi cũng không chỉnh EQ gì.
+Nhan vien: Dạ qua Bluetooth mặc định EQ thường bị flat. Anh vào app Equalizer và chọn preset Bass Boost hoặc chỉnh Low frequency lên thử ạ.
+Khach hang: Ồ khác hẳn luôn, bass rõ ràng hơn nhiều.
+Nhan vien: Dạ tốt quá. Thông tin này đáng lẽ phải có trong hướng dẫn sử dụng. Em xin lỗi vì anh phải tự mày mò.
+Khach hang: Thôi không sao, quan trọng là biết rồi. Cảm ơn em.
+Nhan vien: Dạ anh nghe nhạc vui vẻ nhé ạ.","Headphone tôi mua không có tiếng bass, nghe nhạc như nghe qua loa máy tính. | Bluetooth. Tôi cũng không chỉnh EQ gì. | Ồ khác hẳn luôn, bass rõ ràng hơn nhiều. | Thôi không sao, quan trọng là biết rồi. Cảm ơn em.","Dạ em hiểu anh thất vọng, headphone mà không có bass thì mất đi một nửa trải nghiệm. Anh đang kết nối qua cáp hay Bluetooth ạ? | Dạ qua Bluetooth mặc định EQ thường bị flat. Anh vào app Equalizer và chọn preset Bass Boost hoặc chỉnh Low frequency lên thử ạ. | Dạ tốt quá. Thông tin này đáng lẽ phải có trong hướng dẫn sử dụng. Em xin lỗi vì anh phải tự mày mò. | Dạ anh nghe nhạc vui vẻ nhé ạ.",high_empathy,5,claude-sonnet-4-6,kỳ vọng không khớp vì thiếu hướng dẫn
+EMP-031,"Khach hang: Máy tôi mua bị lỗi, tôi rất thất vọng.
+Nhan vien: Dạ anh cho em biết lỗi như thế nào ạ?
+Khach hang: Màn hình có điểm chết từ ngày đầu.
+Nhan vien: Dạ máy trong bảo hành, anh mang đến cửa hàng để kiểm tra ạ.
+Khach hang: Nhưng tôi ở xa, đi lại bất tiện.
+Nhan vien: Dạ anh liên hệ hotline 1800-xxxx để được hỗ trợ thêm ạ.
+Khach hang: Thôi được, tôi sẽ gọi.","Máy tôi mua bị lỗi, tôi rất thất vọng. | Màn hình có điểm chết từ ngày đầu. | Nhưng tôi ở xa, đi lại bất tiện. | Thôi được, tôi sẽ gọi.","Dạ anh cho em biết lỗi như thế nào ạ? | Dạ máy trong bảo hành, anh mang đến cửa hàng để kiểm tra ạ. | Dạ anh liên hệ hotline 1800-xxxx để được hỗ trợ thêm ạ.",medium_empathy,3,claude-sonnet-4-6,giải quyết được nhưng không ghi nhận cảm xúc
+EMP-032,"Khach hang: Tôi chờ hàng 5 ngày rồi vẫn chưa nhận được.
+Nhan vien: Dạ anh cho em mã đơn ạ.
+Khach hang: ORD-1111. Tôi cần hàng gấp lắm.
+Nhan vien: Dạ đơn đang giao, dự kiến ngày mai ạ.
+Khach hang: Hôm qua cũng nói ngày mai.
+Nhan vien: Dạ em sẽ liên hệ bộ phận vận chuyển và phản hồi anh trong 24 giờ ạ.
+Khach hang: Thôi được. Lần sau đừng để khách chờ lâu vậy.
+Nhan vien: Dạ em ghi nhận ạ.",Tôi chờ hàng 5 ngày rồi vẫn chưa nhận được. | ORD-1111. Tôi cần hàng gấp lắm. | Hôm qua cũng nói ngày mai. | Thôi được. Lần sau đừng để khách chờ lâu vậy.,"Dạ anh cho em mã đơn ạ. | Dạ đơn đang giao, dự kiến ngày mai ạ. | Dạ em sẽ liên hệ bộ phận vận chuyển và phản hồi anh trong 24 giờ ạ. | Dạ em ghi nhận ạ.",medium_empathy,3,claude-sonnet-4-6,hứa action nhưng không ghi nhận cảm xúc chờ đợi
+EMP-033,"Khach hang: Pin máy tôi chỉ dùng được 2 tiếng là hết.
+Nhan vien: Dạ anh dùng máy có chạy nhiều ứng dụng nền không ạ?
+Khach hang: Tôi chỉ dùng bình thường thôi.
+Nhan vien: Dạ anh vào Cài đặt xem ứng dụng nào ngốn pin nhiều nhất ạ.
+Khach hang: Tìm thấy rồi, có mấy app chạy nền.
+Nhan vien: Dạ anh tắt những app đó đi, nếu vẫn vậy mang máy đến kiểm tra pin ạ.
+Khach hang: Oke thử xem. Cảm ơn em.
+Nhan vien: Dạ anh cứ thử, có gì liên hệ lại ạ.","Pin máy tôi chỉ dùng được 2 tiếng là hết. | Tôi chỉ dùng bình thường thôi. | Tìm thấy rồi, có mấy app chạy nền. | Oke thử xem. Cảm ơn em.","Dạ anh dùng máy có chạy nhiều ứng dụng nền không ạ? | Dạ anh vào Cài đặt xem ứng dụng nào ngốn pin nhiều nhất ạ. | Dạ anh tắt những app đó đi, nếu vẫn vậy mang máy đến kiểm tra pin ạ. | Dạ anh cứ thử, có gì liên hệ lại ạ.",medium_empathy,3,claude-sonnet-4-6,giải quyết kỹ thuật nhưng bỏ qua sự bất tiện của khách
+EMP-034,"Khach hang: Đơn tôi bị hủy mà không ai báo, tôi đã thanh toán rồi.
+Nhan vien: Dạ em xin lỗi vì anh không nhận được thông báo. Anh cho em mã đơn ạ.
+Khach hang: ORD-2222. Tôi đã hủy kế hoạch khác vì đợi hàng này.
+Nhan vien: Dạ đơn hủy do hết hàng, tiền hoàn trong 3-5 ngày làm việc ạ.
+Khach hang: Vậy bao giờ có hàng?
+Nhan vien: Dạ em chưa có thông tin, anh để lại email để em thông báo ạ.
+Khach hang: Được rồi.
+Nhan vien: Dạ em ghi nhận ạ.","Đơn tôi bị hủy mà không ai báo, tôi đã thanh toán rồi. | ORD-2222. Tôi đã hủy kế hoạch khác vì đợi hàng này. | Vậy bao giờ có hàng? | Được rồi.","Dạ em xin lỗi vì anh không nhận được thông báo. Anh cho em mã đơn ạ. | Dạ đơn hủy do hết hàng, tiền hoàn trong 3-5 ngày làm việc ạ. | Dạ em chưa có thông tin, anh để lại email để em thông báo ạ. | Dạ em ghi nhận ạ.",medium_empathy,3,claude-sonnet-4-6,xin lỗi nhưng không ghi nhận việc khách đã hủy kế hoạch
+EMP-035,"Khach hang: Loa tôi mua về âm thanh bị rè.
+Nhan vien: Dạ anh cho em biết mức âm lượng anh hay dùng ạ?
+Khach hang: Khoảng 70-80%, nghe nhạc bình thường.
+Nhan vien: Dạ thử giảm xuống 60% xem còn rè không anh?
+Khach hang: Ít hơn rồi nhưng vẫn còn chút.
+Nhan vien: Dạ nếu vẫn rè ở 60% thì là lỗi loa. Anh mang đến bảo hành ạ.
+Khach hang: Oke, tôi mang vào.
+Nhan vien: Dạ anh mang kèm hóa đơn nhé ạ.","Loa tôi mua về âm thanh bị rè. | Khoảng 70-80%, nghe nhạc bình thường. | Ít hơn rồi nhưng vẫn còn chút. | Oke, tôi mang vào.",Dạ anh cho em biết mức âm lượng anh hay dùng ạ? | Dạ thử giảm xuống 60% xem còn rè không anh? | Dạ nếu vẫn rè ở 60% thì là lỗi loa. Anh mang đến bảo hành ạ. | Dạ anh mang kèm hóa đơn nhé ạ.,medium_empathy,3,claude-sonnet-4-6,chẩn đoán đúng nhưng không ghi nhận sự bất tiện
+EMP-036,"Khach hang: Tôi mua máy về thấy camera trước bị mờ.
+Nhan vien: Dạ anh lau lens chưa ạ? Đôi khi có dầu tay.
+Khach hang: Lau rồi vẫn mờ.
+Nhan vien: Dạ trong bảo hành, anh mang đến kiểm tra ạ.
+Khach hang: Mất bao lâu?
+Nhan vien: Dạ thường 3-5 ngày làm việc ạ.
+Khach hang: Vậy tôi không có máy dùng 5 ngày?
+Nhan vien: Dạ anh có thể đăng ký thuê máy trong thời gian bảo hành với phí 50k/ngày ạ.",Tôi mua máy về thấy camera trước bị mờ. | Lau rồi vẫn mờ. | Mất bao lâu? | Vậy tôi không có máy dùng 5 ngày?,"Dạ anh lau lens chưa ạ? Đôi khi có dầu tay. | Dạ trong bảo hành, anh mang đến kiểm tra ạ. | Dạ thường 3-5 ngày làm việc ạ. | Dạ anh có thể đăng ký thuê máy trong thời gian bảo hành với phí 50k/ngày ạ.",medium_empathy,3,claude-sonnet-4-6,"giải pháp có nhưng không free, không ghi nhận bất tiện"
+EMP-037,"Khach hang: Tôi thanh toán xong hệ thống không gửi email xác nhận.
+Nhan vien: Dạ anh kiểm tra thư mục spam chưa ạ?
+Khach hang: Kiểm tra rồi, không có gì hết.
+Nhan vien: Dạ có thể email bị delay. Anh cho em địa chỉ email, em gửi lại ạ.
+Khach hang: Đây là email của tôi.
+Nhan vien: Dạ em gửi lại rồi, anh kiểm tra lại nhé.
+Khach hang: Nhận được rồi. Lần sau gửi ngay đi, đừng để khách lo.
+Nhan vien: Dạ em ghi nhận ạ.","Tôi thanh toán xong hệ thống không gửi email xác nhận. | Kiểm tra rồi, không có gì hết. | Đây là email của tôi. | Nhận được rồi. Lần sau gửi ngay đi, đừng để khách lo.","Dạ anh kiểm tra thư mục spam chưa ạ? | Dạ có thể email bị delay. Anh cho em địa chỉ email, em gửi lại ạ. | Dạ em gửi lại rồi, anh kiểm tra lại nhé. | Dạ em ghi nhận ạ.",medium_empathy,3,claude-sonnet-4-6,giải quyết nhanh nhưng không xin lỗi về sự lo lắng
+EMP-038,"Khach hang: Tôi mua ốp lưng về không vừa máy dù ghi đúng model.
+Nhan vien: Dạ anh cho em biết model máy và model ốp lưng ạ.
+Khach hang: iPhone 15 Pro và ốp ghi iPhone 15 Pro.
+Nhan vien: Dạ iPhone 15 Pro và 15 Pro Max có kích thước khác nhau, anh kiểm tra lại xem mua đúng chưa ạ.
+Khach hang: Ủa tôi mua 15 Pro thật mà.
+Nhan vien: Dạ một số ốp nhập từ Trung Quốc bị in sai thông số. Anh mang đến đổi ốp đúng ạ.
+Khach hang: Oke, tôi mang vào.","Tôi mua ốp lưng về không vừa máy dù ghi đúng model. | iPhone 15 Pro và ốp ghi iPhone 15 Pro. | Ủa tôi mua 15 Pro thật mà. | Oke, tôi mang vào.","Dạ anh cho em biết model máy và model ốp lưng ạ. | Dạ iPhone 15 Pro và 15 Pro Max có kích thước khác nhau, anh kiểm tra lại xem mua đúng chưa ạ. | Dạ một số ốp nhập từ Trung Quốc bị in sai thông số. Anh mang đến đổi ốp đúng ạ.",medium_empathy,3,claude-sonnet-4-6,tìm ra nguyên nhân nhưng không thừa nhận lỗi bán hàng
+EMP-039,"Khach hang: Smartwatch tôi mua không đếm bước chân chính xác.
+Nhan vien: Dạ anh đeo đúng tay và đúng cổ tay chưa ạ?
+Khach hang: Đeo tay trái, đúng rồi.
+Nhan vien: Dạ anh vào cài đặt chọn đúng tay dominant chưa ạ?
+Khach hang: Chưa, tôi không biết có cài đặt đó.
+Nhan vien: Dạ anh chỉnh sang tay trái trong Health Settings thử ạ.
+Khach hang: Oke chỉnh rồi, cảm ơn em.
+Nhan vien: Dạ anh dùng tốt nhé ạ.","Smartwatch tôi mua không đếm bước chân chính xác. | Đeo tay trái, đúng rồi. | Chưa, tôi không biết có cài đặt đó. | Oke chỉnh rồi, cảm ơn em.",Dạ anh đeo đúng tay và đúng cổ tay chưa ạ? | Dạ anh vào cài đặt chọn đúng tay dominant chưa ạ? | Dạ anh chỉnh sang tay trái trong Health Settings thử ạ. | Dạ anh dùng tốt nhé ạ.,medium_empathy,3,claude-sonnet-4-6,giải quyết đúng nhưng không xin lỗi vì thiếu hướng dẫn
+EMP-040,"Khach hang: Tôi đặt hàng express giao trong ngày mà giao hôm sau.
+Nhan vien: Dạ anh cho em mã đơn ạ.
+Khach hang: ORD-3333.
+Nhan vien: Dạ đơn anh đặt sau 14 giờ nên chuyển sang giao hôm sau theo quy định ạ.
+Khach hang: Không ai nói tôi điều đó lúc đặt hàng.
+Nhan vien: Dạ thông tin này có trong điều khoản giao hàng ạ.
+Khach hang: Phải ghi rõ hơn khi đặt chứ không phải trong điều khoản.
+Nhan vien: Dạ em ghi nhận góp ý của anh ạ.",Tôi đặt hàng express giao trong ngày mà giao hôm sau. | ORD-3333. | Không ai nói tôi điều đó lúc đặt hàng. | Phải ghi rõ hơn khi đặt chứ không phải trong điều khoản.,Dạ anh cho em mã đơn ạ. | Dạ đơn anh đặt sau 14 giờ nên chuyển sang giao hôm sau theo quy định ạ. | Dạ thông tin này có trong điều khoản giao hàng ạ. | Dạ em ghi nhận góp ý của anh ạ.,medium_empathy,3,claude-sonnet-4-6,đúng về quy định nhưng không ghi nhận sự thất vọng của khách
+EMP-041,"Khach hang: Màn hình điện thoại tôi bị vỡ sau khi rơi, bảo hành có bao gồm không?
+Nhan vien: Dạ bảo hành không bao gồm vỡ màn hình do va đập ạ.
+Khach hang: Vậy phải trả phí sửa là bao nhiêu?
+Nhan vien: Dạ tùy model, thường từ 500k đến 2 triệu. Anh mang máy đến kiểm tra để báo giá chính xác ạ.
+Khach hang: Vậy để tôi mang vào.
+Nhan vien: Dạ anh mang kèm hóa đơn gốc ạ.","Màn hình điện thoại tôi bị vỡ sau khi rơi, bảo hành có bao gồm không? | Vậy phải trả phí sửa là bao nhiêu? | Vậy để tôi mang vào.","Dạ bảo hành không bao gồm vỡ màn hình do va đập ạ. | Dạ tùy model, thường từ 500k đến 2 triệu. Anh mang máy đến kiểm tra để báo giá chính xác ạ. | Dạ anh mang kèm hóa đơn gốc ạ.",medium_empathy,3,claude-sonnet-4-6,thông tin đầy đủ nhưng thiếu cảm thông về sự cố
+EMP-042,"Khach hang: Tôi không nhận được điểm thưởng sau khi mua hàng.
+Nhan vien: Dạ anh mua hàng bằng tài khoản nào ạ?
+Khach hang: Tài khoản này đây.
+Nhan vien: Dạ em thấy rồi, điểm đang pending, thường mất 24-48 giờ để cộng ạ.
+Khach hang: Đã 3 ngày rồi.
+Nhan vien: Dạ vậy là có lỗi, em cộng tay cho anh ngay bây giờ ạ.
+Khach hang: Vậy thì được. Cảm ơn.
+Nhan vien: Dạ anh kiểm tra lại sau 5 phút nhé ạ.",Tôi không nhận được điểm thưởng sau khi mua hàng. | Tài khoản này đây. | Đã 3 ngày rồi. | Vậy thì được. Cảm ơn.,"Dạ anh mua hàng bằng tài khoản nào ạ? | Dạ em thấy rồi, điểm đang pending, thường mất 24-48 giờ để cộng ạ. | Dạ vậy là có lỗi, em cộng tay cho anh ngay bây giờ ạ. | Dạ anh kiểm tra lại sau 5 phút nhé ạ.",medium_empathy,3,claude-sonnet-4-6,giải quyết nhanh nhưng không xin lỗi về delay
+EMP-043,"Khach hang: Tôi mua máy về thấy bộ nhớ ít hơn quảng cáo, ghi 128GB mà chỉ dùng được 110GB.
+Nhan vien: Dạ đây là dung lượng sau khi trừ phần hệ điều hành và ứng dụng mặc định ạ.
+Khach hang: Sao không ghi rõ là 110GB usable?
+Nhan vien: Dạ đây là tiêu chuẩn ngành, nhà sản xuất nào cũng vậy ạ.
+Khach hang: Nhưng gây hiểu nhầm cho người mua.
+Nhan vien: Dạ anh nói có lý, em ghi nhận góp ý ạ.
+Khach hang: Thôi được.","Tôi mua máy về thấy bộ nhớ ít hơn quảng cáo, ghi 128GB mà chỉ dùng được 110GB. | Sao không ghi rõ là 110GB usable? | Nhưng gây hiểu nhầm cho người mua. | Thôi được.","Dạ đây là dung lượng sau khi trừ phần hệ điều hành và ứng dụng mặc định ạ. | Dạ đây là tiêu chuẩn ngành, nhà sản xuất nào cũng vậy ạ. | Dạ anh nói có lý, em ghi nhận góp ý ạ.",medium_empathy,3,claude-sonnet-4-6,giải thích đúng nhưng thiếu empathy về cảm giác bị mislead
+EMP-044,"Khach hang: Giao hàng trễ 1 ngày, tôi phải đổi lịch công việc.
+Nhan vien: Dạ em xin lỗi anh về sự chậm trễ. Đơn anh sẽ giao trong hôm nay ạ.
+Khach hang: Hôm nay lúc mấy giờ? Tôi cần sắp xếp.
+Nhan vien: Dạ dự kiến từ 2 đến 5 giờ chiều ạ.
+Khach hang: Khoảng thời gian dài quá, tôi có thể confirm giờ cụ thể không?
+Nhan vien: Dạ em liên hệ shipper hỏi lại và nhắn cho anh ạ.
+Khach hang: Được, cảm ơn.","Giao hàng trễ 1 ngày, tôi phải đổi lịch công việc. | Hôm nay lúc mấy giờ? Tôi cần sắp xếp. | Khoảng thời gian dài quá, tôi có thể confirm giờ cụ thể không? | Được, cảm ơn.",Dạ em xin lỗi anh về sự chậm trễ. Đơn anh sẽ giao trong hôm nay ạ. | Dạ dự kiến từ 2 đến 5 giờ chiều ạ. | Dạ em liên hệ shipper hỏi lại và nhắn cho anh ạ.,medium_empathy,3,claude-sonnet-4-6,hứa cụ thể hóa nhưng không ghi nhận việc khách phải đổi lịch
+EMP-045,"Khach hang: Tôi mua cáp sạc về 1 tháng bị đứt, chất lượng kém.
+Nhan vien: Dạ anh dùng cáp như thế nào, có hay gập nhiều không ạ?
+Khach hang: Dùng bình thường thôi, không gập mạnh.
+Nhan vien: Dạ cáp trong bảo hành 6 tháng, anh mang đến đổi ạ.
+Khach hang: Đổi loại khác bền hơn không?
+Nhan vien: Dạ có cáp bọc vải bền hơn giá 150k, anh muốn đổi sang loại đó không ạ?
+Khach hang: Được, tôi đổi loại đó.
+Nhan vien: Dạ anh mang cáp cũ và hóa đơn đến, bù thêm 50k là được ạ.","Tôi mua cáp sạc về 1 tháng bị đứt, chất lượng kém. | Dùng bình thường thôi, không gập mạnh. | Đổi loại khác bền hơn không? | Được, tôi đổi loại đó.","Dạ anh dùng cáp như thế nào, có hay gập nhiều không ạ? | Dạ cáp trong bảo hành 6 tháng, anh mang đến đổi ạ. | Dạ có cáp bọc vải bền hơn giá 150k, anh muốn đổi sang loại đó không ạ? | Dạ anh mang cáp cũ và hóa đơn đến, bù thêm 50k là được ạ.",medium_empathy,3,claude-sonnet-4-6,giải quyết được nhưng không ghi nhận chất lượng kém
+EMP-046,"Khach hang: Tôi đặt online nhưng ra cửa hàng lấy thì hết hàng, nhân viên nói hệ thống chưa cập nhật.
+Nhan vien: Dạ em xin lỗi vì sự bất đồng giữa online và offline. Đơn anh sẽ được xử lý như thế nào ạ?
+Khach hang: Tôi đã đi cả tiếng đường.
+Nhan vien: Dạ em sẽ ship về nhà anh miễn phí khi có hàng, hoặc hoàn tiền ngay ạ.
+Khach hang: Ship về nhà khi nào có hàng?
+Nhan vien: Dạ dự kiến 3-5 ngày ạ.
+Khach hang: Thôi ship về nhà đi.
+Nhan vien: Dạ em xử lý ngay ạ.","Tôi đặt online nhưng ra cửa hàng lấy thì hết hàng, nhân viên nói hệ thống chưa cập nhật. | Tôi đã đi cả tiếng đường. | Ship về nhà khi nào có hàng? | Thôi ship về nhà đi.","Dạ em xin lỗi vì sự bất đồng giữa online và offline. Đơn anh sẽ được xử lý như thế nào ạ? | Dạ em sẽ ship về nhà anh miễn phí khi có hàng, hoặc hoàn tiền ngay ạ. | Dạ dự kiến 3-5 ngày ạ. | Dạ em xử lý ngay ạ.",medium_empathy,3,claude-sonnet-4-6,xin lỗi nhưng không ghi nhận đủ việc khách đi xa vô ích
+EMP-047,"Khach hang: App mua hàng cứ bị lỗi khi checkout, không thanh toán được.
+Nhan vien: Dạ anh dùng iOS hay Android ạ?
+Khach hang: iOS 17.2.
+Nhan vien: Dạ iOS 17.2 đang có bug với app. Anh thử clear cache app hoặc mua qua web thay thế ạ.
+Khach hang: Tôi không biết clear cache.
+Nhan vien: Dạ anh vào Settings, General, iPhone Storage, tìm app và chọn Offload ạ.
+Khach hang: Xong rồi, checkout được rồi.
+Nhan vien: Dạ tốt quá. Chúng em sẽ fix bug sớm ạ.","App mua hàng cứ bị lỗi khi checkout, không thanh toán được. | iOS 17.2. | Tôi không biết clear cache. | Xong rồi, checkout được rồi.","Dạ anh dùng iOS hay Android ạ? | Dạ iOS 17.2 đang có bug với app. Anh thử clear cache app hoặc mua qua web thay thế ạ. | Dạ anh vào Settings, General, iPhone Storage, tìm app và chọn Offload ạ. | Dạ tốt quá. Chúng em sẽ fix bug sớm ạ.",medium_empathy,3,claude-sonnet-4-6,hỗ trợ tốt nhưng không xin lỗi về trải nghiệm xấu
+EMP-048,"Khach hang: Voucher của tôi không áp dụng được, hệ thống báo lỗi.
+Nhan vien: Dạ anh cho em mã voucher ạ.
+Khach hang: SAVE200.
+Nhan vien: Dạ voucher này chỉ áp dụng cho đơn từ 2 triệu trở lên, đơn anh là 1.8 triệu ạ.
+Khach hang: Trên web không ghi điều kiện đó.
+Nhan vien: Dạ có ghi nhưng chữ nhỏ. Em xin lỗi vì gây hiểu nhầm ạ.
+Khach hang: Vậy tôi phải mua thêm để đủ điều kiện.
+Nhan vien: Dạ đúng ạ, hoặc anh dùng voucher khác không có điều kiện tối thiểu.","Voucher của tôi không áp dụng được, hệ thống báo lỗi. | SAVE200. | Trên web không ghi điều kiện đó. | Vậy tôi phải mua thêm để đủ điều kiện.","Dạ anh cho em mã voucher ạ. | Dạ voucher này chỉ áp dụng cho đơn từ 2 triệu trở lên, đơn anh là 1.8 triệu ạ. | Dạ có ghi nhưng chữ nhỏ. Em xin lỗi vì gây hiểu nhầm ạ. | Dạ đúng ạ, hoặc anh dùng voucher khác không có điều kiện tối thiểu.",medium_empathy,3,claude-sonnet-4-6,xin lỗi nhưng không chủ động đề xuất giải pháp tốt hơn
+EMP-049,"Khach hang: Tôi gửi máy bảo hành 2 tuần không thấy update gì.
+Nhan vien: Dạ anh cho em mã bảo hành ạ.
+Khach hang: BH-4444.
+Nhan vien: Dạ máy đang chờ linh kiện, dự kiến thêm 1 tuần nữa ạ.
+Khach hang: Sao không ai thông báo cho tôi biết?
+Nhan vien: Dạ hệ thống lẽ ra phải gửi SMS, em kiểm tra lại. Xin lỗi anh vì không nhận được update ạ.
+Khach hang: Thôi biết rồi thì chờ.",Tôi gửi máy bảo hành 2 tuần không thấy update gì. | BH-4444. | Sao không ai thông báo cho tôi biết? | Thôi biết rồi thì chờ.,"Dạ anh cho em mã bảo hành ạ. | Dạ máy đang chờ linh kiện, dự kiến thêm 1 tuần nữa ạ. | Dạ hệ thống lẽ ra phải gửi SMS, em kiểm tra lại. Xin lỗi anh vì không nhận được update ạ.",medium_empathy,3,claude-sonnet-4-6,xin lỗi về communication nhưng không đề xuất giải pháp chủ động
+EMP-050,"Khach hang: Tôi mua tai nghe về hộp bị móp, bên trong nhìn ổn nhưng không biết có lỗi không.
+Nhan vien: Dạ anh đeo thử xem âm thanh bình thường không ạ?
+Khach hang: Nghe có vẻ ổn.
+Nhan vien: Dạ nếu âm thanh bình thường thì máy không bị ảnh hưởng ạ.
+Khach hang: Nhưng tôi vẫn không yên tâm vì hộp bị móp.
+Nhan vien: Dạ anh có thể mang đến cửa hàng để kỹ thuật kiểm tra kỹ hơn nếu muốn ạ.
+Khach hang: Thôi được, tôi mang vào.","Tôi mua tai nghe về hộp bị móp, bên trong nhìn ổn nhưng không biết có lỗi không. | Nghe có vẻ ổn. | Nhưng tôi vẫn không yên tâm vì hộp bị móp. | Thôi được, tôi mang vào.",Dạ anh đeo thử xem âm thanh bình thường không ạ? | Dạ nếu âm thanh bình thường thì máy không bị ảnh hưởng ạ. | Dạ anh có thể mang đến cửa hàng để kỹ thuật kiểm tra kỹ hơn nếu muốn ạ.,medium_empathy,3,claude-sonnet-4-6,"không chủ động đề xuất đổi, để khách tự quyết định"
+EMP-051,"Khach hang: Điện thoại tôi không nhận được cuộc gọi trong khi sim vẫn có sóng.
+Nhan vien: Dạ anh thử bật tắt máy bay mode 1 lần xem có được không ạ?
+Khach hang: Thử rồi vẫn vậy.
+Nhan vien: Dạ anh thử rút sim ra và cắm lại ạ.
+Khach hang: Vẫn không nhận cuộc gọi.
+Nhan vien: Dạ vậy có thể lỗi phần cứng sim slot. Anh mang đến kiểm tra ạ.
+Khach hang: Oke, tôi mang vào.","Điện thoại tôi không nhận được cuộc gọi trong khi sim vẫn có sóng. | Thử rồi vẫn vậy. | Vẫn không nhận cuộc gọi. | Oke, tôi mang vào.",Dạ anh thử bật tắt máy bay mode 1 lần xem có được không ạ? | Dạ anh thử rút sim ra và cắm lại ạ. | Dạ vậy có thể lỗi phần cứng sim slot. Anh mang đến kiểm tra ạ.,medium_empathy,3,claude-sonnet-4-6,hỗ trợ kỹ thuật đúng nhưng không ghi nhận bất tiện của khách
+EMP-052,"Khach hang: Tôi mua gaming mouse về click trái bị double click.
+Nhan vien: Dạ lỗi double click thường do debounce thấp. Anh tải driver và tăng debounce time lên thử ạ.
+Khach hang: Tôi không biết làm cách đó.
+Nhan vien: Dạ anh vào trang chủ hãng tải driver chính thức về cài, trong driver có mục Debounce Time ạ.
+Khach hang: Làm rồi, chỉnh lên 20ms hết lỗi rồi.
+Nhan vien: Dạ tốt quá ạ.
+Khach hang: Cảm ơn em. Nhưng mặc định nên để cao hơn để khỏi lỗi này.
+Nhan vien: Dạ em ghi nhận ạ.","Tôi mua gaming mouse về click trái bị double click. | Tôi không biết làm cách đó. | Làm rồi, chỉnh lên 20ms hết lỗi rồi. | Cảm ơn em. Nhưng mặc định nên để cao hơn để khỏi lỗi này.","Dạ lỗi double click thường do debounce thấp. Anh tải driver và tăng debounce time lên thử ạ. | Dạ anh vào trang chủ hãng tải driver chính thức về cài, trong driver có mục Debounce Time ạ. | Dạ tốt quá ạ. | Dạ em ghi nhận ạ.",medium_empathy,3,claude-sonnet-4-6,giải quyết kỹ thuật tốt nhưng thiếu empathy về trải nghiệm xấu
+EMP-053,"Khach hang: Hàng tôi đặt bị delay 2 ngày, bây giờ mới thấy báo.
+Nhan vien: Dạ em xin lỗi anh về sự chậm trễ. Shipper gặp vấn đề kỹ thuật ạ.
+Khach hang: Tôi không cần lý do, tôi cần hàng.
+Nhan vien: Dạ em track đơn ngay, hàng đang ở kho phân loại, shipper sẽ lấy và giao ngày mai ạ.
+Khach hang: Ngày mai chắc chắn không?
+Nhan vien: Dạ em ghi chú ưu tiên cho đơn anh ạ.
+Khach hang: Oke, tôi chờ.","Hàng tôi đặt bị delay 2 ngày, bây giờ mới thấy báo. | Tôi không cần lý do, tôi cần hàng. | Ngày mai chắc chắn không? | Oke, tôi chờ.","Dạ em xin lỗi anh về sự chậm trễ. Shipper gặp vấn đề kỹ thuật ạ. | Dạ em track đơn ngay, hàng đang ở kho phân loại, shipper sẽ lấy và giao ngày mai ạ. | Dạ em ghi chú ưu tiên cho đơn anh ạ.",medium_empathy,3,claude-sonnet-4-6,xin lỗi nhưng không ghi nhận sự frustration của khách
+EMP-054,"Khach hang: Tôi mua máy về phát hiện có vết xước nhỏ trên màn hình.
+Nhan vien: Dạ anh kiểm tra kỹ trước khi nhận hàng không ạ?
+Khach hang: Nhân viên giao hàng không cho tôi mở kiểm tra.
+Nhan vien: Dạ anh có quyền kiểm tra trước khi nhận. Trường hợp này anh mang đến cửa hàng, em xem xét hỗ trợ ạ.
+Khach hang: Hỗ trợ là như thế nào?
+Nhan vien: Dạ tùy tình trạng xước, nếu xước nhà sản xuất thì đổi, nếu xước vận chuyển cần xem lại quy trình ạ.
+Khach hang: Thôi tôi mang vào để xem.",Tôi mua máy về phát hiện có vết xước nhỏ trên màn hình. | Nhân viên giao hàng không cho tôi mở kiểm tra. | Hỗ trợ là như thế nào? | Thôi tôi mang vào để xem.,"Dạ anh kiểm tra kỹ trước khi nhận hàng không ạ? | Dạ anh có quyền kiểm tra trước khi nhận. Trường hợp này anh mang đến cửa hàng, em xem xét hỗ trợ ạ. | Dạ tùy tình trạng xước, nếu xước nhà sản xuất thì đổi, nếu xước vận chuyển cần xem lại quy trình ạ.",medium_empathy,3,claude-sonnet-4-6,"không rõ ràng về cam kết, khách không chắc kết quả"
+EMP-055,"Khach hang: Tôi mua loa không dây về bass yếu, không như mô tả.
+Nhan vien: Dạ anh đang dùng ở khoảng cách bao xa ạ?
+Khach hang: Cách 3 mét.
+Nhan vien: Dạ loa này bass mạnh nhất ở khoảng cách 1-1.5 mét ạ.
+Khach hang: Trên mô tả không nói điều đó.
+Nhan vien: Dạ anh thử dùng gần hơn xem khác không ạ.
+Khach hang: Gần hơn rồi, bass rõ hơn nhưng vẫn không bằng kỳ vọng.
+Nhan vien: Dạ nếu anh không hài lòng có thể đổi sang model khác trong 7 ngày ạ.","Tôi mua loa không dây về bass yếu, không như mô tả. | Cách 3 mét. | Trên mô tả không nói điều đó. | Gần hơn rồi, bass rõ hơn nhưng vẫn không bằng kỳ vọng.",Dạ anh đang dùng ở khoảng cách bao xa ạ? | Dạ loa này bass mạnh nhất ở khoảng cách 1-1.5 mét ạ. | Dạ anh thử dùng gần hơn xem khác không ạ. | Dạ nếu anh không hài lòng có thể đổi sang model khác trong 7 ngày ạ.,medium_empathy,3,claude-sonnet-4-6,giải quyết được nhưng không ghi nhận sự thất vọng
+EMP-056,"Khach hang: Tôi gọi hotline 30 phút không ai bắt máy.
+Nhan vien: Dạ em xin lỗi anh vì thời gian chờ dài. Anh cần hỗ trợ vấn đề gì ạ?
+Khach hang: Máy tôi bị lỗi màn hình, tôi cần gặp kỹ thuật viên.
+Nhan vien: Dạ em đặt lịch cho anh với kỹ thuật viên vào ngày mai hoặc ngày kia ạ.
+Khach hang: Ngày mai được không?
+Nhan vien: Dạ ngày mai lúc 10 giờ sáng còn chỗ, anh xác nhận không ạ?
+Khach hang: Được, tôi xác nhận.
+Nhan vien: Dạ em gửi xác nhận qua SMS ạ.","Tôi gọi hotline 30 phút không ai bắt máy. | Máy tôi bị lỗi màn hình, tôi cần gặp kỹ thuật viên. | Ngày mai được không? | Được, tôi xác nhận.","Dạ em xin lỗi anh vì thời gian chờ dài. Anh cần hỗ trợ vấn đề gì ạ? | Dạ em đặt lịch cho anh với kỹ thuật viên vào ngày mai hoặc ngày kia ạ. | Dạ ngày mai lúc 10 giờ sáng còn chỗ, anh xác nhận không ạ? | Dạ em gửi xác nhận qua SMS ạ.",medium_empathy,3,claude-sonnet-4-6,xin lỗi về chờ nhưng không ghi nhận đủ frustration
+EMP-057,"Khach hang: Tôi nhận được máy nhưng không có hóa đơn trong hộp.
+Nhan vien: Dạ anh mua hàng online thì hóa đơn được gửi qua email ạ.
+Khach hang: Tôi không nhận được email nào.
+Nhan vien: Dạ anh cho em địa chỉ email, em gửi lại ạ.
+Khach hang: Đây là email.
+Nhan vien: Dạ em gửi rồi, anh check lại ạ.
+Khach hang: Nhận được rồi. Lần sau nên có hóa đơn trong hộp cho tiện.
+Nhan vien: Dạ em ghi nhận góp ý ạ.",Tôi nhận được máy nhưng không có hóa đơn trong hộp. | Tôi không nhận được email nào. | Đây là email. | Nhận được rồi. Lần sau nên có hóa đơn trong hộp cho tiện.,"Dạ anh mua hàng online thì hóa đơn được gửi qua email ạ. | Dạ anh cho em địa chỉ email, em gửi lại ạ. | Dạ em gửi rồi, anh check lại ạ. | Dạ em ghi nhận góp ý ạ.",medium_empathy,3,claude-sonnet-4-6,giải quyết nhanh nhưng không xin lỗi về sự bất tiện
+EMP-058,"Khach hang: Tôi mua phụ kiện nhưng không tương thích với máy tôi.
+Nhan vien: Dạ anh cho em biết model máy và model phụ kiện ạ.
+Khach hang: Galaxy S24 và ốp lưng ghi S24.
+Nhan vien: Dạ S24 và S24+ có khác nhau về kích thước, anh có thể mua nhầm không ạ?
+Khach hang: Ủa, tôi mua S24 thường thôi.
+Nhan vien: Dạ một số sản phẩm nhập về có sai thông tin, anh mang đến đổi ạ.
+Khach hang: Oke, tôi mang vào.","Tôi mua phụ kiện nhưng không tương thích với máy tôi. | Galaxy S24 và ốp lưng ghi S24. | Ủa, tôi mua S24 thường thôi. | Oke, tôi mang vào.","Dạ anh cho em biết model máy và model phụ kiện ạ. | Dạ S24 và S24+ có khác nhau về kích thước, anh có thể mua nhầm không ạ? | Dạ một số sản phẩm nhập về có sai thông tin, anh mang đến đổi ạ.",medium_empathy,3,claude-sonnet-4-6,giải quyết nhưng không rõ lỗi của ai
+EMP-059,"Khach hang: Chuột tôi mua về 1 tháng bị lag khi dùng, không mượt.
+Nhan vien: Dạ anh dùng chuột có dây hay không dây ạ?
+Khach hang: Không dây, dùng USB dongle.
+Nhan vien: Dạ anh thử cắm dongle vào cổng USB 2.0 thay vì USB 3.0 xem có hết lag không ạ?
+Khach hang: Cắm rồi, mượt hơn nhiều.
+Nhan vien: Dạ USB 3.0 đôi khi gây nhiễu tần số 2.4GHz. Đây là giải pháp chuẩn ạ.
+Khach hang: Cảm ơn em. Sao không ghi trong hướng dẫn?
+Nhan vien: Dạ đây là vấn đề kỹ thuật nên ít ghi trong hướng dẫn người dùng ạ.","Chuột tôi mua về 1 tháng bị lag khi dùng, không mượt. | Không dây, dùng USB dongle. | Cắm rồi, mượt hơn nhiều. | Cảm ơn em. Sao không ghi trong hướng dẫn?",Dạ anh dùng chuột có dây hay không dây ạ? | Dạ anh thử cắm dongle vào cổng USB 2.0 thay vì USB 3.0 xem có hết lag không ạ? | Dạ USB 3.0 đôi khi gây nhiễu tần số 2.4GHz. Đây là giải pháp chuẩn ạ. | Dạ đây là vấn đề kỹ thuật nên ít ghi trong hướng dẫn người dùng ạ.,medium_empathy,3,claude-sonnet-4-6,giải quyết kỹ thuật tốt nhưng không xin lỗi về thiếu thông tin
+EMP-060,"Khach hang: Tôi mua webcam về quality thấp hơn ghi trên hộp.
+Nhan vien: Dạ anh đang dùng phần mềm gì để test ạ?
+Khach hang: Zoom và Google Meet.
+Nhan vien: Dạ Zoom và Meet có thể giới hạn resolution tùy gói subscription. Anh thử app Camera mặc định xem quality thế nào ạ?
+Khach hang: Dùng Camera app thấy đẹp hơn nhiều.
+Nhan vien: Dạ Zoom miễn phí giới hạn 720p, webcam của anh không lỗi ạ.
+Khach hang: Ủa vậy tôi hiểu nhầm, cảm ơn em.
+Nhan vien: Dạ không sao anh ạ.","Tôi mua webcam về quality thấp hơn ghi trên hộp. | Zoom và Google Meet. | Dùng Camera app thấy đẹp hơn nhiều. | Ủa vậy tôi hiểu nhầm, cảm ơn em.","Dạ anh đang dùng phần mềm gì để test ạ? | Dạ Zoom và Meet có thể giới hạn resolution tùy gói subscription. Anh thử app Camera mặc định xem quality thế nào ạ? | Dạ Zoom miễn phí giới hạn 720p, webcam của anh không lỗi ạ. | Dạ không sao anh ạ.",medium_empathy,3,claude-sonnet-4-6,giải thích đúng nhưng không empathize về kỳ vọng sai
+EMP-061,"Khach hang: Máy tôi mua bị lỗi từ hộp mà cửa hàng không đổi.
+Nhan vien: Dạ anh mua bao lâu rồi ạ?
+Khach hang: 2 ngày. Màn hình bị sọc ngay từ đầu.
+Nhan vien: Dạ máy bị lỗi màn hình thường do va đập. Anh kiểm tra lại xem có bị rơi không.
+Khach hang: Tôi nói là không rơi mà.
+Nhan vien: Dạ anh cần chứng minh lỗi từ nhà sản xuất thì mới được đổi ạ.
+Khach hang: Chứng minh kiểu gì? Vô lý quá.
+Nhan vien: Dạ anh đem đến trung tâm bảo hành kiểm định ạ.",Máy tôi mua bị lỗi từ hộp mà cửa hàng không đổi. | 2 ngày. Màn hình bị sọc ngay từ đầu. | Tôi nói là không rơi mà. | Chứng minh kiểu gì? Vô lý quá.,Dạ anh mua bao lâu rồi ạ? | Dạ máy bị lỗi màn hình thường do va đập. Anh kiểm tra lại xem có bị rơi không. | Dạ anh cần chứng minh lỗi từ nhà sản xuất thì mới được đổi ạ. | Dạ anh đem đến trung tâm bảo hành kiểm định ạ.,low_empathy,1,claude-sonnet-4-6,"đổ lỗi cho khách, không ghi nhận"
+EMP-062,"Khach hang: Tôi đặt hàng 1 tuần rồi không thấy giao, gọi không ai nghe.
+Nhan vien: Dạ anh kiểm tra email xác nhận chưa ạ?
+Khach hang: Rồi, đơn xác nhận nhưng hàng chưa về.
+Nhan vien: Dạ thời gian giao hàng tiêu chuẩn 3-7 ngày làm việc ạ.
+Khach hang: 7 ngày không tính cuối tuần thì hơn 1 tuần rồi.
+Nhan vien: Dạ em không can thiệp được vào vận chuyển, anh liên hệ đơn vị giao hàng trực tiếp.
+Khach hang: Số nào? Anh cho tôi số đi.
+Nhan vien: Dạ anh tra Google là có ạ.","Tôi đặt hàng 1 tuần rồi không thấy giao, gọi không ai nghe. | Rồi, đơn xác nhận nhưng hàng chưa về. | 7 ngày không tính cuối tuần thì hơn 1 tuần rồi. | Số nào? Anh cho tôi số đi.","Dạ anh kiểm tra email xác nhận chưa ạ? | Dạ thời gian giao hàng tiêu chuẩn 3-7 ngày làm việc ạ. | Dạ em không can thiệp được vào vận chuyển, anh liên hệ đơn vị giao hàng trực tiếp. | Dạ anh tra Google là có ạ.",low_empathy,1,claude-sonnet-4-6,"đẩy vấn đề sang nơi khác, không hỗ trợ"
+EMP-063,"Khach hang: Hàng giao về hộp vỡ, bên trong có xước.
+Nhan vien: Dạ anh có quay video lúc mở hộp không ạ?
+Khach hang: Không, tôi không biết phải quay.
+Nhan vien: Dạ theo chính sách cần video làm bằng chứng ạ.
+Khach hang: Trên web không thấy ghi điều đó.
+Nhan vien: Dạ quy định trong điều khoản mua hàng ạ.
+Khach hang: Vậy tôi phải làm sao?
+Nhan vien: Dạ vì không có bằng chứng nên bên em không hỗ trợ được ạ.","Hàng giao về hộp vỡ, bên trong có xước. | Không, tôi không biết phải quay. | Trên web không thấy ghi điều đó. | Vậy tôi phải làm sao?",Dạ anh có quay video lúc mở hộp không ạ? | Dạ theo chính sách cần video làm bằng chứng ạ. | Dạ quy định trong điều khoản mua hàng ạ. | Dạ vì không có bằng chứng nên bên em không hỗ trợ được ạ.,low_empathy,1,claude-sonnet-4-6,từ chối hỗ trợ vì thiếu thủ tục
+EMP-064,"Khach hang: Điện thoại chống nước IP67 mà mưa nhỏ là chết màn hình.
+Nhan vien: Dạ IP67 chỉ chống ngâm 1 mét 30 phút, không áp dụng cho mưa ạ.
+Khach hang: Mưa nhỏ mà gọi là áp lực cao?
+Nhan vien: Dạ mưa tạo áp lực khác ngâm nước tĩnh ạ.
+Khach hang: Quảng cáo chống nước để làm gì?
+Nhan vien: Dạ chống nước có điều kiện, anh xem thông tin kỹ thuật trên trang nhà sản xuất ạ.
+Khach hang: Vậy ai chịu tiền sửa máy?
+Nhan vien: Dạ trường hợp này không thuộc bảo hành ạ.",Điện thoại chống nước IP67 mà mưa nhỏ là chết màn hình. | Mưa nhỏ mà gọi là áp lực cao? | Quảng cáo chống nước để làm gì? | Vậy ai chịu tiền sửa máy?,"Dạ IP67 chỉ chống ngâm 1 mét 30 phút, không áp dụng cho mưa ạ. | Dạ mưa tạo áp lực khác ngâm nước tĩnh ạ. | Dạ chống nước có điều kiện, anh xem thông tin kỹ thuật trên trang nhà sản xuất ạ. | Dạ trường hợp này không thuộc bảo hành ạ.",low_empathy,1,claude-sonnet-4-6,"từ chối hoàn toàn, không đề xuất giải pháp"
+EMP-065,"Khach hang: Tôi bị trừ tiền 2 lần, giải thích đi.
+Nhan vien: Dạ anh cho em mã giao dịch ạ.
+Khach hang: Không có mã, thẻ bị trừ 2 lần là thật.
+Nhan vien: Dạ bên em chỉ thấy 1 giao dịch, nếu bị trừ 2 lần là ngân hàng pending.
+Khach hang: Tôi hỏi bên anh chứ không phải ngân hàng.
+Nhan vien: Dạ bên em không can thiệp được hệ thống ngân hàng ạ.
+Khach hang: Thôi tự xử vậy.","Tôi bị trừ tiền 2 lần, giải thích đi. | Không có mã, thẻ bị trừ 2 lần là thật. | Tôi hỏi bên anh chứ không phải ngân hàng. | Thôi tự xử vậy.","Dạ anh cho em mã giao dịch ạ. | Dạ bên em chỉ thấy 1 giao dịch, nếu bị trừ 2 lần là ngân hàng pending. | Dạ bên em không can thiệp được hệ thống ngân hàng ạ.",low_empathy,1,claude-sonnet-4-6,"đẩy trách nhiệm, không hỗ trợ thêm"
+EMP-066,"Khach hang: Laptop tôi cắm sạc không nhận, hàng lỗi từ hộp.
+Nhan vien: Dạ anh thử cắm cổng khác chưa ạ?
+Khach hang: Thử hết rồi. Đừng hỏi thêm, đổi cho tôi đi.
+Nhan vien: Dạ máy cần kiểm tra trước khi đổi, anh mang vào cửa hàng ạ.
+Khach hang: Mua 1 ngày mà còn kiểm tra gì nữa?
+Nhan vien: Dạ đây là quy trình bắt buộc ạ.
+Khach hang: Thôi tôi lên mạng review cho mọi người biết.","Laptop tôi cắm sạc không nhận, hàng lỗi từ hộp. | Thử hết rồi. Đừng hỏi thêm, đổi cho tôi đi. | Mua 1 ngày mà còn kiểm tra gì nữa? | Thôi tôi lên mạng review cho mọi người biết.","Dạ anh thử cắm cổng khác chưa ạ? | Dạ máy cần kiểm tra trước khi đổi, anh mang vào cửa hàng ạ. | Dạ đây là quy trình bắt buộc ạ.",low_empathy,1,claude-sonnet-4-6,"cứng nhắc về quy trình, không linh hoạt"
+EMP-067,"Khach hang: Voucher của tôi không dùng được, hệ thống báo lỗi hoài.
+Nhan vien: Dạ voucher hết hạn chưa ạ?
+Khach hang: Chưa, còn 1 tuần.
+Nhan vien: Dạ đơn anh đủ điều kiện tối thiểu chưa ạ?
+Khach hang: Đủ rồi, 3 triệu. Anh cứ hỏi mà không giải quyết.
+Nhan vien: Dạ bộ phận kỹ thuật đang bảo trì hệ thống, anh thử lại sau 2 tiếng ạ.
+Khach hang: Thôi kệ, mua không voucher luôn.","Voucher của tôi không dùng được, hệ thống báo lỗi hoài. | Chưa, còn 1 tuần. | Đủ rồi, 3 triệu. Anh cứ hỏi mà không giải quyết. | Thôi kệ, mua không voucher luôn.","Dạ voucher hết hạn chưa ạ? | Dạ đơn anh đủ điều kiện tối thiểu chưa ạ? | Dạ bộ phận kỹ thuật đang bảo trì hệ thống, anh thử lại sau 2 tiếng ạ.",low_empathy,1,claude-sonnet-4-6,"trả lời qua loa, không giải quyết được"
+EMP-068,"Khach hang: Tôi mua máy về thấy seal đã bóc, tôi sợ hàng refurbished.
+Nhan vien: Dạ seal bóc có thể do nhân viên kho kiểm tra ạ.
+Khach hang: Nhân viên kho sao được mở seal khách hàng?
+Nhan vien: Dạ đây là quy trình kiểm tra chất lượng ạ.
+Khach hang: Quy trình gì lạ vậy? Tôi cần máy mới nguyên seal.
+Nhan vien: Dạ bên em không có chính sách đổi vì lý do seal ạ.
+Khach hang: Thôi tôi liên hệ bảo vệ người tiêu dùng.","Tôi mua máy về thấy seal đã bóc, tôi sợ hàng refurbished. | Nhân viên kho sao được mở seal khách hàng? | Quy trình gì lạ vậy? Tôi cần máy mới nguyên seal. | Thôi tôi liên hệ bảo vệ người tiêu dùng.",Dạ seal bóc có thể do nhân viên kho kiểm tra ạ. | Dạ đây là quy trình kiểm tra chất lượng ạ. | Dạ bên em không có chính sách đổi vì lý do seal ạ.,low_empathy,1,claude-sonnet-4-6,bảo vệ quy trình thay vì bảo vệ khách
+EMP-069,"Khach hang: Nhân viên tư vấn sai thông số máy, tôi mua về không phù hợp.
+Nhan vien: Dạ anh nói chuyện với nhân viên nào ạ?
+Khach hang: Tôi không nhớ tên, nhưng tôi đã mua sai rồi.
+Nhan vien: Dạ anh có bằng chứng về việc tư vấn sai không ạ?
+Khach hang: Tôi không ghi âm, nhưng rõ ràng là sai.
+Nhan vien: Dạ không có bằng chứng thì bên em không xử lý được ạ.
+Khach hang: Vậy tôi bị thiệt thòi mà không ai chịu trách nhiệm.","Nhân viên tư vấn sai thông số máy, tôi mua về không phù hợp. | Tôi không nhớ tên, nhưng tôi đã mua sai rồi. | Tôi không ghi âm, nhưng rõ ràng là sai. | Vậy tôi bị thiệt thòi mà không ai chịu trách nhiệm.",Dạ anh nói chuyện với nhân viên nào ạ? | Dạ anh có bằng chứng về việc tư vấn sai không ạ? | Dạ không có bằng chứng thì bên em không xử lý được ạ.,low_empathy,1,claude-sonnet-4-6,yêu cầu bằng chứng không thực tế
+EMP-070,"Khach hang: Tôi đặt máy giá flash sale mà sau 2 ngày bị hủy đơn.
+Nhan vien: Dạ flash sale hết hàng rất nhanh, đơn anh bị hủy do hết stock ạ.
+Khach hang: Nhưng tôi đã thanh toán thành công.
+Nhan vien: Dạ tiền anh sẽ hoàn trong 3-5 ngày ạ.
+Khach hang: Vậy tôi không được mua giá flash sale nữa.
+Nhan vien: Dạ flash sale khi có đợt mới anh theo dõi app ạ.
+Khach hang: Không công bằng chút nào.",Tôi đặt máy giá flash sale mà sau 2 ngày bị hủy đơn. | Nhưng tôi đã thanh toán thành công. | Vậy tôi không được mua giá flash sale nữa. | Không công bằng chút nào.,"Dạ flash sale hết hàng rất nhanh, đơn anh bị hủy do hết stock ạ. | Dạ tiền anh sẽ hoàn trong 3-5 ngày ạ. | Dạ flash sale khi có đợt mới anh theo dõi app ạ.",low_empathy,1,claude-sonnet-4-6,thông báo policy mà không ghi nhận cảm giác bị thiệt
+EMP-071,"Khach hang: Camera sau máy tôi bị lóa khi chụp ngoài trời.
+Nhan vien: Dạ anh thử bật HDR xem có khác không ạ?
+Khach hang: Bật rồi vẫn vậy.
+Nhan vien: Dạ thử tắt AI Scene thử ạ.
+Khach hang: Thử hết rồi, vẫn bị lóa. Máy lỗi rõ ràng.
+Nhan vien: Dạ lóa khi chụp ngoài nắng là bình thường với mọi camera ạ.
+Khach hang: Máy cũ của tôi không bị như vậy.
+Nhan vien: Dạ mỗi máy có sensor khác nhau ạ.","Camera sau máy tôi bị lóa khi chụp ngoài trời. | Bật rồi vẫn vậy. | Thử hết rồi, vẫn bị lóa. Máy lỗi rõ ràng. | Máy cũ của tôi không bị như vậy.",Dạ anh thử bật HDR xem có khác không ạ? | Dạ thử tắt AI Scene thử ạ. | Dạ lóa khi chụp ngoài nắng là bình thường với mọi camera ạ. | Dạ mỗi máy có sensor khác nhau ạ.,low_empathy,1,claude-sonnet-4-6,"không thừa nhận vấn đề, biện hộ cho sản phẩm"
+EMP-072,"Khach hang: Tôi mua máy về bạn tôi nói giá này rẻ hơn ở chỗ khác.
+Nhan vien: Dạ giá tùy thị trường, bên em niêm yết công khai ạ.
+Khach hang: Nhưng tôi mua giá cao hơn chỗ khác.
+Nhan vien: Dạ chính sách giá bên em không điều chỉnh sau khi mua ạ.
+Khach hang: Không có chính sách giá tốt nhất hả?
+Nhan vien: Dạ bên em không có chính sách đó ạ.
+Khach hang: Vậy tôi mua sai chỗ rồi.",Tôi mua máy về bạn tôi nói giá này rẻ hơn ở chỗ khác. | Nhưng tôi mua giá cao hơn chỗ khác. | Không có chính sách giá tốt nhất hả? | Vậy tôi mua sai chỗ rồi.,"Dạ giá tùy thị trường, bên em niêm yết công khai ạ. | Dạ chính sách giá bên em không điều chỉnh sau khi mua ạ. | Dạ bên em không có chính sách đó ạ.",low_empathy,1,claude-sonnet-4-6,"không có giải pháp, để khách cảm thấy thua thiệt"
+EMP-073,"Khach hang: Tai nghe không có tiếng dù cắm vào máy tính rồi.
+Nhan vien: Dạ anh check Volume mixer chưa ạ?
+Khach hang: Rồi, volume đang mở.
+Nhan vien: Dạ anh thử cổng 3.5mm khác chưa ạ?
+Khach hang: Thử rồi vẫn không có tiếng.
+Nhan vien: Dạ có thể máy tính anh bị lỗi sound card, không liên quan đến tai nghe ạ.
+Khach hang: Tai nghe này cắm điện thoại có tiếng mà.
+Nhan vien: Dạ vậy bên em không hỗ trợ được, anh mang máy tính đi sửa ạ.","Tai nghe không có tiếng dù cắm vào máy tính rồi. | Rồi, volume đang mở. | Thử rồi vẫn không có tiếng. | Tai nghe này cắm điện thoại có tiếng mà.","Dạ anh check Volume mixer chưa ạ? | Dạ anh thử cổng 3.5mm khác chưa ạ? | Dạ có thể máy tính anh bị lỗi sound card, không liên quan đến tai nghe ạ. | Dạ vậy bên em không hỗ trợ được, anh mang máy tính đi sửa ạ.",low_empathy,1,claude-sonnet-4-6,đổ lỗi cho thiết bị khác mà không kiểm tra đầy đủ
+EMP-074,"Khach hang: Bảo hành máy tôi nói không bảo hành vì tôi tự sửa, nhưng tôi không sửa gì hết.
+Nhan vien: Dạ kỹ thuật viên kiểm tra và xác nhận có dấu hiệu can thiệp ạ.
+Khach hang: Tôi không sửa gì, làm sao có dấu hiệu đó.
+Nhan vien: Dạ bên em dựa vào kết quả kiểm tra của kỹ thuật viên ạ.
+Khach hang: Tôi có thể yêu cầu kiểm tra lại không?
+Nhan vien: Dạ kết quả đã được xác nhận, khó thay đổi ạ.
+Khach hang: Vậy là tôi bị oan mà không có cách gì.","Bảo hành máy tôi nói không bảo hành vì tôi tự sửa, nhưng tôi không sửa gì hết. | Tôi không sửa gì, làm sao có dấu hiệu đó. | Tôi có thể yêu cầu kiểm tra lại không? | Vậy là tôi bị oan mà không có cách gì.","Dạ kỹ thuật viên kiểm tra và xác nhận có dấu hiệu can thiệp ạ. | Dạ bên em dựa vào kết quả kiểm tra của kỹ thuật viên ạ. | Dạ kết quả đã được xác nhận, khó thay đổi ạ.",low_empathy,1,claude-sonnet-4-6,không lắng nghe phản bác của khách
+EMP-075,"Khach hang: Tôi mua máy về chip bị nóng khi dùng nhẹ.
+Nhan vien: Dạ chip nóng khi dùng là bình thường ạ.
+Khach hang: Nóng đến mức không cầm được là bình thường hả?
+Nhan vien: Dạ tùy mức độ, anh đo nhiệt độ được không ạ?
+Khach hang: Tôi không có thiết bị đo, nhưng cầm nóng rát tay.
+Nhan vien: Dạ không có đo cụ thể thì khó xác định có lỗi không ạ.
+Khach hang: Cầm nóng rát tay mà không đủ bằng chứng hả?","Tôi mua máy về chip bị nóng khi dùng nhẹ. | Nóng đến mức không cầm được là bình thường hả? | Tôi không có thiết bị đo, nhưng cầm nóng rát tay. | Cầm nóng rát tay mà không đủ bằng chứng hả?","Dạ chip nóng khi dùng là bình thường ạ. | Dạ tùy mức độ, anh đo nhiệt độ được không ạ? | Dạ không có đo cụ thể thì khó xác định có lỗi không ạ.",low_empathy,1,claude-sonnet-4-6,yêu cầu bằng chứng không thực tế về vấn đề rõ ràng
+EMP-076,"Khach hang: Điện thoại tôi cập nhật xong bị chậm lại rõ rệt.
+Nhan vien: Dạ update mới đôi khi cần thời gian optimize, anh chờ 24 giờ thử ạ.
+Khach hang: Đã chờ 3 ngày rồi vẫn chậm.
+Nhan vien: Dạ anh thử factory reset xem có khắc phục không ạ.
+Khach hang: Factory reset thì mất hết dữ liệu.
+Nhan vien: Dạ anh backup trước rồi reset ạ.
+Khach hang: Tôi bỏ công backup và mất thời gian cài lại vì lỗi của bên anh?
+Nhan vien: Dạ đây là cách xử lý tiêu chuẩn ạ.",Điện thoại tôi cập nhật xong bị chậm lại rõ rệt. | Đã chờ 3 ngày rồi vẫn chậm. | Factory reset thì mất hết dữ liệu. | Tôi bỏ công backup và mất thời gian cài lại vì lỗi của bên anh?,"Dạ update mới đôi khi cần thời gian optimize, anh chờ 24 giờ thử ạ. | Dạ anh thử factory reset xem có khắc phục không ạ. | Dạ anh backup trước rồi reset ạ. | Dạ đây là cách xử lý tiêu chuẩn ạ.",low_empathy,1,claude-sonnet-4-6,đề xuất giải pháp bất tiện mà không nhận lỗi
+EMP-077,"Khach hang: Tôi mua màn hình về dead pixel từ ngày đầu.
+Nhan vien: Dạ anh đếm được bao nhiêu điểm chết ạ?
+Khach hang: 3 điểm.
+Nhan vien: Dạ theo tiêu chuẩn nhà sản xuất, dưới 5 điểm chết không thuộc lỗi ạ.
+Khach hang: Tiêu chuẩn gì vậy? Tôi bỏ tiền mua màn hình hoàn hảo.
+Nhan vien: Dạ đây là tiêu chuẩn ISO, bên em không thể đổi ạ.
+Khach hang: Bán hàng kém chất lượng rồi viện chuẩn ISO.",Tôi mua màn hình về dead pixel từ ngày đầu. | 3 điểm. | Tiêu chuẩn gì vậy? Tôi bỏ tiền mua màn hình hoàn hảo. | Bán hàng kém chất lượng rồi viện chuẩn ISO.,"Dạ anh đếm được bao nhiêu điểm chết ạ? | Dạ theo tiêu chuẩn nhà sản xuất, dưới 5 điểm chết không thuộc lỗi ạ. | Dạ đây là tiêu chuẩn ISO, bên em không thể đổi ạ.",low_empathy,1,claude-sonnet-4-6,"ẩn sau tiêu chuẩn kỹ thuật, không cảm thông"
+EMP-078,"Khach hang: Tôi mua phần mềm diệt virus nhưng key không activate được.
+Nhan vien: Dạ anh nhập đúng key chưa ạ?
+Khach hang: Nhập đúng rồi, báo lỗi invalid key.
+Nhan vien: Dạ anh liên hệ nhà sản xuất phần mềm để được hỗ trợ ạ.
+Khach hang: Tôi mua ở đây chứ không mua trực tiếp từ họ.
+Nhan vien: Dạ bên em chỉ bán key, không hỗ trợ kỹ thuật phần mềm ạ.
+Khach hang: Vậy tôi mua key vô dụng và không ai hỗ trợ.","Tôi mua phần mềm diệt virus nhưng key không activate được. | Nhập đúng rồi, báo lỗi invalid key. | Tôi mua ở đây chứ không mua trực tiếp từ họ. | Vậy tôi mua key vô dụng và không ai hỗ trợ.","Dạ anh nhập đúng key chưa ạ? | Dạ anh liên hệ nhà sản xuất phần mềm để được hỗ trợ ạ. | Dạ bên em chỉ bán key, không hỗ trợ kỹ thuật phần mềm ạ.",low_empathy,1,claude-sonnet-4-6,từ chối trách nhiệm hoàn toàn
+EMP-079,"Khach hang: Shipper thái độ xấu với tôi khi giao hàng.
+Nhan vien: Dạ anh có bằng chứng về thái độ không ạ?
+Khach hang: Không có ghi âm nhưng anh ta nói chuyện cộc lốc.
+Nhan vien: Dạ bên em sẽ ghi nhận phản ánh ạ.
+Khach hang: Ghi nhận là sao? Có xử lý không?
+Nhan vien: Dạ bên em sẽ nhắc nhở đơn vị vận chuyển ạ.
+Khach hang: Nhắc nhở kiểu gì? Tôi không cảm thấy được xem trọng.",Shipper thái độ xấu với tôi khi giao hàng. | Không có ghi âm nhưng anh ta nói chuyện cộc lốc. | Ghi nhận là sao? Có xử lý không? | Nhắc nhở kiểu gì? Tôi không cảm thấy được xem trọng.,Dạ anh có bằng chứng về thái độ không ạ? | Dạ bên em sẽ ghi nhận phản ánh ạ. | Dạ bên em sẽ nhắc nhở đơn vị vận chuyển ạ.,low_empathy,1,claude-sonnet-4-6,phản hồi hời hợt về trải nghiệm xấu
+EMP-080,"Khach hang: Tôi mua 2 cái cùng model nhưng 1 cái nhẹ hơn cái kia, có vấn đề không?
+Nhan vien: Dạ có thể sai số sản xuất nhỏ ạ.
+Khach hang: Nhẹ hơn 50g là sai số nhỏ hả?
+Nhan vien: Dạ em không có thông tin chính xác về sai số cho model này ạ.
+Khach hang: Vậy em tra giúp tôi đi.
+Nhan vien: Dạ anh có thể liên hệ nhà sản xuất để được giải thích kỹ hơn ạ.
+Khach hang: Hỏi bên anh mà cứ đẩy đi chỗ khác.","Tôi mua 2 cái cùng model nhưng 1 cái nhẹ hơn cái kia, có vấn đề không? | Nhẹ hơn 50g là sai số nhỏ hả? | Vậy em tra giúp tôi đi. | Hỏi bên anh mà cứ đẩy đi chỗ khác.",Dạ có thể sai số sản xuất nhỏ ạ. | Dạ em không có thông tin chính xác về sai số cho model này ạ. | Dạ anh có thể liên hệ nhà sản xuất để được giải thích kỹ hơn ạ.,low_empathy,1,claude-sonnet-4-6,không nỗ lực tìm câu trả lời
+EMP-081,"Khach hang: Tôi mua máy về 1 tháng thì hỏng, bây giờ đến bảo hành thì nhân viên nói không được.
+Nhan vien: Dạ nhân viên nói lý do gì ạ?
+Khach hang: Nói do nước vào, nhưng tôi không để máy gần nước bao giờ.
+Nhan vien: Dạ nếu kỹ thuật viên xác định có nước vào thì không thuộc bảo hành ạ.
+Khach hang: Tôi không đồng ý với kết quả đó.
+Nhan vien: Dạ kết quả kiểm định là căn cứ cuối cùng ạ.
+Khach hang: Vậy tôi không có tiếng nói gì cả.","Tôi mua máy về 1 tháng thì hỏng, bây giờ đến bảo hành thì nhân viên nói không được. | Nói do nước vào, nhưng tôi không để máy gần nước bao giờ. | Tôi không đồng ý với kết quả đó. | Vậy tôi không có tiếng nói gì cả.",Dạ nhân viên nói lý do gì ạ? | Dạ nếu kỹ thuật viên xác định có nước vào thì không thuộc bảo hành ạ. | Dạ kết quả kiểm định là căn cứ cuối cùng ạ.,low_empathy,1,claude-sonnet-4-6,"không có cơ chế phúc tra, bỏ mặc khách"
+EMP-082,"Khach hang: App mua hàng cứ tự đăng xuất, tôi mất cả giỏ hàng.
+Nhan vien: Dạ anh đang dùng phiên bản app mấy ạ?
+Khach hang: Phiên bản mới nhất rồi.
+Nhan vien: Dạ anh thử xóa app và cài lại ạ.
+Khach hang: Cài lại thì mất giỏ hàng không?
+Nhan vien: Dạ giỏ hàng lưu trên tài khoản, không mất ạ.
+Khach hang: Tôi cài lại rồi vẫn bị đăng xuất.
+Nhan vien: Dạ em ghi nhận lỗi và chuyển bộ phận kỹ thuật ạ. Anh chờ 24-48 giờ.","App mua hàng cứ tự đăng xuất, tôi mất cả giỏ hàng. | Phiên bản mới nhất rồi. | Cài lại thì mất giỏ hàng không? | Tôi cài lại rồi vẫn bị đăng xuất.","Dạ anh đang dùng phiên bản app mấy ạ? | Dạ anh thử xóa app và cài lại ạ. | Dạ giỏ hàng lưu trên tài khoản, không mất ạ. | Dạ em ghi nhận lỗi và chuyển bộ phận kỹ thuật ạ. Anh chờ 24-48 giờ.",low_empathy,1,claude-sonnet-4-6,"không giải quyết được, để khách chờ vô thời hạn"
+EMP-083,"Khach hang: Tôi đặt hàng giao theo giờ mà không đúng giờ.
+Nhan vien: Dạ giao theo giờ có thể lệch 30 phút ạ.
+Khach hang: Lệch 2 tiếng chứ không phải 30 phút.
+Nhan vien: Dạ có thể do traffic và điều kiện giao thông ạ.
+Khach hang: Tôi trả thêm phí giao giờ mà.
+Nhan vien: Dạ phí giao giờ là ưu tiên, không đảm bảo tuyệt đối ạ.
+Khach hang: Tại sao không nói điều đó lúc tôi mua?",Tôi đặt hàng giao theo giờ mà không đúng giờ. | Lệch 2 tiếng chứ không phải 30 phút. | Tôi trả thêm phí giao giờ mà. | Tại sao không nói điều đó lúc tôi mua?,"Dạ giao theo giờ có thể lệch 30 phút ạ. | Dạ có thể do traffic và điều kiện giao thông ạ. | Dạ phí giao giờ là ưu tiên, không đảm bảo tuyệt đối ạ.",low_empathy,1,claude-sonnet-4-6,"thông tin không đầy đủ lúc bán, không nhận lỗi"
+EMP-084,"Khach hang: Sạc không dây của tôi sạc rất chậm, quảng cáo 15W mà như sạc 5W.
+Nhan vien: Dạ anh dùng adapter mấy W ạ?
+Khach hang: Adapter 20W.
+Nhan vien: Dạ sạc không dây 15W cần adapter đặc biệt, không phải adapter thường ạ.
+Khach hang: Không ai nói tôi điều đó khi mua.
+Nhan vien: Dạ thông tin có ghi trong thông số kỹ thuật ạ.
+Khach hang: Trong thông số kỹ thuật nhỏ như kiến, ai đọc.","Sạc không dây của tôi sạc rất chậm, quảng cáo 15W mà như sạc 5W. | Adapter 20W. | Không ai nói tôi điều đó khi mua. | Trong thông số kỹ thuật nhỏ như kiến, ai đọc.","Dạ anh dùng adapter mấy W ạ? | Dạ sạc không dây 15W cần adapter đặc biệt, không phải adapter thường ạ. | Dạ thông tin có ghi trong thông số kỹ thuật ạ.",low_empathy,1,claude-sonnet-4-6,viện thông số kỹ thuật thay vì nhận lỗi tư vấn
+EMP-085,"Khach hang: Loa của tôi bị crackle khi âm lượng trên 50%.
+Nhan vien: Dạ anh thử giảm bass trong EQ xem có đỡ không ạ?
+Khach hang: Thử rồi vẫn bị crackle.
+Nhan vien: Dạ có thể do content anh nghe có nhiều bass ạ.
+Khach hang: Tôi nghe mọi thứ đều bị crackle.
+Nhan vien: Dạ loa trên 50% volume thường bị distortion, anh dùng ở 50% thôi ạ.
+Khach hang: Mua loa mà chỉ được dùng 50% công suất?",Loa của tôi bị crackle khi âm lượng trên 50%. | Thử rồi vẫn bị crackle. | Tôi nghe mọi thứ đều bị crackle. | Mua loa mà chỉ được dùng 50% công suất?,"Dạ anh thử giảm bass trong EQ xem có đỡ không ạ? | Dạ có thể do content anh nghe có nhiều bass ạ. | Dạ loa trên 50% volume thường bị distortion, anh dùng ở 50% thôi ạ.",low_empathy,1,claude-sonnet-4-6,biện hộ cho sản phẩm lỗi
+EMP-086,"Khach hang: Tôi mua bàn phím cơ về 1 key bị kẹt.
+Nhan vien: Dạ anh thử rút keycap và vệ sinh switch không ạ?
+Khach hang: Tôi không biết làm, lỡ hỏng thêm.
+Nhan vien: Dạ có hướng dẫn trên YouTube anh có thể xem ạ.
+Khach hang: Tôi mua hàng mới mà phải tự sửa hả?
+Nhan vien: Dạ nếu không muốn tự làm thì mang đến cửa hàng ạ.
+Khach hang: Xa lắm, tôi mua online.","Tôi mua bàn phím cơ về 1 key bị kẹt. | Tôi không biết làm, lỡ hỏng thêm. | Tôi mua hàng mới mà phải tự sửa hả? | Xa lắm, tôi mua online.",Dạ anh thử rút keycap và vệ sinh switch không ạ? | Dạ có hướng dẫn trên YouTube anh có thể xem ạ. | Dạ nếu không muốn tự làm thì mang đến cửa hàng ạ.,low_empathy,1,claude-sonnet-4-6,đẩy trách nhiệm cho khách
+EMP-087,"Khach hang: Máy tính tôi mua về WiFi bắt sóng kém hơn máy cũ.
+Nhan vien: Dạ anh đặt máy ở đâu ạ?
+Khach hang: Cùng chỗ với máy cũ, máy cũ 4 vạch, máy mới 2 vạch.
+Nhan vien: Dạ mỗi card WiFi khác nhau về antenna, không so sánh được ạ.
+Khach hang: Nhưng máy mới đắt hơn mà WiFi yếu hơn.
+Nhan vien: Dạ giá cao không đảm bảo WiFi mạnh hơn ạ.
+Khach hang: Vậy thì tôi mua đắt để làm gì.","Máy tính tôi mua về WiFi bắt sóng kém hơn máy cũ. | Cùng chỗ với máy cũ, máy cũ 4 vạch, máy mới 2 vạch. | Nhưng máy mới đắt hơn mà WiFi yếu hơn. | Vậy thì tôi mua đắt để làm gì.","Dạ anh đặt máy ở đâu ạ? | Dạ mỗi card WiFi khác nhau về antenna, không so sánh được ạ. | Dạ giá cao không đảm bảo WiFi mạnh hơn ạ.",low_empathy,1,claude-sonnet-4-6,"không nhận lỗi, để khách cảm thấy bị lừa"
+EMP-088,"Khach hang: Tôi không nhận được quà tặng kèm khi mua máy.
+Nhan vien: Dạ chương trình quà tặng đã kết thúc hôm qua ạ.
+Khach hang: Tôi mua hôm qua, trong chương trình rồi.
+Nhan vien: Dạ chương trình kết thúc lúc 18 giờ, anh mua lúc mấy giờ ạ?
+Khach hang: 17 giờ 30.
+Nhan vien: Dạ anh cần có voucher đặc biệt để nhận quà ạ.
+Khach hang: Không ai nói tôi cần voucher.
+Nhan vien: Dạ thông tin có trên banner chương trình ạ.","Tôi không nhận được quà tặng kèm khi mua máy. | Tôi mua hôm qua, trong chương trình rồi. | 17 giờ 30. | Không ai nói tôi cần voucher.","Dạ chương trình quà tặng đã kết thúc hôm qua ạ. | Dạ chương trình kết thúc lúc 18 giờ, anh mua lúc mấy giờ ạ? | Dạ anh cần có voucher đặc biệt để nhận quà ạ. | Dạ thông tin có trên banner chương trình ạ.",low_empathy,1,claude-sonnet-4-6,tìm cớ từ chối thay vì kiểm tra lại
+EMP-089,"Khach hang: Tôi nâng cấp RAM máy tính theo hướng dẫn của nhân viên mà máy không boot được.
+Nhan vien: Dạ anh lắp RAM đúng slot chưa ạ?
+Khach hang: Đúng slot rồi, theo hướng dẫn nhân viên tư vấn.
+Nhan vien: Dạ tự nâng cấp phần cứng có thể void warranty ạ.
+Khach hang: Nhân viên bên anh tư vấn tôi làm vậy.
+Nhan vien: Dạ bên em không chịu trách nhiệm về tư vấn nâng cấp phần cứng ạ.
+Khach hang: Vậy nhân viên tư vấn sai mà tôi chịu?","Tôi nâng cấp RAM máy tính theo hướng dẫn của nhân viên mà máy không boot được. | Đúng slot rồi, theo hướng dẫn nhân viên tư vấn. | Nhân viên bên anh tư vấn tôi làm vậy. | Vậy nhân viên tư vấn sai mà tôi chịu?",Dạ anh lắp RAM đúng slot chưa ạ? | Dạ tự nâng cấp phần cứng có thể void warranty ạ. | Dạ bên em không chịu trách nhiệm về tư vấn nâng cấp phần cứng ạ.,low_empathy,1,claude-sonnet-4-6,từ chối trách nhiệm dù nhân viên tư vấn sai
+EMP-090,"Khach hang: Tôi mua máy về màu khác với ảnh trên web, web chụp trắng sáng mà thực tế xám đậm.
+Nhan vien: Dạ màu sắc trên màn hình có thể khác thực tế do ánh sáng chụp ảnh ạ.
+Khach hang: Vậy thì web bị misleading.
+Nhan vien: Dạ ảnh chỉ mang tính minh họa ạ.
+Khach hang: Minh họa nhưng sai màu hoàn toàn thì chấp nhận được hả?
+Nhan vien: Dạ bên em không hỗ trợ đổi trả vì lý do màu sắc ạ.
+Khach hang: Vậy tôi phải giữ cái màu tôi không thích.","Tôi mua máy về màu khác với ảnh trên web, web chụp trắng sáng mà thực tế xám đậm. | Vậy thì web bị misleading. | Minh họa nhưng sai màu hoàn toàn thì chấp nhận được hả? | Vậy tôi phải giữ cái màu tôi không thích.",Dạ màu sắc trên màn hình có thể khác thực tế do ánh sáng chụp ảnh ạ. | Dạ ảnh chỉ mang tính minh họa ạ. | Dạ bên em không hỗ trợ đổi trả vì lý do màu sắc ạ.,low_empathy,1,claude-sonnet-4-6,"không nhận lỗi misleading, từ chối hỗ trợ"
