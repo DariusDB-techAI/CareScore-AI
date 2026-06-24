@@ -51,20 +51,32 @@ CRITERION_THEMES = {
         "support_copy": "Kiem tra viec ghi nhan cam xuc, nhac lai boi canh va chuyen sang huong ho tro.",
     },
     "politeness": {
-        "title": "Politeness Atelier",
-        "eyebrow": "Tone Craft",
-        "accent": "#0d5bd7",
-        "accent_soft": "rgba(13, 91, 215, 0.14)",
-        "bg_start": "#eef4ff",
-        "bg_end": "#dce7ff",
-        "surface": "#fbfdff",
-        "ink": "#0c1933",
-        "muted": "#4f638c",
-        "chip": "#d6e4ff",
-        "placeholder": "Vi du:\nKhach hang: Toi can duoc giai thich phi nay.\nNhan vien: Em xin phep kiem tra lai cho anh chi...",
-        "button_label": "Evaluate politeness",
-        "focus_points": ["xung ho", "ton trong", "phan hoi mem"],
-        "support_copy": "Do do ton trong, do mem va cach giu tone giao tiep chuyen nghiep.",
+       "title": "Đánh Giá Mức Độ Lịch Sự",
+       "eyebrow": "POLITENESS ANALYSIS",
+       "accent": "#dc2626",
+        "accent_soft": "rgba(220,38,38,0.18)",
+        "bg_start": "#fee2e2",
+        "bg_end": "#fecaca",
+        "surface": "#ffffff",
+        "ink": "#450a0a",
+        "muted": "#7f1d1d",
+        "chip": "#fee2e2",
+       "placeholder": """Ví dụ:
+        Khách hàng: Tôi muốn được giải thích khoản phí này.
+
+        Nhân viên: Dạ em xin phép kiểm tra lại thông tin và phản hồi anh/chị trong ít phút ạ.
+
+        Khách hàng: Cảm ơn em.
+        """,
+
+        "button_label": "Đánh giá mức độ lịch sự",
+        "focus_points": [
+            "Xưng hô phù hợp",
+            "Tôn trọng khách hàng",
+            "Ngôn ngữ mềm mại",
+            "Thái độ chuyên nghiệp"
+        ],
+        "support_copy": "Đánh giá mức độ lịch sự, cách xưng hô, thái độ phục vụ và khả năng duy trì giao tiếp chuyên nghiệp với khách hàng."
     },
     "toxicity": {
         "title": "Toxicity Watchtower",

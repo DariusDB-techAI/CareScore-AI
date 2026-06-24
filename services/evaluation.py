@@ -11,7 +11,7 @@ from .text_preprocess import preprocess_text_for_criterion
 CRITERIA_META = {
     "positivity": {"label": "Sentiment", "summary": "Muc do tich cuc hay tieu cuc cua hoi thoai."},
     "empathy": {"label": "Empathy", "summary": "Muc do ghi nhan cam xuc va boi canh cua khach hang."},
-    "politeness": {"label": "Politeness", "summary": "Do ton trong va mem mai trong cach giao tiep."},
+    "politeness": {"label": "Politeness", "summary": "-."},
     "toxicity": {"label": "Toxicity", "summary": "Dau hieu gay gat, cong kich, do loi hoac doc hai."},
     "resolution": {"label": "Resolution", "summary": "Muc do ro rang cua huong xu ly va next step."},
 }
